@@ -1,0 +1,148 @@
+@import "../../assets/colors.scss";
+
+.header {
+  padding: 0 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    margin: 14px 0;
+  }
+  .nav {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      color: $primary;
+      &:hover {
+        transition: 0.2s ease-in-out;
+        font-weight: 500;
+        color: $focus;
+        padding-bottom: 5px;
+        border-bottom: 2px solid $focus;
+      }
+    }
+    .active {
+      font-weight: 500;
+      color: $focus;
+      padding-bottom: 5px;
+      border-bottom: 2px solid $focus;
+    }
+  }
+  .btns {
+    display: flex;
+    gap: 20px;
+
+    .specialBtn {
+      background-color: $primary;
+      color: $white;
+      padding: 13px 11px;
+      width: 135px;
+      height: 45px;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      &:hover {
+        transition: 0.2s ease-in-out;
+        background-color: $hover;
+      }
+
+      .switch {
+        color: $white;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 30px 15%;
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 0;
+    border-bottom: 1px solid #c9c9c9;
+
+    .footerContentItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+
+      .footerHeading {
+        font-size: 20px;
+        color: $font;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .footerLists {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+
+        .footerListsItem {
+          display: flex;
+          gap: 10px;
+          align-items: flex-end;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: $font;
+
+          .footerListsItemText {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: $font;
+          }
+        }
+      }
+
+      .footerSocialLinks {
+        display: flex;
+        gap: 20px;
+
+        .footerSocialLinksItem {
+          color: $font;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: $lightFont;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .header {
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    padding: 0 5%;
+  }
+}

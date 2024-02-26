@@ -1,0 +1,77 @@
+@import "../../assets/colors.scss";
+
+.container {
+  min-height: 100vh;
+  padding: 30px 15%;
+  background-color: $background;
+  .nav {
+    font-family: "Montserrat", sans-serif !important;
+    a {
+      color: $lightFont !important;
+    }
+    i {
+      padding: 0 10px;
+      color: $lightFont !important;
+    }
+    margin-bottom: 30px;
+  }
+
+  .wrapper {
+    display: flex;
+
+    justify-content: space-between;
+    .leftSide {
+      width: 22%;
+    }
+    .rightSide {
+      width: 76%;
+      h1 {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .dflex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+      }
+    }
+    .products {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+  }
+}
+.notFound{
+  width: 100%;
+  height: 100vh;
+display: flex;
+flex-direction: column;
+padding-top: 10%;
+gap: 30px;
+align-items: center;
+  i{
+color: #F5DDFF;
+font-weight: 400;
+font-size: 200px;
+  }
+  h1{
+font-weight: 500 !important;
+font-size: 20px !important;
+  }
+button{
+border: 1px solid $primary;
+color: $primary;
+cursor: pointer;
+padding: 15px 50px;
+border-radius: 8px;
+background-color: transparent;
+&:hover{
+  background-color: $hover;
+  color: $white;
+  transition: .3s ease-in-out;
+}
+}
+}

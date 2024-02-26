@@ -1,0 +1,14 @@
+@import "../style";
+
+.new__promotion__main__type {
+  @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
+
+  .radio__group__label {
+    @extend %font-normal;
+  }
+
+  &__group {
+    @include flexbox($justify: flex-start, $items: center, $gap: 2rem);
+    margin-left: 130px;
+  }
+}

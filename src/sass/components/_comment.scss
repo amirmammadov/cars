@@ -1,0 +1,67 @@
+@import "../style";
+
+.comment {
+  width: 100%;
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: flex-start,
+    $gap: 1rem
+  );
+
+  &__title {
+    @extend %font-normal;
+    line-height: 16px;
+    color: $mainDark;
+  }
+
+  &__content {
+    @include flexbox($justify: flex-start, $items: flex-start, $gap: 1.5rem);
+
+    &__area {
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: $white;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 10px;
+      outline: none;
+
+      &:focus {
+        border: 1px solid $primary;
+      }
+    }
+
+    &__input {
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: $white;
+      padding: 10px;
+      @extend %font-normal;
+      outline: none;
+
+      &:focus {
+        border: 1px solid $primary;
+      }
+    }
+
+    &__img {
+      margin-top: 9px;
+      cursor: pointer;
+    }
+  }
+
+  &__restrict {
+    @include flexbox($justify: flex-start, $items: center, $gap: 0.5rem);
+
+    &__text {
+      color: $red;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+}

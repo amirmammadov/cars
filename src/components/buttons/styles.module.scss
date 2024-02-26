@@ -1,0 +1,22 @@
+@import "../../assets/colors.scss";
+
+.primary {
+  background-color: $primary;
+  color: $white;
+  padding: 13px 25px;
+  min-width: 160px;
+  height: 45px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  &:hover {
+    transition: 0.2s ease-in-out;
+    background-color: $hover;
+  }
+}

@@ -1,0 +1,225 @@
+@import "../style";
+
+.home {
+  background-color: $background;
+  height: auto;
+  width: 100%;
+
+  .up__arrow {
+    position: fixed;
+    top: 50%;
+    right: 3%;
+    padding: 10px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    background: $white;
+    box-shadow: 0px 10px 15px -7px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  &__hero {
+    width: 100%;
+    height: 465px;
+    background-image: url("../../assets/home/hero1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: bgChange 10s infinite ease-in-out;
+    padding: 20px 15%;
+
+    &__content {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      height: 100%;
+      @include flexbox(
+        $direction: column,
+        $justify: flex-end,
+        $items: flex-start,
+        $gap: 1.25rem
+      );
+
+      &__firstLine {
+        @include flexbox($justify: flex-start, $items: center, $gap: 1.25rem);
+        width: 100%;
+      }
+
+      &__secondLine {
+        @include flexbox(
+          $justify: space-between,
+          $items: center,
+          $gap: 1.25rem
+        );
+        width: 100%;
+      }
+
+      &__thirdLine {
+        @include flexbox(
+          $justify: space-between,
+          $items: center,
+          $gap: 1.25rem
+        );
+        width: 100%;
+
+        &__amount {
+          @include flexbox($justify: flex-start, $items: center);
+
+          input {
+            margin: 0;
+            border: none;
+            outline: none;
+            padding: 10px;
+            width: 117px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: $white;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          input[type="number"] {
+            appearance: textfield;
+            -moz-appearance: textfield;
+          }
+
+          input.amount__min {
+            border-bottom-left-radius: 8px;
+            border-top-left-radius: 8px;
+          }
+
+          input.amount__max {
+            border-bottom-right-radius: 8px;
+            border-top-right-radius: 8px;
+          }
+        }
+
+        &__currency {
+          width: 90px;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          padding: 8px 10px;
+          border-radius: 8px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background: $white;
+          outline: none;
+          margin-right: auto;
+
+          &:focus {
+            border-color: $primary;
+          }
+        }
+
+        &__year {
+          @include flexbox($justify: flex-start, $items: center);
+        }
+
+        &__code {
+          width: 235px;
+          padding: 14px;
+          border-radius: 8px;
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background: $white;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          &:focus {
+            border-color: $primary;
+          }
+        }
+      }
+
+      &__fourthLine {
+        @include flexbox($justify: center, $items: center, $gap: 5.5rem);
+        width: 100%;
+
+        &__clearBtn {
+          margin-right: auto;
+        }
+
+        &__clearBtn,
+        &__moreFilter {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          color: $lightBorder;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          &:hover {
+            cursor: pointer;
+            color: $background;
+          }
+        }
+
+        &__search {
+          width: 235px;
+          padding: 10px;
+          border: none;
+          outline: none;
+          color: $white;
+          background-color: $primary;
+          border-radius: 8px;
+          height: 40px;
+          @include flexbox($justify: center, $items: center, $gap: 0.5rem);
+
+          &:hover {
+            cursor: pointer;
+            background-color: $hover;
+          }
+
+          &__text {
+            @extend %font-normal;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes bgChange {
+    0% {
+      background-image: url("../../assets/home/hero1.png");
+    }
+    25% {
+      background-image: url("../../assets/home/hero2.png");
+    }
+    75% {
+      background-image: url("../../assets/home/hero3.png");
+    }
+    100% {
+      background-image: url("../../assets/home/hero4.png");
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .home__hero {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .home__hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

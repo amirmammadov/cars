@@ -1,0 +1,43 @@
+@import "../style";
+
+.favorites {
+  min-width: 100%;
+  padding: 32px 15%;
+  background-color: $background;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 2rem
+  );
+
+  &__title {
+    @extend %font-title1;
+    color: $font;
+  }
+
+  &__content {
+    @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
+    width: 100%;
+
+    .no__car {
+      @include flexbox(
+        $direction: column,
+        $justify: center,
+        $items: center,
+        $gap: 1rem
+      );
+      width: 100%;
+
+      &__text {
+        @extend %font-normal2;
+        color: $font;
+      }
+
+      &__img {
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+}

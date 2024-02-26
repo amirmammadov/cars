@@ -1,0 +1,43 @@
+@import "../style";
+
+.filter__tab {
+  min-width: 340px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: $white;
+  @include flexbox($justify: center, $items: center, $gap: 0.625rem);
+
+  &__item {
+    min-width: 100px;
+    min-height: 40px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    color: $mainDark;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__item.active {
+    color: $white;
+    background-color: $hover;
+  }
+}
+
+@media only screen and (max-width: 827px) {
+  .filter__tab {
+    min-width: 250px;
+
+    &__item {
+      min-width: 50px;
+    }
+  }
+}

@@ -1,0 +1,263 @@
+@import "../style";
+
+.credit__container {
+  width: 700px;
+  height: auto;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 25px;
+
+  &__stepOne {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start
+    );
+
+    &__header {
+      @include flexbox($justify: center, $items: center, $gap: 1.875rem);
+      width: 100%;
+      position: relative;
+      margin-bottom: 30px;
+
+      &__title {
+        margin: 0 auto;
+        @extend %font-title1;
+        color: $font;
+      }
+
+      &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+
+    &__carTitle {
+      @extend %font-normal2;
+      color: $font;
+      margin-bottom: 30px;
+    }
+
+    &__calc {
+      width: 100%;
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $items: flex-start,
+        $gap: 1.5rem
+      );
+      margin-bottom: 30px;
+
+      &__item {
+        width: 100%;
+        @include flexbox(
+          $direction: column,
+          $justify: flex-start,
+          $items: flex-start,
+          $gap: 1.5rem
+        );
+
+        &__title {
+          @include flexbox($justify: space-between, $items: center);
+          width: 100%;
+
+          &__text {
+            @extend %font-normal;
+            color: $font;
+          }
+
+          &__amount {
+            @extend %font-title5;
+            color: $font;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      padding: 15px 64px;
+      border-radius: 8px;
+      background: $primary;
+      color: $white;
+      width: 100%;
+      @extend %font-normal2;
+      border: none;
+      outline: none;
+      margin-bottom: 20px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+    }
+
+    &__note {
+      @extend %font-title2;
+      color: $lightFont;
+    }
+  }
+
+  &__stepTwo {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start
+    );
+    width: 100%;
+
+    &__header {
+      @include flexbox($justify: center, $items: center, $gap: 1.875rem);
+      width: 100%;
+      position: relative;
+      margin-bottom: 30px;
+
+      &__title {
+        margin: 0 auto;
+        @extend %font-title1;
+        color: $font;
+      }
+
+      &__closeBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        &:hover {
+          color: $red;
+        }
+      }
+
+      &__prevBtn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+
+    &__form {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $items: flex-start,
+        $gap: 1rem
+      );
+      width: 100%;
+      margin-bottom: 30px;
+
+      &__item {
+        width: 100%;
+        @include flexbox($justify: flex-start, $items: center, $gap: 0.5rem);
+
+        &__input {
+          padding: 14px 10px;
+          border-radius: 8px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background: $white;
+          @extend %font-normal;
+          color: $lightFont;
+          width: 100%;
+          outline: none;
+
+          &:hover {
+            border-color: $primary;
+          }
+        }
+
+        &__input.phone::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        input[type="number"] {
+          appearance: textfield;
+          -moz-appearance: textfield;
+        }
+
+        &__select {
+          padding: 13px 10px;
+          border-radius: 8px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background: $white;
+          @extend %font-normal;
+          color: $font;
+        }
+
+        &__question {
+          cursor: pointer;
+          border: none;
+          outline: none;
+          background-color: transparent;
+        }
+      }
+    }
+
+    &__btn {
+      padding: 15px 64px;
+      border-radius: 8px;
+      background: $primary;
+      color: $white;
+      width: 100%;
+      @extend %font-normal2;
+      border: none;
+      outline: none;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+    }
+
+    &__warning {
+      color: red;
+      @extend %font-normal;
+      margin: 10px 0;
+    }
+
+    &__note {
+      @extend %font-title2;
+      color: $lightFont;
+      margin-top: 10px;
+    }
+
+    &__identity {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      @include flexbox($justify: center, $items: center);
+
+      &__img {
+        height: 650px;
+        border-radius: 8px;
+      }
+
+      &__closeBtn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}

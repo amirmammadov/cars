@@ -1,0 +1,110 @@
+@import "../style";
+
+.pictures {
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 1.25rem
+  );
+  width: 100%;
+
+  &__title {
+    @extend %font-normal;
+    color: $mainDark;
+    line-height: 16px;
+  }
+
+  &__content {
+    // @include flexbox($justify: flex-start, $items: center, $gap: 1.25rem);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1.25rem;
+
+    &__item {
+      flex-grow: 1;
+      border-radius: 8px;
+      border: 1px dashed var(--Second-Color, #620985);
+      background: $white;
+      padding: 20px;
+      outline: none;
+      min-width: 235px;
+      min-height: 216px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__img {
+        width: 200px;
+        height: 142px;
+        border-radius: 8px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+      }
+
+      &__extraImg {
+        width: 24px;
+        height: 24px;
+      }
+
+      &__text,
+      &__deleteBtn {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: $mainDark;
+        margin-top: 10px;
+      }
+
+      &__deleteBtn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+          color: $red;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__item.extra {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-end,
+        $items: center,
+        $gap: 3rem
+      );
+    }
+  }
+
+  &__notes {
+    width: 100%;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 15px;
+      row-gap: 5px;
+      list-style-type: disc !important;
+      width: 100%;
+      align-content: center;
+      list-style-position: inside;
+
+      &__item {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: $lightFont;
+        vertical-align: middle;
+      }
+    }
+  }
+}

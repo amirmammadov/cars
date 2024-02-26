@@ -1,0 +1,28 @@
+@import "../style";
+
+.car__supply {
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: flex-start,
+    $gap: 1.25rem
+  );
+  width: 100%;
+
+  &__title {
+    @extend %font-normal;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 30px;
+    row-gap: 20px;
+    width: 100%;
+
+    &__item {
+      flex-grow: 1;
+      @include flexbox($justify: flex-start, $items: center, $gap: 0.5rem);
+    }
+  }
+}

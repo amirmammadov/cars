@@ -1,0 +1,57 @@
+@import "../style";
+
+.new__promotion__price {
+  @include flexbox($justify: space-between, $items: center);
+  width: 100%;
+
+  &__inputs {
+    @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
+
+    &__amount {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: $white;
+      @extend %font-normal;
+      border: 1px solid $white;
+      outline: none;
+
+      &:focus {
+        border: 1px solid $primary;
+      }
+    }
+
+    &__amount::-webkit-outer-spin-button,
+    &__amount::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &__amount[type="number"] {
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+
+    &__currency {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: $white;
+      @extend %font-normal;
+      border: 1px solid $white;
+      outline: none;
+
+      &:focus {
+        border: 1px solid $primary;
+      }
+    }
+  }
+
+  &__radios {
+    @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
+
+    &__label {
+      @extend %font-normal;
+    }
+  }
+}

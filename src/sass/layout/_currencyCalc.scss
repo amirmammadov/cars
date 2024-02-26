@@ -1,0 +1,47 @@
+@import "../style";
+
+.currency__convertor__calc {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  @include flexbox($justify: center, $items: center);
+
+  &__content {
+    width: 344px;
+    height: auto;
+    border-radius: 8px;
+    background: $white;
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start
+    );
+    padding: 15px;
+
+    &__title {
+      @include flexbox($justify: flex-end, $items: center, $gap: 4rem);
+      width: 100%;
+
+      &__text {
+        color: $font;
+        @extend %font-title1;
+      }
+
+      &__btn {
+        cursor: pointer;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+
+    &__body {
+      @include flexbox($direction: column, $justify: center, $items: center);
+      width: 100%;
+    }
+  }
+}

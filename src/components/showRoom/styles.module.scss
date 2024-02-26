@@ -1,0 +1,14 @@
+.label {
+    margin-left: 20px;
+}
+.container {
+  p{
+    font-family: 'Montserrat',sans-serif !important;
+  }
+  width:100% ;
+  flex-direction: row !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px;
+  margin-bottom: 30px;
+}

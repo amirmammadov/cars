@@ -1,0 +1,1180 @@
+{
+  "statcars": [
+    {
+      "id": 1,
+      "salon": true,
+      "name": "Audi A4",
+      "price": "21 000",
+      "currency": "$",
+      "capacity": "2.5L",
+      "year": "2018",
+      "distance": "180 800 km",
+      "location": "Sumqayıt",
+      "date": "Bugün 08:45",
+      "img": "audi",
+      "leasing": true,
+      "credit": false,
+      "barter": true,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm."
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "salon": true,
+      "name": "Bentley Mulsanne",
+      "price": "162 500",
+      "currency": "$",
+      "year": "2017",
+      "capacity": "6.5L",
+      "distance": "35 500 km",
+      "location": "Bakı",
+      "date": "Bugün 11:45",
+      "img": "bentley",
+      "leasing": true,
+      "credit": true,
+      "barter": true,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm."
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "salon": true,
+      "name": "Chevrolet Camaro",
+      "price": "23 500",
+      "currency": "$",
+      "year": "2020",
+      "capacity": "2.5L",
+      "distance": "95 500 km",
+      "location": "Bakı",
+      "date": "Bugün 11:45",
+      "img": "chevrolet",
+      "leasing": true,
+      "credit": false,
+      "barter": true,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "salon": true,
+      "name": "Mercedes-Benz G 55 AMG",
+      "price": "162 500",
+      "currency": "AZN",
+      "year": "2020",
+      "distance": "110 000 km",
+      "location": "Mingəçevir",
+      "date": "Bugün 19:45",
+      "capacity": "5.2L",
+      "img": "mercedesG55",
+      "leasing": true,
+      "credit": false,
+      "barter": false,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "salon": true,
+      "name": "Mercedes-Benz S 500",
+      "price": "75 500",
+      "currency": "$",
+      "year": "2021",
+      "distance": "110 000 km",
+      "location": "Bakı",
+      "capacity": "5.5L",
+      "date": "Bugün 11:45",
+      "img": "mercedesS500",
+      "leasing": true,
+      "credit": false,
+      "barter": true,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "salon": true,
+      "name": "Ferrari California",
+      "price": "185 000",
+      "currency": "$",
+      "capacity": "4.0 L",
+      "year": "2021",
+      "distance": "35 500 km",
+      "location": "Bakı",
+      "date": "Bugün 11:45",
+      "img": "ferrari",
+      "leasing": true,
+      "credit": true,
+      "barter": false,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "salon": true,
+      "name": "Bentley Mulsanne",
+      "price": "162 500",
+      "currency": "$",
+      "year": "2017",
+      "capacity": "6.5L",
+      "distance": "35 500 km",
+      "location": "Bakı",
+      "date": "Bugün 11:45",
+      "img": "bentley",
+      "leasing": true,
+      "credit": true,
+      "barter": true,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "salon": true,
+      "name": "Chevrolet Camaro",
+      "price": "23 500",
+      "currency": "$",
+      "year": "2020",
+      "capacity": "2.5L",
+      "distance": "95 500 km",
+      "location": "Bakı",
+      "date": "Bugün 11:45",
+      "img": "chevrolet",
+      "leasing": true,
+      "credit": false,
+      "barter": true,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "salon": true,
+      "name": "Mercedes-Benz G 55 AMG",
+      "price": "162 500",
+      "currency": "AZN",
+      "year": "2020",
+      "distance": "110 000 km",
+      "location": "Mingəçevir",
+      "date": "Bugün 19:45",
+      "capacity": "5.2L",
+      "img": "mercedesG55",
+      "leasing": true,
+      "credit": false,
+      "barter": false,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "salon": true,
+      "name": "Ferrari California",
+      "price": "185 000",
+      "currency": "$",
+      "capacity": "4.0 L",
+      "year": "2021",
+      "distance": "35 500 km",
+      "location": "Bakı",
+      "date": "Bugün 11:45",
+      "img": "ferrari",
+      "leasing": true,
+      "credit": true,
+      "barter": false,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "salon": true,
+      "name": "Audi A4",
+      "price": "21 000",
+      "currency": "$",
+      "capacity": "2.5L",
+      "year": "2018",
+      "distance": "180 800 km",
+      "location": "Sumqayıt",
+      "date": "Bugün 08:45",
+      "img": "audi",
+      "leasing": true,
+      "credit": false,
+      "barter": true,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "/carDetail/person1.png",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "/carDetail/person2.png",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "salon": true,
+      "name": "Mercedes-Benz S 500",
+      "price": "75 500",
+      "currency": "$",
+      "year": "2021",
+      "distance": "110 000 km",
+      "location": "Bakı",
+      "capacity": "5.5L",
+      "date": "Bugün 11:45",
+      "img": "mercedesS500",
+      "leasing": true,
+      "credit": false,
+      "barter": true,
+      "extraInfo": [
+        {
+          "title": "Mühərrik həcmi",
+          "value": "5.5 L",
+          "imgName": "engine_volume"
+        },
+        { "title": "Il", "value": "2021", "imgName": "year" },
+        { "title": "Rəng", "value": "Qara", "imgName": "color" },
+        { "title": "Yürüyüş", "value": "110 000 km", "imgName": "distance" },
+        { "title": "Ban növü", "value": "Sedan", "imgName": "bantype" },
+        { "title": "Sahib", "value": "2", "imgName": "owner" },
+        {
+          "title": "Transmissiya",
+          "value": "Avtomat",
+          "imgName": "transmission"
+        },
+        { "title": "Güc", "value": "263", "imgName": "power" },
+        { "title": "Oturacaq sayı", "value": "5", "imgName": "number_seats" },
+        { "title": "Ötürücü", "value": "Ön", "imgName": "gear" },
+        { "title": "Yanacaq", "value": "Dizel", "imgName": "fuel" },
+        { "title": "Şəhər", "value": "Bakı", "imgName": "city" }
+      ],
+      "basicInfo": [
+        { "key": "Vəziyyəti", "value": "Sürülmüş" },
+        { "key": "Yanacaq sərfiyyatı", "value": "71/100 km" },
+        { "key": "Parkinq sensoru", "value": "360° kamera" },
+        {
+          "key": "Sürət kontrol düzənləyici",
+          "value": "Adaptiv kontrol düzənləyici"
+        },
+        { "key": "Daxili rəngi", "value": "Bej" },
+        { "key": "Daxili materialı", "value": "Tam dəri" },
+        { "key": "Hava yastıqları", "value": "Ön təhlükəsizlik yastıqları" }
+      ],
+      "supplies": [
+        { "key": "TV", "case": true },
+        { "key": "USB Ports", "case": true },
+        { "key": "Elektrik pəncərələr", "case": true },
+        { "key": "Kondisioner", "case": true },
+        { "key": "Bluetooth", "case": true },
+        { "key": "Toxunma ekran", "case": true },
+        { "key": "WI-FI", "case": true },
+        { "key": "Siqnalizasiya sistemi", "case": true },
+        { "key": "Təcili zəng sistemi", "case": true },
+        { "key": "Oturacaqların isidilməsi", "case": true },
+        { "key": "Dəri sükan", "case": true },
+        { "key": "Naviqasiya sistemi", "case": true },
+        { "key": "Oturacaqların havalandırılması", "case": true }
+      ],
+      "otherAdvantages": [
+        { "key": "ABS", "case": true },
+        { "key": "Lyuk", "case": true },
+        { "key": "Ksenon lampalar", "case": true },
+        { "key": "Məsafə xəbərdarlıq sistemi", "case": true },
+        { "key": "Adaptiv dönmə işıqları", "case": true },
+        { "key": "Yüngül lehimli disklər", "case": true },
+        { "key": "Ehtiyat təkərlər", "case": true },
+        { "key": "Qızdırılan ön şüşə", "case": true },
+        { "key": "Start-stop sistemi", "case": true },
+        { "key": "Yağış sensoru", "case": true },
+        { "key": "Duman əleyhinə lampa", "case": true },
+        { "key": "Mərkəzi qapanma", "case": true }
+      ],
+      "note": {
+        "content": "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
+        "hasCrash": false,
+        "isPainted": false
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "person": "Ruslan Qasımov",
+          "imgUrl": "person1.jpg",
+          "note": "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. "
+        },
+        {
+          "id": 2,
+          "person": "Arif Bayramlı",
+          "imgUrl": "person2.jpg",
+          "note": "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm."
+        }
+      ]
+    }
+  ]
+}

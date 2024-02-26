@@ -1,0 +1,41 @@
+@import "../style";
+
+.currency__convertor__calc__content__body__item {
+  @include flexbox($justify: center, $items: center, $gap: 1rem);
+  width: 100%;
+  margin: 20px 0 5px 0;
+
+  &__input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+
+  &__input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+  &__currency {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: $white;
+    outline: none;
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}

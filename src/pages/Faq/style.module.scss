@@ -1,0 +1,45 @@
+@import "../../assets/colors.scss";
+
+.container {
+  padding: 30px 15%;
+  background-color: $background;
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+}
+.accordion,
+.accordion > div {
+  margin: 0 auto;
+  border: none !important;
+  box-shadow: none !important;
+  &::before {
+    content: none !important;
+    border: none !important;
+  }
+  border-radius: 8px !important;
+}
+.accordion {
+  margin-bottom: 30px;
+  background-color: $background !important;
+}
+.qstn {
+  border-radius: 8px !important;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: $white !important;
+  // padding: 20px 10px !important;
+}
+
+.answer {
+  // background-color: green !important;
+  font-size: 16px;
+  font-weight: 400;
+  color: #747474;
+  margin: 10px 0 !important;
+  font-family: "Montserrat", sans-serif !important;
+  line-height: 137%;
+
+  // background-color: $background !important;
+}

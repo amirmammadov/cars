@@ -1,0 +1,27 @@
+@import "../style";
+
+.new__promotion__room {
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 2rem
+  );
+
+  &__title {
+    @extend %font-normal;
+    color: $font;
+  }
+
+  &__content__control {
+    @include flexbox($justify: flex-start, $items: center, $gap: 2.5rem);
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+      &__label {
+        text-align: center;
+      }
+    }
+  }
+}
