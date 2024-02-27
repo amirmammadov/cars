@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import logo from "../../assets/logo.svg";
 import { Link, useLocation } from "react-router-dom";
-import PrimaryBtn from "../buttons/PrimaryBtn";
+import PrimaryBtn from "../../components/buttons/PrimaryBtn";
 import { Icon } from "@fluentui/react";
 
 function Header() {
