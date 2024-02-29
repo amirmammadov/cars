@@ -10,4 +10,28 @@
     $items: flex-start,
     $gap: 60px
   );
+
+  &__section {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start,
+      $gap: 30px
+    );
+    width: 100%;
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-content: flex-start;
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .pagination .Mui-selected {
+      background-color: $primary;
+      color: $white;
+    }
+  }
 }
