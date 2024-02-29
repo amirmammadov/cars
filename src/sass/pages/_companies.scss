@@ -1,0 +1,13 @@
+@import "../style";
+
+.companies {
+  padding: 30px 15%;
+  background-color: $background;
+  width: 100%;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 60px
+  );
+}

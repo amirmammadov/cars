@@ -20,7 +20,7 @@ import {
 
 import { useNavigate } from "react-router-dom";
 
-export const INITIAL_DATA = {
+const INITIAL_DATA = {
   tabOne: "hamısı",
   tabTwo: "hamısı",
   brand: "",

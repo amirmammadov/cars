@@ -479,3 +479,24 @@ export const CurrencyAPI =
   "http://data.fixer.io/api/latest?access_key=5a9ef5f2b04f78dbacb021a3c7bad49a";
 
 export const ITEMS_PER_PAGE = 4;
+
+export const companies = [
+  { title: "AutoStyle" },
+  { title: "West Cost" },
+  { title: "Car Fanatics" },
+];
+
+export const foreignCountries = [
+  { title: "Almaniya" },
+  { title: "Rusiya" },
+  { title: "Türkiyə" },
+  { title: "Gürcüstan" },
+];
+
+export const rating = [
+  { title: 1 },
+  { title: 2 },
+  { title: 3 },
+  { title: 4 },
+  { title: 5 },
+];

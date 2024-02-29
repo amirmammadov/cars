@@ -10,6 +10,7 @@ import CarDetail from "./pages/CarDetail/CarDetail";
 import SearchResult from "./pages/SearchResult/SearchResult";
 import ComparisonPage from "./pages/Comparison/ComparisonPage";
 import Favorites from "./pages/Favorites/Favorites";
+import Companies from "./pages/Companies/Companies";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/result" element={<SearchResult />} />
         <Route path="/comparison" element={<ComparisonPage />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/companies" element={<Companies />} />
       </Routes>
     </Layout>
   );
