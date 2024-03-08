@@ -34,3 +34,7 @@ export const getCompanies = async (page = 1) => {
 
   return { currentItems, totalItems };
 };
+
+export const getCompany = async (id) => {
+  return (await axiosInstance.get(`companies/${id}`)).data;
+};

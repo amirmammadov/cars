@@ -2,9 +2,19 @@ import "../../sass/components/_companyItem.scss";
 
 import { Icon } from "@fluentui/react";
 
-const CompanyItem = ({ img, companyName, phone }) => {
+import { useNavigate } from "react-router-dom";
+
+const CompanyItem = ({ img, companyName, phone, id }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="companies__item">
+    <div
+      className="companies__item"
+      onClick={() => {
+        navigate(`/company/${id}`);
+        window.scrollTo(0, 0);
+      }}
+    >
       <img
         src={`/companies/${img}`}
         alt="company"

@@ -11,6 +11,7 @@ import SearchResult from "./pages/SearchResult/SearchResult";
 import ComparisonPage from "./pages/Comparison/ComparisonPage";
 import Favorites from "./pages/Favorites/Favorites";
 import Companies from "./pages/Companies/Companies";
+import CompanyDetail from "./pages/CompanyDetail/CompanyDetail";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
         <Route path="/result" element={<SearchResult />} />
         <Route path="/comparison" element={<ComparisonPage />} />
         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/companies" element={<Companies />} />
+        <Route path="/company" element={<Companies />} />
+        <Route path="/company/:id" element={<CompanyDetail />} />
       </Routes>
     </Layout>
   );
