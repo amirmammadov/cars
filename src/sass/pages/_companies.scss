@@ -1,0 +1,57 @@
+@import "../style";
+
+.companies {
+  padding: 30px 15%;
+  background-color: $background;
+  width: 100%;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 60px
+  );
+
+  &__section {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start,
+      $gap: 30px
+    );
+    width: 100%;
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: flex-start;
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .pagination .Mui-selected {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .companies {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .companies {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .companies__section__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

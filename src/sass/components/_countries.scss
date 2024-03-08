@@ -1,0 +1,31 @@
+@import "../style";
+
+.countries {
+  padding: 20px;
+  border-radius: 0.5rem;
+  background-color: $white-light;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 1.25rem
+  );
+
+  &__title {
+    @extend %font-title5;
+    color: $font;
+  }
+
+  &__list {
+    @include flexbox($justify: flex-start, $items: flex-start, $gap: 1.25rem);
+    flex-wrap: wrap;
+
+    &__item {
+      padding: 5px 10px;
+      border-radius: 10px;
+      background-color: $background;
+      @extend %font-title2;
+      color: $font;
+    }
+  }
+}

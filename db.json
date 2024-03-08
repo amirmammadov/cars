@@ -1176,5 +1176,103 @@
         }
       ]
     }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "companyName": "Autostyle",
+      "img": "company1.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 2,
+      "companyName": "West Coast",
+      "img": "company2.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 3,
+      "companyName": "Car Fanatics",
+      "img": "company4.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 4,
+      "companyName": "Company",
+      "img": "company3.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 5,
+      "companyName": "Car Fanatics",
+      "img": "company4.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 6,
+      "companyName": "Company",
+      "img": "company3.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 7,
+      "companyName": "Autostyle",
+      "img": "company1.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 8,
+      "companyName": "West Coast",
+      "img": "company2.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 9,
+      "companyName": "Autostyle",
+      "img": "company1.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 10,
+      "companyName": "West Coast",
+      "img": "company2.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 11,
+      "companyName": "Car Fanatics",
+      "img": "company4.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 12,
+      "companyName": "Company",
+      "img": "company3.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 13,
+      "companyName": "Car Fanatics",
+      "img": "company4.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 14,
+      "companyName": "Company",
+      "img": "company3.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 15,
+      "companyName": "Autostyle",
+      "img": "company1.png",
+      "phone": "+994505556412"
+    },
+    {
+      "id": 16,
+      "companyName": "West Coast",
+      "img": "company2.png",
+      "phone": "+994505556412"
+    }
   ]
 }

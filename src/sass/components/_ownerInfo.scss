@@ -6,11 +6,16 @@
   background: $white;
   @include flexbox(
     $direction: column,
-    $justify: flex-start,
+    $justify: space-between,
     $items: flex-start,
     $gap: 1.25rem
   );
   width: 100%;
+
+  &__title {
+    @extend %font-title6;
+    color: $font;
+  }
 
   &__detail {
     @include flexbox($justify: flex-start, $items: center, $gap: 1rem);

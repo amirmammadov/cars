@@ -21,3 +21,20 @@ export const getStatCars = async (page = 1) => {
 
   return { currentItems, totalItems };
 };
+
+export const getCompanies = async (page = 1) => {
+  const response = (await axiosInstance.get(`companies`)).data;
+
+  const currentItems = response.slice(
+    (page - 1) * ITEMS_PER_PAGE,
+    (page - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+  );
+
+  const totalItems = response.length;
+
+  return { currentItems, totalItems };
+};
+
+export const getCompany = async (id) => {
+  return (await axiosInstance.get(`companies/${id}`)).data;
+};
