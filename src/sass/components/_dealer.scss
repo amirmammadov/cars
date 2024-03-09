@@ -1,0 +1,80 @@
+@import "../style";
+
+.about__dealer {
+  padding: 20px;
+  border-radius: 8px;
+  background: $white-light;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 1.25rem
+  );
+  width: 100%;
+  grid-column-start: 1;
+
+  &__title {
+    @extend %font-title5;
+    color: $font;
+  }
+
+  &__rating {
+    @include flexbox($justify: flex-start, $items: center, $gap: 1.25rem);
+
+    &__number {
+      @extend %font-title5;
+      color: $font;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 66px;
+
+    &__column {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $items: flex-start,
+        $gap: 0.5rem
+      );
+
+      &__title,
+      &__value {
+        @extend %font-normal;
+        letter-spacing: 0.16px;
+        color: $font;
+      }
+    }
+  }
+
+  &__extra {
+    width: 100%;
+    @include flexbox($justify: space-between, $items: center);
+
+    &__item {
+      @include flexbox($justify: flex-start, $items: center, $gap: 0.75rem);
+
+      &__content {
+        @include flexbox(
+          $direction: column,
+          $justify: space-between,
+          $items: flex-start,
+          $gap: 0.5rem
+        );
+
+        &__key {
+          @extend %font-title2;
+          color: $grey1;
+        }
+
+        &__value {
+          @extend %font-title4;
+          letter-spacing: 0.14px;
+          color: $font;
+        }
+      }
+    }
+  }
+}
