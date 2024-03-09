@@ -10,8 +10,9 @@ import {
   ExtraInfo,
   Note,
   OwnerInfo,
-  Reviews,
 } from "./components";
+
+import Reviews from "../../components/Reviews/Reviews";
 
 import ProductCart from "../../components/productCard/ProductCart";
 import DegreeSlider from "../../components/DegreeSlider/DegreeSlider";
@@ -240,7 +241,7 @@ const CarDetail = () => {
           <Basic product={product[0]} />
           <Note product={product[0]} />
           <AboutDealer product={product[0]} />
-          <Reviews product={product[0]} />
+          <Reviews />
           <div className="car__detail__additional__left__divider" />
         </div>
         <div className="car__detail__additional__right">

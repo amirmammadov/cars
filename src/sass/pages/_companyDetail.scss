@@ -64,4 +64,32 @@
       }
     }
   }
+
+  &__divider {
+    grid-column-start: 1;
+    width: 100%;
+    height: 1px;
+    background-color: $grayish;
+    margin: 2rem 0;
+  }
+
+  &__similar {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start,
+      $gap: 2rem
+    );
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 1.5rem;
+      row-gap: 2rem;
+    }
+
+    &__content > * {
+      flex-grow: 1;
+    }
+  }
 }

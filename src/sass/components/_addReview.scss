@@ -1,0 +1,33 @@
+@import "../style";
+
+.add__review {
+  background-color: $white-light;
+  grid-column-start: 1;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 1.5rem
+  );
+
+  &__title {
+    @extend %font-title5;
+    color: $font;
+  }
+
+  &__form {
+    width: 100%;
+
+    &__input {
+      background-color: $white;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      outline: none;
+      width: 100%;
+      padding: 0.8rem;
+      @extend %font-normal;
+    }
+  }
+}
