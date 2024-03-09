@@ -76,7 +76,7 @@ const CompanyDetail = () => {
       <div className="company__detail__info">
         <div className="company__detail__info__img">
           <img
-            src={`../../../public/companies/${company.img}`}
+            src={`/companies/${company.img}`}
             alt="company"
             className="company__detail__info__img__item"
           />

@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { ITEMS_PER_PAGE } from "../constants";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://mock-api-moto4.vercel.app";
 const axiosInstance = axios.create({ baseURL: BASE_URL });
 
 // export const getStatCars = async (page = 1) => {
