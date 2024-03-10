@@ -11,8 +11,8 @@ import CurrencyInput from "../components/CurrencyInput/CurrencyInput";
 import { CurrencyAPI } from "../constants";
 
 const CurrencyCalc = ({ setIsCalcOpen }) => {
-  const [amount1, setAmount1] = useState(200000);
-  const [amount2, setAmount2] = useState(200000);
+  const [amount1, setAmount1] = useState(0);
+  const [amount2, setAmount2] = useState(0);
   const [currency1, setCurrency1] = useState("AZN");
   const [currency2, setCurrency2] = useState("USD");
   const [rates, setRates] = useState([]);
@@ -34,15 +34,6 @@ const CurrencyCalc = ({ setIsCalcOpen }) => {
     },
     [currency1, currency2, rates]
   );
-
-  useEffect(() => {
-    if (!!rates) {
-      function init() {
-        handleAmount1Change(200000);
-      }
-      init();
-    }
-  }, [handleAmount1Change, rates]);
 
   function handleCurrency1Change(currency1) {
     setAmount2(format((amount1 * rates[currency2]) / rates[currency1]));
