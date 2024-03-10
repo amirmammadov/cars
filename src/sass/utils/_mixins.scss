@@ -5,3 +5,33 @@
   align-items: $items;
   gap: $gap;
 }
+
+@mixin x-large-screen() {
+  @media (max-width: $x-large-screen) {
+    @content;
+  }
+}
+
+@mixin large-screen() {
+  @media (max-width: $large-screen) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
