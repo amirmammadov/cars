@@ -124,7 +124,7 @@
       border: none;
       outline: none;
       background-color: transparent;
-      color: $lightBorder;
+      color: $grey2;
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -132,7 +132,7 @@
 
       &:hover {
         cursor: pointer;
-        color: $background;
+        color: $grey1;
       }
     }
 

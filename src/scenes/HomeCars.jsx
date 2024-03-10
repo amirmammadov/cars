@@ -27,7 +27,7 @@ const HomeCars = () => {
   }
 
   return (
-    <div className="home__cars">
+    <main className="home__cars">
       <section className="home__cars__section">
         <SectionHeader title="Statistik elanlar" filterTitle="Rating" />
         <div className="home__cars__section__content">
@@ -61,7 +61,7 @@ const HomeCars = () => {
           })}
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

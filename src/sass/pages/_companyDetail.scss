@@ -3,6 +3,14 @@
 .company__detail {
   background-color: $background;
   padding: 2rem 15%;
+  @include x-large-screen {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @include x-large-screen {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
   &__links {
     @include flexbox($justify: flex-start, $items: center, $gap: 0.675rem);

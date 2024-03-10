@@ -10,6 +10,10 @@
     font-weight: 600;
   }
 
+  .filter {
+    margin-bottom: 60px;
+  }
+
   .upArrow {
     position: fixed;
     top: 50%;
@@ -53,7 +57,34 @@
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  column-gap: 20;
+  column-gap: 20px;
   row-gap: 30px;
   justify-content: space-between;
+  margin: 30px 0;
+}
+
+.pagination {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination .Mui-selected {
+  background-color: $primary;
+  color: $white;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
