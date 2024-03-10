@@ -35,58 +35,58 @@
     border-radius: 8px;
     display: flex;
     align-items: center;
-margin: 0 auto;
-cursor: pointer;
-transition: .3s ease-in-out;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
     justify-content: center;
-    span{
-        margin-right: 15px;
+    span {
+      margin-right: 15px;
     }
-    &:hover{
+    &:hover {
       background-color: $hover;
       color: $white;
     }
   }
 }
-.top{
-    display:flex;
-    justify-content: space-between;
-    padding-bottom: 100px;
-   .leftBar{
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  .leftBar {
     min-width: 180px;
-     background-color: $white;
-     border-radius: 8px;
-     padding: 10px;
-     ul{
-       padding-top: 145px;
-     }
-   } 
-    .deleteLink{
-        color: $primary;
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 20px;
-        display: flex;
-        align-items:center ;
-        left: 0;
-        cursor: pointer;
-        span{
-            margin-left: 15px;
-            font-weight:bolder;
-        }
+    background-color: $white;
+    border-radius: 8px;
+    padding: 10px;
+    ul {
+      padding-top: 145px;
     }
+  }
+  .deleteLink {
+    color: $primary;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    left: 0;
+    cursor: pointer;
+    span {
+      margin-left: 15px;
+      font-weight: bolder;
+    }
+  }
 }
-.addBox{
-background-color: #FFFFFF4D;
-border-radius: 8px;
-width: 235px;
-height: 295px;
-cursor: pointer;
-transition: .2s ease-in-out;
-display: flex;
-align-items: center;
-justify-content: center;
-button{
+.addBox {
+  background-color: #ffffff4d;
+  border-radius: 8px;
+  width: 235px;
+  height: 295px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
     border: none;
     background-color: $white;
     padding: 13px;
@@ -94,25 +94,23 @@ button{
     height: 50px;
     border-radius: 100%;
     font-weight: bolder;
-   cursor: pointer;
-}
+    cursor: pointer;
+  }
 
-&:hover {
+  &:hover {
     box-shadow: 0px 10px 15px -7px rgba(0, 0, 0, 0.1);
   }
 }
-.infoList{
-  li{
-    border-bottom: 1px solid #0000001A;
+.infoList {
+  li {
+    border-bottom: 1px solid #0000001a;
     padding: 10px 0;
     margin-top: 10px;
   }
 }
-.products{
-    position: relative;
-  .product{
-  }
-  .cancelBtn{
+.products {
+  position: relative;
+  .cancelBtn {
     position: absolute;
     z-index: 9;
     right: -15px;
@@ -123,6 +121,19 @@ button{
     border-radius: 100%;
     border: none;
     cursor: pointer;
+  }
+}
 
+@media only screen and (max-width: 1400px) {
+  .container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }

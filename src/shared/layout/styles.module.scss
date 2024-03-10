@@ -140,11 +140,19 @@
   .header {
     padding: 0 10%;
   }
+  .footer {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   .header {
     padding: 0 5%;
+  }
+  .footer {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 

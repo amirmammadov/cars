@@ -35,14 +35,11 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setFavCarIds } from "../../features/appSlice";
 
-// import { useProjects } from "../../services/queries";
 import { products } from "../../mockData/products";
 
 const CarDetail = () => {
   const [isSliderOpen, setIsSliderOpen] = useState(false);
   const [isDegreeOpen, setIsDegreeOpen] = useState(false);
-
-  // const { data, isPending } = useProjects();
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -82,10 +79,6 @@ const CarDetail = () => {
   const handle360Degree = () => {
     setIsDegreeOpen((degree) => !degree);
   };
-
-  // if (isPending) {
-  //   return;
-  // }
 
   return (
     <div className="car__detail">
@@ -242,7 +235,6 @@ const CarDetail = () => {
           <Note product={product[0]} />
           <AboutDealer product={product[0]} />
           <Reviews />
-          <div className="car__detail__additional__left__divider" />
         </div>
         <div className="car__detail__additional__right">
           <CurrencyConvertor product={product[0]} />
@@ -257,6 +249,7 @@ const CarDetail = () => {
           </div>
         </div>
       </div>
+      <div className="car__detail__divider" />
       <div className="car__detail__similar">
         <div className="car__detail__similar__header">
           <div className="car__detail__similar__header__title">

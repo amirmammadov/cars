@@ -10,6 +10,14 @@
     $items: flex-start,
     $gap: 2rem
   );
+  @include x-large-screen {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @include x-large-screen {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
   &__title {
     @extend %font-title1;
