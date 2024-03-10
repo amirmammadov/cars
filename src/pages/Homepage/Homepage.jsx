@@ -5,7 +5,7 @@ import HomeCars from "../../scenes/HomeCars";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-import HomeHeroFilter from "../../scenes/HomeHeroFilter";
+import HeroFilter from "../../shared/HeroFilter";
 
 function Homepage() {
   const [isSeenUpArrow, setIsSeenUpArrow] = useState(false);
@@ -31,7 +31,7 @@ function Homepage() {
   return (
     <main className="home">
       <div className="home__hero">
-        <HomeHeroFilter />
+        <HeroFilter />
       </div>
       <HomeCars />
       {isSeenUpArrow && (

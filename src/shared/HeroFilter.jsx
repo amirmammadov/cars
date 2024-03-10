@@ -6,7 +6,7 @@ import OptionInputSingle from "../components/OptionInputSingle/OptionInputSingle
 
 import SearchIcon from "@mui/icons-material/Search";
 
-import "../sass/layout/_homeHeroFilter.scss";
+import "../sass/layout/_heroFilter.scss";
 
 import {
   filterTabOne,
@@ -35,7 +35,7 @@ const INITIAL_DATA = {
   code: "",
 };
 
-const HomeHeroFilter = () => {
+const HeroFilter = () => {
   const [data, setData] = useState(INITIAL_DATA);
   const [tabOneDefaultValue, setTabOneDefaultValue] = useState("all");
   const [tabTwoDefaultValue, setTwoOneDefaultValue] = useState("all");
@@ -219,4 +219,4 @@ const HomeHeroFilter = () => {
   );
 };
 
-export default HomeHeroFilter;
+export default HeroFilter;
