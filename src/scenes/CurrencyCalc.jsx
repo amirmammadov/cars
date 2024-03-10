@@ -8,8 +8,6 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import CurrencyInput from "../components/CurrencyInput/CurrencyInput";
 
-import { CurrencyAPI } from "../constants";
-
 const CurrencyCalc = ({ setIsCalcOpen }) => {
   const [amount1, setAmount1] = useState(0);
   const [amount2, setAmount2] = useState(0);
@@ -17,11 +15,15 @@ const CurrencyCalc = ({ setIsCalcOpen }) => {
   const [currency2, setCurrency2] = useState("USD");
   const [rates, setRates] = useState([]);
 
+  const currency = process.env.CURRENCY_API;
+
   useEffect(() => {
-    axios.get(CurrencyAPI).then((response) => {
-      setRates(response.data.rates);
-    });
-  }, []);
+    axios
+      .get(`http://data.fixer.io/api/latest?access_key=${currency}`)
+      .then((response) => {
+        setRates(response.data.rates);
+      });
+  }, [currency]);
 
   function format(number) {
     return number.toFixed(2);
