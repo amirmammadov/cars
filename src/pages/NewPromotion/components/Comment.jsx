@@ -15,7 +15,6 @@ const Comment = () => {
       <div className="comment__title">Əlavə qeyd</div>
       <div className="comment__content">
         <textarea
-          cols="60"
           rows="5"
           placeholder="Əlavə məlumatlarınızı qeyd edin."
           className="comment__content__area"
