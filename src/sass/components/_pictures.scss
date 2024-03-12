@@ -16,28 +16,28 @@
   }
 
   &__content {
-    // @include flexbox($justify: flex-start, $items: center, $gap: 1.25rem);
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     &__item {
       flex-grow: 1;
       border-radius: 8px;
-      border: 1px dashed var(--Second-Color, #620985);
+      border: 1px dashed var(--Second-Color, $primary);
       background: $white;
       padding: 20px;
       outline: none;
-      min-width: 235px;
-      min-height: 216px;
 
       &:hover {
         cursor: pointer;
       }
 
       &__img {
-        width: 200px;
+        width: 100%;
         height: 142px;
         border-radius: 8px;
         object-fit: cover;

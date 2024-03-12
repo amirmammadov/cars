@@ -33,6 +33,7 @@ const Type = () => {
         setClear={setClear}
         handleChange={handleChange}
         key="brand"
+        className="new__promotion__main__type__input"
       />
       <OptionInputSingle
         options={modelOptions}
@@ -42,6 +43,7 @@ const Type = () => {
         setClear={setClear}
         handleChange={handleChange}
         key="model"
+        className="new__promotion__main__type__input"
       />
       <FormControl>
         <RadioGroup

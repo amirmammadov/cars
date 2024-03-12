@@ -1,9 +1,11 @@
 import "../../sass/pages/_companyDetail.scss";
 
-import { Link } from "react-router-dom";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
 import { useCompany, useCompanies } from "../../services/queries";
+
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 import { useParams } from "react-router-dom";
 
@@ -36,21 +38,26 @@ const CompanyDetail = () => {
     return <div className="company__detail">{error}</div>;
   }
 
+  const breadcrumbs = [
+    <Link underline="hover" key="1" color="inherit" href="/">
+      Ana Səhifə
+    </Link>,
+    <Link underline="hover" key="2" color="inherit" href="/company">
+      Şirkətlər
+    </Link>,
+    <Typography key="3" color="text.primary">
+      {company.companyName}
+    </Typography>,
+  ];
+
   return (
     <main className="company__detail">
-      <div className="company__detail__links">
-        <Link to="/" className="company__detail__links__item">
-          Ana Səhifə
-        </Link>
-        <ArrowForwardIosIcon sx={{ color: "#7b7b7b", fontSize: 20 }} />
-        <Link to="/company" className="company__detail__links__item">
-          Şirkətlər
-        </Link>
-        <ArrowForwardIosIcon sx={{ color: "#7b7b7b", fontSize: 20 }} />
-        <Link to="#" className="company__detail__links__item">
-          {company.companyName}
-        </Link>
-      </div>
+      <Breadcrumbs
+        separator={<NavigateNextIcon fontSize="small" />}
+        aria-label="breadcrumb"
+      >
+        {breadcrumbs}
+      </Breadcrumbs>
       <div className="company__detail__topBar">
         <div className="company__detail__topBar__car">
           {company.companyName}, Bakı

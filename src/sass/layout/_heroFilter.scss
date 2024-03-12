@@ -26,6 +26,7 @@
 
   &__secondLine > * {
     flex-grow: 1;
+    max-width: 250px;
   }
 
   &__thirdLine {
@@ -46,6 +47,10 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        max-width: 100px; /* Set a maximum width for the input */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
 
       input::-webkit-outer-spin-button,

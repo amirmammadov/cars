@@ -16,7 +16,7 @@
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
     gap: 20px;
     width: 100%;
 
@@ -34,13 +34,5 @@
         border: 1px solid $primary;
       }
     }
-
-    // &__select {
-    //   max-width: 90px;
-    // }
-
-    // &__phone {
-    //   max-width: 205px;
-    // }
   }
 }

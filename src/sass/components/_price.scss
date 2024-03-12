@@ -15,6 +15,12 @@
       @extend %font-normal;
       border: 1px solid $white;
       outline: none;
+      @include desktop {
+        width: 150px;
+      }
+      @include tablet {
+        width: 100px;
+      }
 
       &:focus {
         border: 1px solid $primary;

@@ -28,6 +28,13 @@
       line-height: 24px;
       padding: 10px;
       outline: none;
+      width: 500px;
+      @include desktop {
+        width: 400px;
+      }
+      @include tablet {
+        width: 300px;
+      }
 
       &:focus {
         border: 1px solid $primary;

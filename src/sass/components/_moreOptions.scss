@@ -2,8 +2,7 @@
 
 .more__options {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
   row-gap: 30px;
   column-gap: 20px;
   width: 100%;
