@@ -20,7 +20,6 @@ export default function OptionInputMultiple({
 
   const handleAutocompleteChange = (event, value) => {
     setSelectedOptions(value);
-
     setClear(false);
     handleChange({
       target: { name: keyValue, value: value || [] },
@@ -33,6 +32,16 @@ export default function OptionInputMultiple({
     }
   }, [clear]);
 
+  const renderTags = (value, getTagProps) => {
+    if (value.length === 0) {
+      return null;
+    } else if (value.length === 1) {
+      return <div {...getTagProps({ index: 0 })}>{value[0].title}</div>;
+    } else {
+      return <div>{`${value.length} selected`}</div>;
+    }
+  };
+
   return (
     <Autocomplete
       multiple
@@ -43,14 +52,13 @@ export default function OptionInputMultiple({
       sx={{
         overflow: "hidden",
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-          { borderColor: "#620985", borderRadius: "8px", borderWidth: "1px" },
+          {
+            borderColor: "#620985",
+            borderRadius: "8px",
+            borderWidth: "1px",
+          },
         "& .MuiAutocomplete-inputRoot": { padding: "5px" },
         borderRadius: "8px",
-        "& .MuiAutocomplete-tag": {
-          display: "flex",
-          alignItems: "center",
-          gap: "8px",
-        },
         ".MuiOutlinedInput-notchedOutline": {
           borderColor: "transparent",
         },
@@ -89,7 +97,7 @@ export default function OptionInputMultiple({
           />
         </li>
       )}
-      // style={{ width: 270 }}
+      renderTags={renderTags}
       renderInput={(params) => (
         <TextField
           {...params}
