@@ -20,3 +20,14 @@
     background-color: $hover;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .primary {
+    min-width: max-content;
+    padding: 10px 15px;
+    border-radius: 100px;
+  }
+  .text {
+    display: none;
+  }
+}

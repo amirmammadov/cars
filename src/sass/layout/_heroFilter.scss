@@ -47,7 +47,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        max-width: 100px; /* Set a maximum width for the input */
+        max-width: 100px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -137,7 +137,7 @@
 
       &:hover {
         cursor: pointer;
-        color: $grey1;
+        color: $white-light;
       }
     }
 

@@ -1,22 +1,56 @@
 import { useEffect, useState } from "react";
+
 import styles from "./styles.module.scss";
 import logo from "../../assets/logo.svg";
+
+import CloseIcon from "@mui/icons-material/Close";
+
 import { Link, useLocation } from "react-router-dom";
+
 import PrimaryBtn from "../../components/buttons/PrimaryBtn";
+
 import { Icon } from "@fluentui/react";
 
 function Header() {
   const [activePage, setActivePage] = useState("/");
+  const [hamburgerClicked, setHamburgerClicked] = useState(false);
+  const [windowSize, setWindowSize] = useState(0);
 
   const location = useLocation();
 
   useEffect(() => {
     setActivePage(location.pathname);
+    setHamburgerClicked(false);
   }, [location]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    if (windowSize > 768) {
+      setHamburgerClicked(false);
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, [windowSize]);
+
+  const handleHamburgerOpen = () => {
+    setHamburgerClicked((prevValue) => !prevValue);
+  };
 
   return (
     <div className={styles.header}>
-      <img src={logo} alt="" />
+      <div className={styles.hamburger} onClick={handleHamburgerOpen}>
+        <span className={styles.hamburgerClicked}></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src={logo} alt="" className={styles.logo} />
       <div className={styles.nav}>
         <Link className={activePage === "/" ? styles.active : ""} to="/">
           Ana səhifə
@@ -44,6 +78,41 @@ function Header() {
           icon={<Icon iconName="Add" />}
         />
       </div>
+      {hamburgerClicked && windowSize < 768 && (
+        <div className={styles.mobileFixed}>
+          <div className={styles.mobileNav}>
+            <div className={styles.mobileNavHeader}>
+              <div className={styles.mobileNavHeaderText}>Menu</div>
+              <div
+                className={styles.mobileNavHeaderClose}
+                onClick={handleHamburgerOpen}
+              >
+                <CloseIcon />
+              </div>
+            </div>
+            <div className={styles.mobileNavLists}>
+              <Link className={styles.mobileNavListsItem} to="/">
+                Ana Səhifə
+              </Link>
+              <Link className={styles.mobileNavListsItem} to="/elan">
+                Elanlar
+              </Link>
+              <Link className={styles.mobileNavListsItem} to="/company">
+                Şirkətlər
+              </Link>
+              <Link className={styles.mobileNavListsItem} to="/faq">
+                FAQ
+              </Link>
+              <Link className={styles.mobileNavListsItem} to="/favorites">
+                Seçilmişlər
+              </Link>
+              <Link className={styles.mobileNavListsItem} to="/comparison">
+                Müqayisələr
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
