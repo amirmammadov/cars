@@ -10,7 +10,7 @@ function PrimaryBtn({ text, icon, newPageTitle }) {
       className={styles.primary}
       onClick={() => navigate(`/${newPageTitle}`)}
     >
-      {text}
+      <span className={styles.text}>{text}</span>
       {icon && <span>{icon}</span>}
     </button>
   );
