@@ -110,6 +110,9 @@ function Header() {
                 Müqayisələr
               </Link>
             </div>
+            <Link to="#" className={styles.loginBtn}>
+              Login
+            </Link>
           </div>
         </div>
       )}
