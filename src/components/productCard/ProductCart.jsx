@@ -68,20 +68,19 @@ function ProductCart({ product }) {
           </h1>
           {product.salon && <button>Salon</button>}
         </div>
-        <p>{product.name}</p>
-
+        <p className={styles.productName}>{product.name}</p>
         <ul>
           <li>{product.year}</li>
           <li className={styles.border}>{product.capacity}</li>
-          <li>{product.distance}</li>
+          <li className={styles.distance}>{product.distance}</li>
         </ul>
         <ul className={styles.dateInfo}>
           <li>
-            <Icon iconName="Poi" />
+            <Icon iconName="Poi" className={styles.icon} />
             {product.location}
           </li>
           <li>
-            <Icon iconName="Clock" />
+            <Icon iconName="Clock" className={styles.icon} />
             {product.date}
           </li>
         </ul>

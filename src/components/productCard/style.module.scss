@@ -2,7 +2,7 @@
 
 .cardWrapper {
   border-radius: 8px;
-  max-width: 250px;
+  // max-width: 250px;
   background-color: $white;
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -97,6 +97,14 @@
     border-left: 1px solid $background;
     border-right: 1px solid $background;
   }
+
+  .distance {
+    max-width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
   .dateInfo {
     padding: 10px 0;
 
@@ -111,6 +119,21 @@
     i {
       font-size: 14px;
       margin-right: 4px;
+    }
+  }
+
+  .productName {
+    max-width: 160px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .dateInfo {
+    .icon {
+      display: none;
     }
   }
 }

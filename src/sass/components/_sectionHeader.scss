@@ -18,5 +18,11 @@
     background-color: transparent;
     @include flexbox($justify: center, $items: center, $gap: 1rem);
     cursor: pointer;
+
+    &__text {
+      @include mobile {
+        display: none;
+      }
+    }
   }
 }
