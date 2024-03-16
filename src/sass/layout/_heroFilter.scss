@@ -163,3 +163,9 @@
     }
   }
 }
+
+.home__hero__content:last-child {
+  @include tablet {
+    display: none;
+  }
+}

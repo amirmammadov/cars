@@ -20,6 +20,10 @@
       opacity: 0.8;
       cursor: pointer;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__hero {

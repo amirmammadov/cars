@@ -15,7 +15,7 @@ const SectionHeader = ({ title }) => {
           navigate("/elan");
         }}
       >
-        Hamısına bax
+        <p className="section__header__link__text">Hamısına bax</p>
         <img
           src="/carDetail/right-arrow.png"
           alt="arrow"
