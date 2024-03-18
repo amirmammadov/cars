@@ -38,7 +38,7 @@ export default function OptionInputSingle({
         popupIndicator: "custom-popup-indicator",
       }}
       sx={{
-        minWidth: "120px",
+        width: "100%",
         margin: `${isYear && "0"}`,
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
           { borderColor: "#620985", borderRadius: "8px", borderWidth: "1px" },

@@ -4,6 +4,10 @@
   @include flexbox($justify: space-between, $items: center);
   width: 100%;
   margin: 0 auto;
+  @include tablet {
+    background-color: $white;
+    padding: 5px;
+  }
 
   &__title {
     @extend %font-title7;
