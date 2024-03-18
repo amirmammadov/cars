@@ -76,6 +76,7 @@ const HeroFilter = () => {
 
   return (
     <div className="home__hero__content">
+      <div className="home__hero__content__title">Filtrlə</div>
       <div className="home__hero__content__firstLine">
         <FilterTab
           handleChange={handleChange}
@@ -95,42 +96,50 @@ const HeroFilter = () => {
         />
       </div>
       <div className="home__hero__content__secondLine">
-        <OptionInputSingle
-          options={brandOptions}
-          holder="Marka"
-          keyValue="brand"
-          clear={clear}
-          setClear={setClear}
-          handleChange={handleChange}
-          key="brand"
-        />
-        <OptionInputMultiple
-          options={modelOptions}
-          holder="Model"
-          keyValue="model"
-          clear={clear}
-          setClear={setClear}
-          handleChange={handleChange}
-          key="model"
-        />
-        <OptionInputMultiple
-          options={banOptions}
-          holder="Ban növü"
-          keyValue="banType"
-          clear={clear}
-          setClear={setClear}
-          handleChange={handleChange}
-          key="banType"
-        />
-        <OptionInputSingle
-          options={cityOptions}
-          holder="Şəhər"
-          keyValue="city"
-          clear={clear}
-          setClear={setClear}
-          handleChange={handleChange}
-          key="city"
-        />
+        <div className="home__hero__content__secondLine__item">
+          <OptionInputSingle
+            options={brandOptions}
+            holder="Marka"
+            keyValue="brand"
+            clear={clear}
+            setClear={setClear}
+            handleChange={handleChange}
+            key="brand"
+          />
+        </div>
+        <div className="home__hero__content__secondLine__item">
+          <OptionInputMultiple
+            options={modelOptions}
+            holder="Model"
+            keyValue="model"
+            clear={clear}
+            setClear={setClear}
+            handleChange={handleChange}
+            key="model"
+          />
+        </div>
+        <div className="home__hero__content__secondLine__item tablet__none">
+          <OptionInputMultiple
+            options={banOptions}
+            holder="Ban növü"
+            keyValue="banType"
+            clear={clear}
+            setClear={setClear}
+            handleChange={handleChange}
+            key="banType"
+          />
+        </div>
+        <div className="home__hero__content__secondLine__item tablet__none">
+          <OptionInputSingle
+            options={cityOptions}
+            holder="Şəhər"
+            keyValue="city"
+            clear={clear}
+            setClear={setClear}
+            handleChange={handleChange}
+            key="city"
+          />
+        </div>
       </div>
       <div className="home__hero__content__thirdLine">
         <div className="home__hero__content__thirdLine__amount">

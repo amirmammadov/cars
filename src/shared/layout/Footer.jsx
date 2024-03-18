@@ -82,7 +82,7 @@ function Footer() {
         </div>
       </div>
       <p className={styles.copyright}>
-        <span>&copy;</span> 2023 by MOTO4
+        <span>&copy;</span> 2024 by MOTO4
       </p>
     </div>
   );
