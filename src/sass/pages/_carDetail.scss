@@ -19,23 +19,6 @@
     padding-right: 5%;
   }
 
-  &__topLinks {
-    @include flexbox($justify: flex-start, $items: center, $gap: 0.5rem);
-
-    &__link {
-      @extend %font-normal;
-      color: $lightFont;
-
-      &:hover {
-        color: $primary;
-      }
-    }
-
-    &__name {
-      color: $font;
-    }
-  }
-
   &__general {
     @include flexbox(
       $direction: column,
@@ -187,22 +170,6 @@
             font-weight: 500;
             border-radius: 8px;
           }
-
-          &__degree {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            @include flexbox($justify: center, $items: center);
-
-            &__btn {
-              border: none;
-              outline: none;
-              background-color: transparent;
-            }
-          }
         }
       }
     }
@@ -308,29 +275,6 @@
       grid-template-columns: repeat(4, auto);
       column-gap: 20px;
       row-gap: 30px;
-    }
-  }
-
-  &__degree {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-
-    &__close {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: transparent;
-      border: none;
-      outline: none;
-      cursor: pointer;
     }
   }
 

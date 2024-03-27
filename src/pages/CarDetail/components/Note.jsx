@@ -19,8 +19,6 @@ const others = [
 const Note = ({ product }) => {
   return (
     <div className="note">
-      <div className="note__title">Əlavə qeydlər</div>
-      <div className="note__content">{product.note.content}</div>
       <div className="note__extra">
         <div className="note__extra__title">Avtomobil təchizatları</div>
         <div className="note__extra__content">
@@ -41,6 +39,8 @@ const Note = ({ product }) => {
           ))}
         </div>
       </div>
+      <div className="note__title">Əlavə qeydlər</div>
+      <div className="note__content">{product.note.content}</div>
     </div>
   );
 };

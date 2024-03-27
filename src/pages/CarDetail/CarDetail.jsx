@@ -4,7 +4,6 @@ import "../../sass/pages/_carDetail.scss";
 
 import CarSwipper from "../../scenes/CarSwipper";
 import {
-  AboutDealer,
   Basic,
   CurrencyConvertor,
   ExtraInfo,
@@ -12,12 +11,14 @@ import {
   OwnerInfo,
 } from "./components";
 
-import Reviews from "../../components/Reviews/Reviews";
-
 import ProductCart from "../../components/productCard/ProductCart";
-import DegreeSlider from "../../components/DegreeSlider/DegreeSlider";
 
 import { carPictures } from "../../assets/index";
+
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
@@ -26,8 +27,6 @@ import GppMaybeIcon from "@mui/icons-material/GppMaybe";
 import BalanceIcon from "@mui/icons-material/Balance";
 import UploadIcon from "@mui/icons-material/Upload";
 import ImageIcon from "@mui/icons-material/Image";
-import ThreeSixtyIcon from "@mui/icons-material/ThreeSixty";
-import CloseIcon from "@mui/icons-material/Close";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import { useParams } from "react-router-dom";
@@ -39,7 +38,6 @@ import { products } from "../../mockData/products";
 
 const CarDetail = () => {
   const [isSliderOpen, setIsSliderOpen] = useState(false);
-  const [isDegreeOpen, setIsDegreeOpen] = useState(false);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -76,23 +74,26 @@ const CarDetail = () => {
     );
   };
 
-  const handle360Degree = () => {
-    setIsDegreeOpen((degree) => !degree);
-  };
+  const breadcrumbs = [
+    <Link underline="hover" key="1" color="inherit" href="/">
+      Ana Səhifə
+    </Link>,
+    <Link underline="hover" key="2" color="inherit" href="/elan">
+      Elanlar
+    </Link>,
+    <Typography key="3" color="text.primary">
+      Mercedes-Benz
+    </Typography>,
+  ];
 
   return (
     <div className="car__detail">
-      <div className="car__detail__topLinks">
-        <a href="/" className="car__detail__topLinks__link">
-          Ana Səhifə
-        </a>
-        <img src="/carDetail/switch.png" alt="switch" />
-        <a href="/elan" className="car__detail__topLinks__link">
-          Salonlar
-        </a>
-        <img src="/carDetail/switch.png" alt="switch" />
-        <p className="car__detail__topLinks__name">Mercedes-Benz</p>
-      </div>
+      <Breadcrumbs
+        separator={<NavigateNextIcon fontSize="small" />}
+        aria-label="breadcrumb"
+      >
+        {breadcrumbs}
+      </Breadcrumbs>
       <div className="car__detail__general">
         <div className="car__detail__general__header">
           <div className="car__detail__general__header__info">
@@ -111,24 +112,20 @@ const CarDetail = () => {
               ) : (
                 <FavoriteIcon
                   iconname="HeartFill"
-                  sx={{ color: "#4e4e4e", "&:hover": { color: "#620985" } }}
+                  sx={{
+                    color: "#620985",
+                  }}
                 />
               )}
             </button>
             <button className="car__detail__general__header__links__btn">
-              <BalanceIcon
-                sx={{ color: "#4e4e4e", "&:hover": { color: "#620985" } }}
-              />
+              <BalanceIcon sx={{ color: "#620985" }} />
             </button>
             <button className="car__detail__general__header__links__btn">
-              <GppMaybeIcon
-                sx={{ color: "#4e4e4e", "&:hover": { color: "#620985" } }}
-              />
+              <GppMaybeIcon sx={{ color: "#620985" }} />
             </button>
             <button className="car__detail__general__header__links__btn">
-              <UploadIcon
-                sx={{ color: "#4e4e4e", "&:hover": { color: "#620985" } }}
-              />
+              <UploadIcon sx={{ color: "#620985" }} />
             </button>
           </div>
         </div>
@@ -174,20 +171,7 @@ const CarDetail = () => {
             </div>
             <div className="car__detail__general__pictures__aside__item">
               <img src={`/carDetail/car3.jpg`} alt="car" />
-              <div className="car__detail__general__pictures__aside__item__degree">
-                <button
-                  className="car__detail__general__pictures__aside__item__degree__btn"
-                  onClick={handle360Degree}
-                >
-                  <ThreeSixtyIcon
-                    sx={{
-                      color: "#fff",
-                      fontSize: "30px",
-                      "&:hover": { cursor: "pointer" },
-                    }}
-                  />
-                </button>
-              </div>
+              <div className="car__detail__general__pictures__aside__item__degree"></div>
             </div>
             <div className="car__detail__general__pictures__aside__item">
               <img src={`/carDetail/car4.jpg`} alt="car" />
@@ -210,31 +194,12 @@ const CarDetail = () => {
             </button>
           </div>
         )}
-        {isDegreeOpen && (
-          <div className="car__detail__degree">
-            <DegreeSlider />
-            <button
-              className="car__detail__degree__close"
-              onClick={handle360Degree}
-            >
-              <CloseIcon
-                sx={{
-                  color: "#fff",
-                  fontSize: "40px",
-                  "&:hover": { color: "red" },
-                }}
-              />
-            </button>
-          </div>
-        )}
       </div>
       <div className="car__detail__additional">
         <div className="car__detail__additional__left">
           <ExtraInfo product={product[0]} />
           <Basic product={product[0]} />
           <Note product={product[0]} />
-          <AboutDealer product={product[0]} />
-          <Reviews />
         </div>
         <div className="car__detail__additional__right">
           <CurrencyConvertor product={product[0]} />

@@ -14,13 +14,11 @@ import SalonItem from "../../components/SalonItem/SalonItem";
 import OwnerInfo from "./components/OwnerInfo";
 import Countries from "./components/Countries";
 import Dealer from "./components/Dealer";
-import AddReview from "./components/AddReview";
 
 import GppMaybeIcon from "@mui/icons-material/GppMaybe";
 import BalanceIcon from "@mui/icons-material/Balance";
 import UploadIcon from "@mui/icons-material/Upload";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import Reviews from "../../components/Reviews/Reviews";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 const SalonDetail = () => {
@@ -91,8 +89,6 @@ const SalonDetail = () => {
         <OwnerInfo />
         <Countries />
         <Dealer />
-        <AddReview />
-        <Reviews />
       </div>
       <div className="company__detail__divider" />
       <div className="company__detail__similar">
