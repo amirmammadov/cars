@@ -70,10 +70,10 @@ function Header() {
           Elanlar
         </Link>
         <Link
-          className={activePage === "/company" ? styles.active : ""}
-          to="/company"
+          className={activePage === "/salons" ? styles.active : ""}
+          to="/salons"
         >
-          Şirkətlər
+          Salonlar
         </Link>
         <Link className={activePage === "/faq" ? styles.active : ""} to="/faq">
           FAQ

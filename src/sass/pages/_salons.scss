@@ -10,6 +10,14 @@
     $items: flex-start,
     $gap: 60px
   );
+  @include x-large-screen {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @include large-screen {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
   &__section {
     @include flexbox(
@@ -27,31 +35,20 @@
       gap: 20px;
       width: 100%;
       flex-wrap: wrap;
+      @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile3 {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     .pagination .Mui-selected {
       background-color: $primary;
       color: $white;
     }
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .companies {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .companies {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .companies__section__content {
-    grid-template-columns: repeat(3, 1fr);
   }
 }

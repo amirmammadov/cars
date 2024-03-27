@@ -1,4 +1,4 @@
-import "../../sass/pages/_companyDetail.scss";
+import "../../sass/pages/_salonDetail.scss";
 
 import { useCompany, useCompanies } from "../../services/queries";
 
@@ -9,7 +9,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 import { useParams } from "react-router-dom";
 
-import CompanyItem from "../../components/CompanyItem/CompanyItem";
+import SalonItem from "../../components/SalonItem/SalonItem";
 
 import OwnerInfo from "./components/OwnerInfo";
 import Countries from "./components/Countries";
@@ -23,7 +23,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import Reviews from "../../components/Reviews/Reviews";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
-const CompanyDetail = () => {
+const SalonDetail = () => {
   const { id } = useParams();
 
   const similarCompanies = useCompanies(1);
@@ -96,7 +96,7 @@ const CompanyDetail = () => {
       </div>
       <div className="company__detail__divider" />
       <div className="company__detail__similar">
-        <SectionHeader title="Bənzər Şirkətlər" />
+        <SectionHeader title="Bənzər Salonlar" />
         <div className="company__detail__similar__content">
           {similarCompanies.isPending ? (
             <div>Loading...</div>
@@ -104,7 +104,7 @@ const CompanyDetail = () => {
             <div>{similarCompanies.error}</div>
           ) : (
             similarCompanies.data.currentItems.map((company) => (
-              <CompanyItem key={company.id} {...company} />
+              <SalonItem key={company.id} {...company} />
             ))
           )}
         </div>
@@ -113,4 +113,4 @@ const CompanyDetail = () => {
   );
 };
 
-export default CompanyDetail;
+export default SalonDetail;
