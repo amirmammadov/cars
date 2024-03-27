@@ -76,7 +76,7 @@
       border-radius: 4px;
     }
     h1 {
-      color: $red;
+      color: $primary;
       font-size: 20px;
       font-weight: 600;
       line-height: 24px;
@@ -105,13 +105,15 @@
 
   .dateInfo {
     padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
 
     color: $lightFont;
     font-size: 14px;
     font-weight: 400;
     ul li {
       display: flex;
-
       align-items: center;
     }
     i {
@@ -133,5 +135,38 @@
     .icon {
       display: none;
     }
+  }
+}
+
+@media only screen and (max-width: 450px) and (min-width: 390px) {
+  .info .generalInfo {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .info .header h1 {
+    font-size: 18px;
+  }
+
+  .info .generalInfo li {
+    font-size: 14px;
+  }
+
+  .info .generalInfo .border {
+    padding: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .info .generalInfo .distance {
+    max-width: 50px;
+  }
+
+  .info .productName {
+    max-width: 130px;
+  }
+
+  .info .dateInfo {
+    gap: 0.5rem;
   }
 }

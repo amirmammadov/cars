@@ -10,7 +10,7 @@ import { Pagination } from "@mui/material";
 
 import { useCompanies } from "../../services/queries";
 
-import { ITEMS_PER_PAGE } from "../../constants";
+import { ITEMS_PER_PAGE_COMPANY } from "../../constants";
 
 const Companies = () => {
   const [page, setPage] = useState(1);
@@ -19,11 +19,13 @@ const Companies = () => {
     useCompanies(page);
 
   const PAGINATION_NUMBER =
-    Math.ceil(data?.totalItems / ITEMS_PER_PAGE) || undefined;
+    Math.ceil(data?.totalItems / ITEMS_PER_PAGE_COMPANY) || undefined;
 
   function handlePagination(_, value) {
     setPage(value);
   }
+
+  console.log(data?.currentItems);
 
   return (
     <main className="companies">

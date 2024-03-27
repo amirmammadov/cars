@@ -1,4 +1,6 @@
 @import "../../assets/colors.scss";
+@import "../../sass//utils/variables";
+@import "../../sass/utils/mixins";
 
 .container {
   background-color: $background;
@@ -29,6 +31,10 @@
       opacity: 0.8;
       cursor: pointer;
     }
+
+    @include tablet {
+      display: none;
+    }
   }
 }
 .titleWrapper {
@@ -53,14 +59,38 @@
     }
   }
 }
+// .products {
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: auto auto auto auto;
+//   column-gap: 20px;
+//   row-gap: 30px;
+//   justify-content: space-between;
+//   margin: 30px 0;
+// }
+
 .products {
-  width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
   column-gap: 20px;
   row-gap: 30px;
-  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
   margin: 30px 0;
+  @include large-screen {
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .pagination {

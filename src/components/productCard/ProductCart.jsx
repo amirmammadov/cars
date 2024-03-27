@@ -59,17 +59,16 @@ function ProductCart({ product }) {
             )}
           </button>
         </div>
-        <img src={`/productImgs/${product.img}.svg`} alt="" />
+        <img src={`/productImgs/${product.img}.svg`} alt="car" />
       </div>
       <div className={styles.info}>
         <div className={styles.header}>
           <h1>
             {product.price} <span>{product.currency}</span>
           </h1>
-          {product.salon && <button>Salon</button>}
         </div>
         <p className={styles.productName}>{product.name}</p>
-        <ul>
+        <ul className={styles.generalInfo}>
           <li>{product.year}</li>
           <li className={styles.border}>{product.capacity}</li>
           <li className={styles.distance}>{product.distance}</li>
