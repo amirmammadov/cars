@@ -12,6 +12,9 @@
   &__title {
     @extend %font-title7;
     color: $mainDark;
+    @include mobile3 {
+      font-size: 1.2rem;
+    }
   }
 
   &__link {

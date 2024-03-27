@@ -475,7 +475,8 @@ export const moreOptionsIterator = [
 export const locationOfCity =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194472.76853003306!2d49.69014890705255!3d40.394737007992184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2sBaku!5e0!3m2!1sen!2saz!4v1698083147829!5m2!1sen!2saz";
 
-export const ITEMS_PER_PAGE = 4;
+export const ITEMS_PER_PAGE_FEATURED = 8;
+export const ITEMS_PER_PAGE_COMPANY = 8;
 
 export const companies = [
   { title: "AutoStyle" },
@@ -495,6 +496,5 @@ export const rating = [
   { title: 2 },
   { title: 3 },
   { title: 4 },
-  { title: 5 },
   { title: 5 },
 ];

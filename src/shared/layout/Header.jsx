@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -38,6 +38,14 @@ function Header() {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, [windowSize]);
+
+  useEffect(() => {
+    if (hamburgerClicked) {
+      document.documentElement.classList.add("no-scroll");
+    } else {
+      document.documentElement.classList.remove("no-scroll");
+    }
+  }, [hamburgerClicked]);
 
   const handleHamburgerOpen = () => {
     setHamburgerClicked((prevValue) => !prevValue);

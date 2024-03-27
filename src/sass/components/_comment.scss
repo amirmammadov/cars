@@ -29,6 +29,7 @@
       padding: 10px;
       outline: none;
       width: 500px;
+      resize: vertical;
       @include desktop {
         width: 400px;
       }

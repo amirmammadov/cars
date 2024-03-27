@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "../sass/layout/_homeCars.scss";
 
-import { useProjects } from "../services/queries";
+import { useFeaturedCars } from "../services/queries";
 
 import { Pagination } from "@mui/material";
 
@@ -11,16 +11,16 @@ import SectionHeader from "../components/SectionHeader/SectionHeader";
 
 import { products } from "../mockData/products";
 
-import { ITEMS_PER_PAGE } from "../constants";
+import { ITEMS_PER_PAGE_FEATURED } from "../constants";
 
 const HomeCars = () => {
   const [page, setPage] = useState(1);
 
   const { data, isPending, isPlaceholderData, isError, error } =
-    useProjects(page);
+    useFeaturedCars(page);
 
   const PAGINATION_NUMBER =
-    Math.ceil(data?.totalItems / ITEMS_PER_PAGE) || undefined;
+    Math.ceil(data?.totalItems / ITEMS_PER_PAGE_FEATURED) || undefined;
 
   function handlePagination(_, value) {
     setPage(value);
@@ -29,7 +29,7 @@ const HomeCars = () => {
   return (
     <main className="home__cars">
       <section className="home__cars__section">
-        <SectionHeader title="Statistik elanlar" filterTitle="Rating" />
+        <SectionHeader title="Önə çəkilmiş elanlar" filterTitle="Rating" />
         <div className="home__cars__section__content">
           {isPending ? (
             <div>Loading...</div>
@@ -60,6 +60,7 @@ const HomeCars = () => {
             return <ProductCart key={product.id} product={product} />;
           })}
         </div>
+        <Pagination count={5} shape="rounded" className="pagination" />
       </section>
     </main>
   );

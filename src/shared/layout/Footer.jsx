@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 import { Icon } from "@fluentui/react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -11,8 +11,7 @@ const mainLinks = [
   { id: 1, text: "Ana səhifə", url: "/" },
   { id: 2, text: "Elanlar", url: "/elan" },
   { id: 3, text: "FAQ", url: "/faq" },
-  { id: 4, text: "Əlaqə", url: "#" },
-  { id: 5, text: "Qaydalar və şərtlər", url: "#" },
+  { id: 4, text: "Qaydalar və şərtlər", url: "#" },
 ];
 
 const contactLinks = [
