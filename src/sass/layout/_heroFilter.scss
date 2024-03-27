@@ -64,88 +64,96 @@
   }
 
   &__thirdLine {
-    @include flexbox($justify: space-between, $items: center, $gap: 1.25rem);
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
 
-    &__amount {
-      @include flexbox($justify: flex-start, $items: center);
+    &__item {
+      flex-grow: 1;
+      width: 25%;
 
-      input {
-        margin: 0;
-        border: none;
+      &__amount {
+        width: 100%;
+        @include flexbox($justify: flex-start, $items: center);
+
+        input {
+          width: 50%;
+          margin: 0;
+          border: none;
+          outline: none;
+          padding: 10px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background: $white;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        input[type="number"] {
+          appearance: textfield;
+          -moz-appearance: textfield;
+        }
+
+        input.amount__min {
+          border-bottom-left-radius: 8px;
+          border-top-left-radius: 8px;
+        }
+
+        input.amount__max {
+          border-bottom-right-radius: 8px;
+          border-top-right-radius: 8px;
+        }
+      }
+
+      &__currency {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: $white;
         outline: none;
-        padding: 10px;
+        display: flex;
+        align-self: flex-start;
+
+        &:focus {
+          border-color: $primary;
+        }
+      }
+
+      &__year {
+        @include flexbox($justify: flex-start, $items: center);
+        width: 100%;
+      }
+
+      &__code {
+        width: 100%;
+        padding: 14px;
+        border-radius: 8px;
+        outline: none;
         border: 1px solid rgba(0, 0, 0, 0.1);
         background: $white;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        max-width: 100px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
 
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-
-      input[type="number"] {
-        appearance: textfield;
-        -moz-appearance: textfield;
-      }
-
-      input.amount__min {
-        max-width: 100px;
-        border-bottom-left-radius: 8px;
-        border-top-left-radius: 8px;
-      }
-
-      input.amount__max {
-        max-width: 100px;
-        border-bottom-right-radius: 8px;
-        border-top-right-radius: 8px;
-      }
-    }
-
-    &__currency {
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      padding: 8px 10px;
-      border-radius: 8px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      background: $white;
-      outline: none;
-      margin-right: auto;
-
-      &:focus {
-        border-color: $primary;
-      }
-    }
-
-    &__year {
-      @include flexbox($justify: flex-start, $items: center);
-    }
-
-    &__code {
-      max-width: 100px;
-      padding: 14px;
-      border-radius: 8px;
-      outline: none;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      background: $white;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-
-      &:focus {
-        border-color: $primary;
+        &:focus {
+          border-color: $primary;
+        }
       }
     }
 
@@ -153,20 +161,29 @@
       flex-direction: column;
 
       .home__hero__content__thirdLine {
-        &__amount {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+        width: 100%;
+
+        &__item {
           width: 100%;
 
-          input {
+          &__amount {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+
+            input {
+              min-width: 100%;
+            }
+          }
+
+          &__year {
             min-width: 100%;
           }
-        }
 
-        &__currency,
-        &__year,
-        &__code {
-          min-width: 100%;
+          &__currency,
+          &__code {
+            width: 100%;
+          }
         }
       }
     }

@@ -142,64 +142,72 @@ const HeroFilter = () => {
         </div>
       </div>
       <div className="home__hero__content__thirdLine">
-        <div className="home__hero__content__thirdLine__amount">
+        <div className="home__hero__content__thirdLine__item">
+          <div className="home__hero__content__thirdLine__item__amount">
+            <input
+              type="text"
+              value={data.minPrice}
+              name="minPrice"
+              onChange={handleChange}
+              placeholder="Qiymət,Min"
+              className="amount__min"
+            />
+            <input
+              type="text"
+              value={data.maxPrice}
+              name="maxPrice"
+              onChange={handleChange}
+              placeholder="Max"
+              className="amount__max"
+            />
+          </div>
+        </div>
+        <div className="home__hero__content__thirdLine__item">
+          <select
+            className="home__hero__content__thirdLine__item__currency"
+            value={data.currency}
+            onChange={handleCurrencyChange}
+            name="currency"
+          >
+            <option value="AZN">AZN</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>
+        <div className="home__hero__content__thirdLine__item">
+          <div className="home__hero__content__thirdLine__item__year">
+            <OptionInputSingle
+              options={yearOptions}
+              holder="İl,Min"
+              isYear
+              keyValue="minYear"
+              clear={clear}
+              setClear={setClear}
+              handleChange={handleChange}
+              key="minYear"
+            />
+            <OptionInputSingle
+              options={yearOptions}
+              holder="Max"
+              isYear
+              keyValue="maxYear"
+              clear={clear}
+              setClear={setClear}
+              handleChange={handleChange}
+              key="maxYear"
+            />
+          </div>
+        </div>
+        <div className="home__hero__content__thirdLine__item">
           <input
             type="text"
-            value={data.minPrice}
-            name="minPrice"
+            name="code"
+            value={data.code}
             onChange={handleChange}
-            placeholder="Qiymət,Min"
-            className="amount__min"
-          />
-          <input
-            type="text"
-            value={data.maxPrice}
-            name="maxPrice"
-            onChange={handleChange}
-            placeholder="Max"
-            className="amount__max"
+            placeholder="Elan kodu"
+            className="home__hero__content__thirdLine__item__code"
           />
         </div>
-        <select
-          className="home__hero__content__thirdLine__currency"
-          value={data.currency}
-          onChange={handleCurrencyChange}
-          name="currency"
-        >
-          <option value="AZN">AZN</option>
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-        </select>
-        <div className="home__hero__content__thirdLine__year">
-          <OptionInputSingle
-            options={yearOptions}
-            holder="İl,Min"
-            isYear
-            keyValue="minYear"
-            clear={clear}
-            setClear={setClear}
-            handleChange={handleChange}
-            key="minYear"
-          />
-          <OptionInputSingle
-            options={yearOptions}
-            holder="Max"
-            isYear
-            keyValue="maxYear"
-            clear={clear}
-            setClear={setClear}
-            handleChange={handleChange}
-            key="maxYear"
-          />
-        </div>
-        <input
-          type="text"
-          name="code"
-          value={data.code}
-          onChange={handleChange}
-          placeholder="Elan kodu"
-          className="home__hero__content__thirdLine__code"
-        />
       </div>
       <div className="home__hero__content__fourthLine">
         <button
