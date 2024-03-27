@@ -15,6 +15,8 @@ import {
   NewPromotion,
   SearchResult,
 } from "./pages/index";
+import Registration from "./pages/Authentication/Registration";
+import Login from "./pages/Authentication/Login";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/company" element={<Companies />} />
         <Route path="/company/:id" element={<CompanyDetail />} />
+        <Route path="/register" element={<Registration/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
     </Layout>
   );
