@@ -25,8 +25,6 @@ const Companies = () => {
     setPage(value);
   }
 
-  console.log(data?.currentItems);
-
   return (
     <main className="companies">
       <CompaniesFilter />

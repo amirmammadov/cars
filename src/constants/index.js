@@ -497,5 +497,4 @@ export const rating = [
   { title: 3 },
   { title: 4 },
   { title: 5 },
-  { title: 5 },
 ];
