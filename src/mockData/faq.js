@@ -3,7 +3,7 @@ export const faqData = [
     id: 1,
     question: "Biz kimik?",
     answer:
-      "Avtomobilinizi satmaq niyyətindəsinizsə və ya yenisini almaq fikrindəsinizsə, model avtomobilinizin qiymətini proqnozlaşdırmağa kömək edir. Sistem sizin üçün orta bazar qiymətini hesablayır və sonra hansı avtomobilin ehtiyaclarınıza daha uyğun olduğunu təmin edir. O, istənilən avtomobil satışı platformasına inteqrasiya oluna bilən vebsaytın bir hissəsi kimi yaradılacaq. Avtomobil sahibləri avtomobillərini satmaq üçün vebsayta daxil olduqda, qiymətlərə əhəmiyyətli dərəcədə təsir edən əsas avtomobil xüsusiyyətlərini daxil edə bilərlər. Daha sonra sistem müvafiq qiyməti qiymətləndirmək üçün orta statistik göstəricilərdən istifadə edəcək. Satıcı davam etməyi seçərsə, proqnozlaşdırılan dəyər dərhal vebsaytda elan olaraq göstəriləcək.",
+      "Avtomobilinizi satmaq niyyətindəsinizsə və ya yenisini almaq fikrindəsinizsə, model avtomobilinizin qiymətini proqnozlaşdırmağa kömək edir. Sistem sizin üçün orta bazar qiymətini hesablayır və sonra hansı avtomobilin ehtiyaclarınıza daha uyğun olduğunu təmin edir. O, istənilən avtomobil satışı platformasına inteqrasiya oluna bilən vebsaytın bir hissəsi kimi yaradılacaq.",
   },
   {
     id: 2,
