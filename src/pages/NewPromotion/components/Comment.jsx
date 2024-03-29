@@ -21,18 +21,6 @@ const Comment = () => {
           name="comment"
           onChange={(e) => handleChange(e)}
         ></textarea>
-        <input
-          type="text"
-          placeholder="VİN/Ban kodu"
-          className="comment__content__input"
-          name="vin"
-          onChange={(e) => handleChange(e)}
-        />
-        <img
-          src="/promotion/question.png"
-          alt="question"
-          className="comment__content__img"
-        />
       </div>
       <div className="comment__restrict">
         <img
