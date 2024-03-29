@@ -77,6 +77,8 @@ function ComparisonPage() {
                 ))}
               </ul>
             </div>
+            <div className={styles.productWrapper}>
+
             {comparisonPrdoucts.map((product) => (
               <div key={product.id} className={styles.products}>
                 <button
@@ -93,7 +95,8 @@ function ComparisonPage() {
                 </ul>
               </div>
             ))}
-            {count < 3 && (
+
+            {/* {count < 3 && ( */}
               <div
                 onClick={() => {
                   setCount(count + 1);
@@ -104,7 +107,9 @@ function ComparisonPage() {
                   <Icon iconName="Add" />
                 </button>
               </div>
-            )}
+            </div>
+
+            {/* )} */}
           </div>
         </div>
       )}

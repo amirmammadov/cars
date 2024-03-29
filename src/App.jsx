@@ -15,6 +15,8 @@ import {
   NewPromotion,
   SearchResult,
 } from "./pages/index";
+import Registration from "./pages/Authentication/Registration";
+import Login from "./pages/Authentication/Login";
 
 function App() {
   return (
@@ -29,6 +31,10 @@ function App() {
         <Route path="/result" element={<SearchResult />} />
         <Route path="/comparison" element={<ComparisonPage />} />
         <Route path="/favorites" element={<Favorites />} />
+        {/* <Route path="/company" element={<Companies />} /> */}
+        <Route path="/company/:id" element={<CompanyDetail />} />
+        <Route path="/register" element={<Registration/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path="/salons" element={<Salons />} />
         <Route path="/salons/:id" element={<CompanyDetail />} />
       </Routes>

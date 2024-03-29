@@ -23,12 +23,18 @@
 .accordion {
   margin-bottom: 30px;
   background-color: $background !important;
+@media (max-width:500px) {
+  margin-bottom: 10px;
+}
 }
 .qstn {
   border-radius: 8px !important;
   font-size: 18px;
   font-weight: 500;
   background-color: $white !important;
+  // padding: 20px 10px !important;
+  @media (max-width:500px) {
+font-size: 16px;  }
 }
 
 .answer {
