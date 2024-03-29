@@ -95,7 +95,6 @@ function ComparisonPage() {
                 </ul>
               </div>
             ))}
-            </div>
 
             {/* {count < 3 && ( */}
               <div
@@ -108,6 +107,8 @@ function ComparisonPage() {
                   <Icon iconName="Add" />
                 </button>
               </div>
+            </div>
+
             {/* )} */}
           </div>
         </div>

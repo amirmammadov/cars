@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 import { Icon } from "@fluentui/react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -11,8 +11,7 @@ const mainLinks = [
   { id: 1, text: "Ana səhifə", url: "/" },
   { id: 2, text: "Elanlar", url: "/elan" },
   { id: 3, text: "FAQ", url: "/faq" },
-  { id: 4, text: "Əlaqə", url: "#" },
-  { id: 5, text: "Qaydalar və şərtlər", url: "#" },
+  { id: 4, text: "Qaydalar və şərtlər", url: "#" },
 ];
 
 const contactLinks = [
@@ -63,26 +62,28 @@ function Footer() {
           </div>
         </div>
         <div className={styles.footerContentItem}>
-          <h2 className={styles.footerHeading}>Bizi izlə</h2>
-          <div className={styles.footerSocialLinks}>
-            <Link to="#" className={styles.footerSocialLinksItem}>
-              <InstagramIcon />
-            </Link>
-            <Link to="#" className={styles.footerSocialLinksItem}>
-              <FacebookIcon />
-            </Link>
-            <Link
-              to="https://www.linkedin.com/company/motofour2023"
-              target="_blank"
-              className={styles.footerSocialLinksItem}
-            >
-              <LinkedInIcon />
-            </Link>
+          <div className={styles.lastItemContent}>
+            <h2 className={styles.footerHeading}>Bizi izlə</h2>
+            <div className={styles.footerSocialLinks}>
+              <Link to="#" className={styles.footerSocialLinksItem}>
+                <InstagramIcon />
+              </Link>
+              <Link to="#" className={styles.footerSocialLinksItem}>
+                <FacebookIcon />
+              </Link>
+              <Link
+                to="https://www.linkedin.com/company/motofour2023"
+                target="_blank"
+                className={styles.footerSocialLinksItem}
+              >
+                <LinkedInIcon />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
       <p className={styles.copyright}>
-        <span>&copy;</span> 2023 by MOTO4
+        <span>&copy;</span> 2024 by MOTO4
       </p>
     </div>
   );

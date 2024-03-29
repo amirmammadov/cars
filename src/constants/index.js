@@ -285,28 +285,12 @@ export const supplies = [
     title: "ABS",
   },
   {
-    id: 2,
-    title: "Məsafə xəbərdarlıq sistemi",
-  },
-  {
     id: 3,
     title: "Mərkəzi qapanma",
   },
   {
-    id: 4,
-    title: "Start-stop sistemi",
-  },
-  {
     id: 5,
     title: "Lyuk",
-  },
-  {
-    id: 6,
-    title: "Adaptiv döngə işıqları",
-  },
-  {
-    id: 7,
-    title: "Ehtiyyat təkər",
   },
   {
     id: 8,
@@ -325,32 +309,8 @@ export const supplies = [
     title: "Qızdırılan ön şüşə",
   },
   {
-    id: 12,
-    title: "Duman əleyhinə lampa",
-  },
-  {
-    id: 13,
-    title: "Tv",
-  },
-  {
-    id: 14,
-    title: "USB ports",
-  },
-  {
-    id: 15,
-    title: "Elektrik pəncərələr",
-  },
-  {
-    id: 16,
-    title: "Siqnalizasiya sistemi",
-  },
-  {
-    id: 17,
-    title: "Təcili zəng sistemi",
-  },
-  {
     id: 18,
-    title: "Oturacaqların isidilməsi",
+    title: "Bluetooth",
   },
   {
     id: 19,
@@ -358,23 +318,11 @@ export const supplies = [
   },
   {
     id: 20,
-    title: "Bluetooth",
-  },
-  {
-    id: 21,
-    title: "Naviqasiya sistemi",
-  },
-  {
-    id: 22,
     title: "Oturacaqların havalandırılması",
   },
   {
-    id: 23,
-    title: "Toxunma ekran",
-  },
-  {
-    id: 24,
-    title: "WI-FI",
+    id: 22,
+    title: "Oturacaqların isidilməsi",
   },
   {
     id: 25,
@@ -394,6 +342,21 @@ export const others = [
   {
     id: 3,
     title: "Qəzalı və ya ehtiyat hissələr üçün",
+  },
+];
+
+export const forMarket = [
+  {
+    id: 1,
+    title: "Amerika",
+  },
+  {
+    id: 2,
+    title: "Avropa",
+  },
+  {
+    id: 3,
+    title: "Digər",
   },
 ];
 
@@ -448,34 +411,29 @@ export const moreOptionsIterator = [
   },
   {
     id: 9,
-    options: airBags,
-    holder: "Hava yastıqları",
-    keyValue: "airBags",
-  },
-  {
-    id: 10,
     options: seatNumbers,
     holder: "Oturacaq sayı",
     keyValue: "seatNumbers",
   },
   {
-    id: 11,
+    id: 10,
     options: seller,
     holder: "Satıcı",
     keyValue: "seller",
   },
   {
-    id: 12,
-    options: ownNumbers,
-    holder: "Neçənsi sahibisiniz",
-    keyValue: "ownNumbers",
+    id: 11,
+    options: forMarket,
+    holder: "Yığıldığı bazar",
+    keyValue: "formarket",
   },
 ];
 
 export const locationOfCity =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194472.76853003306!2d49.69014890705255!3d40.394737007992184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2sBaku!5e0!3m2!1sen!2saz!4v1698083147829!5m2!1sen!2saz";
 
-export const ITEMS_PER_PAGE = 4;
+export const ITEMS_PER_PAGE_FEATURED = 8;
+export const ITEMS_PER_PAGE_COMPANY = 8;
 
 export const companies = [
   { title: "AutoStyle" },
@@ -495,6 +453,5 @@ export const rating = [
   { title: 2 },
   { title: 3 },
   { title: 4 },
-  { title: 5 },
   { title: 5 },
 ];

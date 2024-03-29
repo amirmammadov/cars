@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -39,6 +39,14 @@ function Header() {
     };
   }, [windowSize]);
 
+  useEffect(() => {
+    if (hamburgerClicked) {
+      document.documentElement.classList.add("no-scroll");
+    } else {
+      document.documentElement.classList.remove("no-scroll");
+    }
+  }, [hamburgerClicked]);
+
   const handleHamburgerOpen = () => {
     setHamburgerClicked((prevValue) => !prevValue);
   };
@@ -62,10 +70,10 @@ function Header() {
           Elanlar
         </Link>
         <Link
-          className={activePage === "/company" ? styles.active : ""}
-          to="/company"
+          className={activePage === "/salons" ? styles.active : ""}
+          to="/salons"
         >
-          Şirkətlər
+          Salonlar
         </Link>
         <Link className={activePage === "/faq" ? styles.active : ""} to="/faq">
           FAQ

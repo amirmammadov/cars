@@ -50,6 +50,7 @@ export default function OptionInputMultiple({
       disableCloseOnSelect
       classes={{ popupIndicator: "custom-popup-indicator" }}
       sx={{
+        width: "100%",
         overflow: "hidden",
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
           {
@@ -105,7 +106,6 @@ export default function OptionInputMultiple({
           sx={{
             backgroundColor: "#fff",
             borderRadius: "8px",
-            overflow: "hidden",
           }}
         />
       )}

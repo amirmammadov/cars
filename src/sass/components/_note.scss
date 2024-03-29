@@ -21,8 +21,6 @@
     @extend %font-normal;
     letter-spacing: 0.16px;
     color: $grey1;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 0.75rem;
   }
 
   &__extra {
@@ -41,9 +39,11 @@
     &__content {
       @include flexbox($justify: flex-start, $items: flex-start, $gap: 1rem);
       flex-wrap: wrap;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 1rem;
 
       &__item {
-        background-color: $background;
+        background-color: $grey3;
         border-radius: 100px;
         padding: 5px 10px;
       }

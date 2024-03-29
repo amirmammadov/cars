@@ -60,13 +60,20 @@ const Contact = () => {
           placeholder="Mobil nömrə"
           className="contact__content__phone"
         />
-        <input
-          type="mail"
-          name="mail"
-          onChange={(e) => handleChange(e)}
-          placeholder="E-mail"
-          className="contact__content__item"
-        />
+        <div className="vinItem">
+          <input
+            type="text"
+            placeholder="VİN/Ban kodu"
+            className="vinItem__input"
+            name="vin"
+            onChange={(e) => handleChange(e)}
+          />
+          <img
+            src="/promotion/question.png"
+            alt="question"
+            className="vinItem__img"
+          />
+        </div>
       </div>
     </div>
   );

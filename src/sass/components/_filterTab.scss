@@ -8,6 +8,13 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: $white;
   @include flexbox($justify: center, $items: center, $gap: 0.625rem);
+  @include tablet {
+    width: 100%;
+    padding: 5px;
+  }
+  @include mobile2 {
+    min-width: 200px;
+  }
 
   &__item {
     min-width: 100px;
@@ -20,6 +27,14 @@
     font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
+    @include tablet {
+      width: 100%;
+      padding: 10px 5px;
+    }
+    @include mobile2 {
+      min-width: 40px;
+      padding: 10px 2px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -29,15 +44,5 @@
   &__item.active {
     color: $white;
     background-color: $hover;
-  }
-}
-
-@media only screen and (max-width: 827px) {
-  .filter__tab {
-    min-width: 250px;
-
-    &__item {
-      min-width: 50px;
-    }
   }
 }

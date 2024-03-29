@@ -4,10 +4,17 @@
   @include flexbox($justify: space-between, $items: center);
   width: 100%;
   margin: 0 auto;
+  @include tablet {
+    background-color: $white;
+    padding: 5px;
+  }
 
   &__title {
     @extend %font-title7;
     color: $mainDark;
+    @include mobile3 {
+      font-size: 1.2rem;
+    }
   }
 
   &__link {
@@ -18,5 +25,11 @@
     background-color: transparent;
     @include flexbox($justify: center, $items: center, $gap: 1rem);
     cursor: pointer;
+
+    &__text {
+      @include mobile {
+        display: none;
+      }
+    }
   }
 }

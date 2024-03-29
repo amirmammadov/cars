@@ -19,7 +19,7 @@
   }
 
   &__more {
-    @include flexbox($justify: space-between, $items: center, $gap: 2rem);
+    @include flexbox($justify: space-between, $items: center, $gap: 3rem);
 
     &__heart,
     &__balance,

@@ -4,12 +4,12 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 
-import { getStatCars, getCompanies, getCompany } from "./api";
+import { getFeaturedCars, getCompanies, getCompany } from "./api";
 
-export function useProjects(page) {
+export function useFeaturedCars(page) {
   return useQuery({
     queryKey: ["statcars", { page }],
-    queryFn: () => getStatCars(page),
+    queryFn: () => getFeaturedCars(page),
     placeholderData: keepPreviousData,
   });
 }

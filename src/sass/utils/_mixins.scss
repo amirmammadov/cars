@@ -35,3 +35,15 @@
     @content;
   }
 }
+
+@mixin mobile2() {
+  @media (max-width: $mobile2) {
+    @content;
+  }
+}
+
+@mixin mobile3() {
+  @media (max-width: $mobile3) {
+    @content;
+  }
+}

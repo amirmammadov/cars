@@ -14,7 +14,7 @@
   }
 
   &__content__control {
-    @include flexbox($justify: flex-start, $items: center, $gap: 2.5rem);
+    @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
     flex-direction: row;
     flex-wrap: wrap;
 

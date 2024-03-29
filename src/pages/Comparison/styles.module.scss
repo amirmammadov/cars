@@ -21,6 +21,7 @@ display: flex;
     margin-bottom: 30px;
     @media (max-width:500px) {
       font-size: 18px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -76,14 +77,32 @@ overflow-x: scroll;
     padding: 10px;
     @media (max-width:768px) {
       background-color: transparent;
- 
+.infoList{display: none;}
   .radioGroup
   >div{
-  display: block;
+  display: flex;
+  flex-direction: row !important;
+align-items: center;
+width: 100%;
+justify-content: space-between;
+
+label>span{
+padding: 0;
+}  
+  
+label{
+margin: 0 !important;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+  font-size: 14px !important;
   }
     }
     ul {
-      padding-top: 145px;
+      padding-top: 115px;
+      // background-color: red;
     }
   }
   .deleteLink {
@@ -104,13 +123,17 @@ overflow-x: scroll;
 .addBox {
   background-color: #ffffff4d;
   border-radius: 8px;
-  min-width: 235px;
+  min-width: 220px;
   height: 295px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width:768px) {
+    min-width: 150px;
+    height: 250px;
+  }
   button {
     border: none;
     background-color: $white;
@@ -133,7 +156,7 @@ overflow-x: scroll;
     margin-top: 10px;
   }
   @media (max-width:768px) {
-    display: none;
+    // display: none;
   }
 }
 .productWrapper{
@@ -146,6 +169,9 @@ overflow-x: scroll;
   position: relative;
   min-width: 220px;
   margin-right: 25px;
+  @media (max-width:768px) {
+    min-width: 150px;
+  }
   .cancelBtn {
     position: absolute;
     z-index: 9;

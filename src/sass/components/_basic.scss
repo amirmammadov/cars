@@ -31,6 +31,7 @@
       width: 100%;
       padding-bottom: 0.75rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      gap: 0.5rem;
 
       &__key {
         width: 50%;
@@ -40,6 +41,7 @@
       }
 
       &__value {
+        width: 50%;
         @extend %font-normal2;
         color: $font;
       }

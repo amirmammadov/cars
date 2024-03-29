@@ -1,19 +1,28 @@
 @import "../style";
 
 .new__promotion__main__type {
-  @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
+  @include flexbox($justify: flex-start, $items: center, $gap: 2rem);
   width: 100%;
 
-  .radio__group__label {
-    @extend %font-normal;
+  &__item {
+    flex-grow: 1;
+
+    &__group {
+      @include flexbox($justify: flex-start, $items: center, $gap: 2rem);
+      width: 100%;
+
+      .radio__group__label {
+        @extend %font-normal;
+      }
+    }
   }
 
-  &__group {
-    @include flexbox($justify: flex-start, $items: center, $gap: 2rem);
-    margin-left: 130px;
+  &__item:last-child {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
 .new__promotion__main__type > * {
-  flex-grow: 1;
+  width: 100%;
 }

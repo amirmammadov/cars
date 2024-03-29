@@ -3,6 +3,9 @@ import { Icon } from "@fluentui/react";
 import { useSelector, useDispatch } from "react-redux";
 import { setFavCarIds } from "../../features/appSlice";
 
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+
 import { useNavigate } from "react-router-dom";
 
 function ProductCart({ product }) {
@@ -59,29 +62,27 @@ function ProductCart({ product }) {
             )}
           </button>
         </div>
-        <img src={`/productImgs/${product.img}.svg`} alt="" />
+        <img src={`/productImgs/${product.img}.svg`} alt="car" />
       </div>
       <div className={styles.info}>
         <div className={styles.header}>
           <h1>
             {product.price} <span>{product.currency}</span>
           </h1>
-          {product.salon && <button>Salon</button>}
         </div>
-        <p>{product.name}</p>
-
-        <ul>
+        <p className={styles.productName}>{product.name}</p>
+        <ul className={styles.generalInfo}>
           <li>{product.year}</li>
           <li className={styles.border}>{product.capacity}</li>
-          <li>{product.distance}</li>
+          <li className={styles.distance}>{product.distance}</li>
         </ul>
         <ul className={styles.dateInfo}>
           <li>
-            <Icon iconName="Poi" />
+            <FmdGoodIcon className={styles.icon} sx={{ color: "#94a684" }} />
             {product.location}
           </li>
           <li>
-            <Icon iconName="Clock" />
+            <AccessTimeIcon className={styles.icon} sx={{ color: "#94a684" }} />
             {product.date}
           </li>
         </ul>

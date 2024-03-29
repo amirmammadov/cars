@@ -28,13 +28,13 @@ const Colors = () => {
           className={`colors__btns__inner ${activeBtn === "inner" && "active"}`}
           onClick={changeActiveBtn}
         >
-          Daxili rəng
+          Xarici rəng
         </button>
         <button
           className={`colors__btns__outer ${activeBtn === "outer" && "active"}`}
           onClick={changeActiveBtn}
         >
-          Xarici rəng
+          Daxili rəng
         </button>
       </div>
       <div className="colors__content">

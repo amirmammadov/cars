@@ -67,6 +67,7 @@
     display: none;
     flex-direction: column;
     gap: 6px;
+    cursor: pointer;
 
     span {
       width: 25px;
@@ -87,7 +88,7 @@
 
   .mobileNav {
     position: absolute;
-    top: 15px;
+    top: 0;
     left: 0;
     width: 50%;
     height: 100%;
@@ -104,6 +105,10 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 14px;
+      }
+
+      .mobileNavHeaderClose {
+        cursor: pointer;
       }
     }
 
@@ -142,11 +147,25 @@
   padding: 30px 15%;
 
   .footerContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 30px 0;
     border-bottom: 1px solid #c9c9c9;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+
+    .footerContentItem:last-child {
+      display: flex;
+      align-items: flex-end;
+
+      .lastItemContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
 
     .footerContentItem {
       display: flex;
@@ -249,6 +268,29 @@
   }
   .header .hamburger {
     display: flex;
+  }
+  .footer .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    .footerContentItem:last-child {
+      grid-column: span 2;
+      align-items: center;
+      .footerHeading {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 592px) {
+  .footer .footerContent {
+    column-gap: 10px;
+  }
+
+  .footer .footerListsItemText,
+  .footerListsItem {
+    font-size: 10px;
   }
 }
 

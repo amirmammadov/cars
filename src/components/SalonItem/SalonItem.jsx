@@ -11,7 +11,7 @@ const CompanyItem = ({ img, companyName, phone, id }) => {
     <div
       className="companies__item"
       onClick={() => {
-        navigate(`/company/${id}`);
+        navigate(`/salons/${id}`);
         window.scrollTo(0, 0);
       }}
     >

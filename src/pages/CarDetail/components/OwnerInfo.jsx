@@ -21,13 +21,6 @@ const OwnerInfo = () => {
           <div className="owner__info__detail__content__city">Bakı</div>
         </div>
       </div>
-      <div className="owner__info__rating">
-        <img src="/carDetail/filled.png" alt="filled" />
-        <img src="/carDetail/filled.png" alt="filled" />
-        <img src="/carDetail/filled.png" alt="filled" />
-        <img src="/carDetail/filled.png" alt="filled" />
-        <img src="/carDetail/empty.png" alt="empty" />
-      </div>
       <button
         className="owner__info__btn"
         onClick={() => {
