@@ -3,6 +3,9 @@ import { Icon } from "@fluentui/react";
 import { useSelector, useDispatch } from "react-redux";
 import { setFavCarIds } from "../../features/appSlice";
 
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+
 import { useNavigate } from "react-router-dom";
 
 function ProductCart({ product }) {
@@ -75,11 +78,11 @@ function ProductCart({ product }) {
         </ul>
         <ul className={styles.dateInfo}>
           <li>
-            <Icon iconName="Poi" className={styles.icon} />
+            <FmdGoodIcon className={styles.icon} sx={{ color: "#94a684" }} />
             {product.location}
           </li>
           <li>
-            <Icon iconName="Clock" className={styles.icon} />
+            <AccessTimeIcon className={styles.icon} sx={{ color: "#94a684" }} />
             {product.date}
           </li>
         </ul>
