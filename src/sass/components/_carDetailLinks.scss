@@ -1,0 +1,18 @@
+@import "../style";
+
+.car__detail__general__header__links {
+  @include flexbox($justify: flex-start, $items: center, $gap: 1.875rem);
+
+  img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
