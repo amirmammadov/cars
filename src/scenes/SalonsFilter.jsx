@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "../sass/layout/_companiesFilter.scss";
+import "../sass/layout/_salonsFilter.scss";
 
 import OptionInputSingle from "../components/OptionInputSingle/OptionInputSingle";
 
@@ -14,7 +14,7 @@ const INITIAL_DATA = {
   rating: 1,
 };
 
-const CompaniesFilter = () => {
+const SalonsFilter = () => {
   const [data, setData] = useState(INITIAL_DATA);
 
   const [clear, setClear] = useState(false);
@@ -39,6 +39,7 @@ const CompaniesFilter = () => {
 
   return (
     <section className="companies__filter">
+      <div className="companies__filter__title">Filtrlə</div>
       <div className="companies__filter__colOne">
         <div className="companies__filter__colOne__item">
           <OptionInputSingle
@@ -74,18 +75,18 @@ const CompaniesFilter = () => {
           />
         </div>
       </div>
-      <div className="companies__filter__colThree">
+      <div className="companies__filter__colTwo">
         <button
           onClick={handleClear}
-          className="companies__filter__colThree__clear"
+          className="companies__filter__colTwo__clear"
         >
           Təmizlə &#10005;
         </button>
         <button
           onClick={handleSearch}
-          className="companies__filter__colThree__search"
+          className="companies__filter__colTwo__search"
         >
-          <div className="companies__filter__colThree__text">Axtar</div>
+          <div className="companies__filter__colTwo__text">Axtar</div>
           <SearchIcon />
         </button>
       </div>
@@ -93,4 +94,4 @@ const CompaniesFilter = () => {
   );
 };
 
-export default CompaniesFilter;
+export default SalonsFilter;

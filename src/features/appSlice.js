@@ -34,7 +34,7 @@ const initialState = {
     comment: "",
     vin: "",
   },
-  favCarIds: [],
+  favCarIds: JSON.parse(localStorage.getItem("favCars")) || [],
 };
 
 export const appSlice = createSlice({
@@ -59,8 +59,10 @@ export const appSlice = createSlice({
         const index = state.favCarIds.indexOf(carId);
 
         state.favCarIds.splice(index, 1);
+        localStorage.setItem("favCars", JSON.stringify(state.favCarIds));
       } else {
         state.favCarIds.push(carId);
+        localStorage.setItem("favCars", JSON.stringify(state.favCarIds));
       }
     },
   },

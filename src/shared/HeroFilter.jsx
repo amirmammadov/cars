@@ -6,6 +6,9 @@ import OptionInputSingle from "../components/OptionInputSingle/OptionInputSingle
 
 import SearchIcon from "@mui/icons-material/Search";
 
+import TuneIcon from "@mui/icons-material/Tune";
+import CloseIcon from "@mui/icons-material/Close";
+
 import "../sass/layout/_heroFilter.scss";
 
 import {
@@ -214,13 +217,13 @@ const HeroFilter = () => {
           className="home__hero__content__fourthLine__clearBtn"
           onClick={handleClear}
         >
-          Təmizlə &#10005;
+          Təmizlə <CloseIcon />
         </button>
         <button
           onClick={() => navigate("/more-filters")}
           className="home__hero__content__fourthLine__moreFilter"
         >
-          Daha çox filtr
+          Daha çox filtr <TuneIcon />
         </button>
         <button
           className="home__hero__content__fourthLine__search"

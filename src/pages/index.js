@@ -1,7 +1,7 @@
 import CarDetail from "./CarDetail/CarDetail";
 import Advertisement from "./Advertisement/Advertisement";
-import Companies from "./Companies/Companies";
-import CompanyDetail from "./CompanyDetail/CompanyDetail";
+import Salons from "./Salons/Salons";
+import CompanyDetail from "./CompanyDetail/SalonDetail";
 import ComparisonPage from "./Comparison/ComparisonPage";
 import Faq from "./Faq/Faq";
 import Favorites from "./Favorites/Favorites";
@@ -13,7 +13,7 @@ import SearchResult from "./SearchResult/SearchResult";
 export {
   CarDetail,
   Advertisement,
-  Companies,
+  Salons,
   CompanyDetail,
   ComparisonPage,
   Faq,

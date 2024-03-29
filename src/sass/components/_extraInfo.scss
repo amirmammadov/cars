@@ -30,9 +30,28 @@
     grid-template-columns: repeat(3, auto);
     column-gap: 86px;
     row-gap: 30px;
+    @include tablet {
+      grid-template-columns: repeat(2, auto);
+      column-gap: 70px;
+      row-gap: 20px;
+    }
+    @include mobile {
+      column-gap: 30px;
+    }
+    @include mobile3 {
+      column-gap: 10px;
+    }
 
     &__item {
       @include flexbox($justify: flex-start, $items: center, $gap: 0.625rem);
+
+      &__img {
+        width: 40px;
+        height: auto;
+        @include mobile2 {
+          width: 30px;
+        }
+      }
 
       &__content {
         @include flexbox(
@@ -41,6 +60,9 @@
           $items: flex-start,
           $gap: 0.625rem
         );
+        @include mobile {
+          gap: 0.5rem;
+        }
 
         &__title {
           @extend %font-title2;

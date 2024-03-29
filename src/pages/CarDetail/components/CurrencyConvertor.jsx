@@ -2,16 +2,10 @@ import "../../../sass/components/_currencyConvertor.scss";
 
 import { useState } from "react";
 
-import CarDetailCredit from "../../../scenes/CarDetailCredit";
 import CurrencyCalc from "../../../scenes/CurrencyCalc";
 
 const CurrencyConvertor = ({ product }) => {
-  const [isCreditOpen, setIsCreditOpen] = useState(false);
   const [isCalcOpen, setIsCalcOpen] = useState(false);
-
-  const handleCreditOpen = () => {
-    setIsCreditOpen((prevValue) => !prevValue);
-  };
 
   return (
     <div className="currency__convertor">
@@ -41,27 +35,7 @@ const CurrencyConvertor = ({ product }) => {
           Valyuta çevirici
         </button>
       </div>
-      <div className="currency__convertor__justice">
-        <div className="currency__convertor__justice__rank">
-          <div className="currency__convertor__justice__rank__item filled" />
-          <div className="currency__convertor__justice__rank__item filled" />
-          <div className="currency__convertor__justice__rank__item filled" />
-          <div className="currency__convertor__justice__rank__item" />
-          <div className="currency__convertor__justice__rank__item" />
-        </div>
-        <div className="currency__convertor__justice__text">
-          Ədalətli qiymət
-        </div>
-      </div>
-      <button className="currency__convertor__btn" onClick={handleCreditOpen}>
-        <img src="/carDetail/currency/credit.png" alt="credit" />
-        Hissə-hissə al
-      </button>
-      {isCreditOpen && (
-        <div className="currency__convertor__credit">
-          <CarDetailCredit closeBtn={setIsCreditOpen} />
-        </div>
-      )}
+
       {isCalcOpen && <CurrencyCalc setIsCalcOpen={setIsCalcOpen} />}
     </div>
   );

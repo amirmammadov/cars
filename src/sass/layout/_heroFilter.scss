@@ -207,15 +207,18 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
 
       &:hover {
         cursor: pointer;
-        color: $white-light;
+        color: $primary;
       }
     }
 
     &__search {
-      width: 235px;
+      width: 250px;
       padding: 10px;
       border: none;
       outline: none;

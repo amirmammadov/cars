@@ -9,9 +9,26 @@
   );
   width: 100%;
 
+  &__title {
+    display: none;
+    font-size: 18px;
+    font-weight: 600;
+    @include mobile {
+      display: block;
+    }
+  }
+
   &__colOne {
     width: 100%;
     @include flexbox($justify: space-between, $items: flex-start, $gap: 20px);
+
+    @include mobile {
+      flex-direction: column;
+
+      .companies__filter__colOne__item {
+        width: 100%;
+      }
+    }
   }
 
   &__colOne > * {
@@ -19,7 +36,7 @@
     width: 33.33%;
   }
 
-  &__colThree {
+  &__colTwo {
     width: 100%;
     @include flexbox($justify: space-between, $items: center);
 
@@ -50,6 +67,12 @@
       border-radius: 8px;
       height: 40px;
       @include flexbox($justify: center, $items: center, $gap: 0.5rem);
+      @include mobile {
+        width: 160px;
+      }
+      @include mobile3 {
+        width: 100px;
+      }
 
       &:hover {
         cursor: pointer;
