@@ -62,21 +62,23 @@ function Footer() {
           </div>
         </div>
         <div className={styles.footerContentItem}>
-          <h2 className={styles.footerHeading}>Bizi izlə</h2>
-          <div className={styles.footerSocialLinks}>
-            <Link to="#" className={styles.footerSocialLinksItem}>
-              <InstagramIcon />
-            </Link>
-            <Link to="#" className={styles.footerSocialLinksItem}>
-              <FacebookIcon />
-            </Link>
-            <Link
-              to="https://www.linkedin.com/company/motofour2023"
-              target="_blank"
-              className={styles.footerSocialLinksItem}
-            >
-              <LinkedInIcon />
-            </Link>
+          <div className={styles.lastItemContent}>
+            <h2 className={styles.footerHeading}>Bizi izlə</h2>
+            <div className={styles.footerSocialLinks}>
+              <Link to="#" className={styles.footerSocialLinksItem}>
+                <InstagramIcon />
+              </Link>
+              <Link to="#" className={styles.footerSocialLinksItem}>
+                <FacebookIcon />
+              </Link>
+              <Link
+                to="https://www.linkedin.com/company/motofour2023"
+                target="_blank"
+                className={styles.footerSocialLinksItem}
+              >
+                <LinkedInIcon />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
