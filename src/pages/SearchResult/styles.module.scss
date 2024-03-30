@@ -1,5 +1,8 @@
 @import "../../assets/colors.scss";
 
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+
 .container {
   min-height: 100vh;
   padding: 30px 15%;
@@ -38,9 +41,20 @@
     }
     .products {
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
       gap: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .products > * {
+      flex-grow: 1;
     }
   }
 }
