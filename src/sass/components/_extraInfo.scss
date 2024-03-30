@@ -46,10 +46,13 @@
       @include flexbox($justify: flex-start, $items: center, $gap: 0.625rem);
 
       &__img {
-        width: 40px;
+        width: 32px;
         height: auto;
         @include mobile2 {
           width: 30px;
+        }
+        @include mobile3 {
+          width: 20px;
         }
       }
 
@@ -63,15 +66,24 @@
         @include mobile {
           gap: 0.5rem;
         }
+        @include mobile3 {
+          gap: 0.1rem;
+        }
 
         &__title {
           @extend %font-title2;
           color: $grey1;
+          @include mobile3 {
+            font-size: 12px;
+          }
         }
 
         &__value {
           @extend %font-normal2;
           color: $font;
+          @include mobile3 {
+            font-size: 12px;
+          }
         }
       }
     }

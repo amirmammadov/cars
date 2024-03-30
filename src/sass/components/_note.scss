@@ -21,6 +21,9 @@
     @extend %font-normal;
     letter-spacing: 0.16px;
     color: $grey1;
+    @include mobile3 {
+      font-size: 14px;
+    }
   }
 
   &__extra {
@@ -46,6 +49,9 @@
         background-color: $grey3;
         border-radius: 100px;
         padding: 5px 10px;
+        @include mobile3 {
+          font-size: 14px;
+        }
       }
     }
   }
