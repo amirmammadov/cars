@@ -2,14 +2,14 @@ import { useState } from "react";
 
 import "../sass/layout/_homeCars.scss";
 
+import HomeNewCars from "./HomeNewCars";
+
 import { useFeaturedCars } from "../services/queries";
 
 import { Pagination } from "@mui/material";
 
 import ProductCart from "../components/productCard/ProductCart";
 import SectionHeader from "../components/SectionHeader/SectionHeader";
-
-import { products } from "../mockData/products";
 
 import { ITEMS_PER_PAGE_FEATURED } from "../constants";
 
@@ -53,15 +53,7 @@ const HomeCars = () => {
           disabled={isPlaceholderData}
         />
       </section>
-      <section className="home__cars__section">
-        <SectionHeader title="Yeni elanlar" filterTitle="Tarix" />
-        <div className="home__cars__section__content">
-          {products.map((product) => {
-            return <ProductCart key={product.id} product={product} />;
-          })}
-        </div>
-        <Pagination count={5} shape="rounded" className="pagination" />
-      </section>
+      <HomeNewCars />
     </main>
   );
 };

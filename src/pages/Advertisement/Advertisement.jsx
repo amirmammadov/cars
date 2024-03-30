@@ -37,7 +37,7 @@ function Advertisement() {
         <HeroFilter />
       </div>
 
-      <SectionHeader title="Statistik elanlar" />
+      <SectionHeader title="Önə çəkilmiş elanlar" />
 
       <div className={styles.products}>
         {products.map((item) => (

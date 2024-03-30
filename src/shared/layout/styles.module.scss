@@ -288,9 +288,11 @@
     column-gap: 10px;
   }
 
-  .footer .footerListsItemText,
-  .footerListsItem {
-    font-size: 10px;
+  .footer .footerContent .footerContentItem .footerLists .footerListsItem {
+    font-size: 13px;
+    .footerListsItemText {
+      font-size: 13px;
+    }
   }
 }
 

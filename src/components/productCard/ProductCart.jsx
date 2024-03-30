@@ -62,7 +62,7 @@ function ProductCart({ product }) {
             )}
           </button>
         </div>
-        <img src={`/productImgs/${product.img}.svg`} alt="car" />
+        <img src={`/productImgs/${product.img}.jpg`} alt="car" />
       </div>
       <div className={styles.info}>
         <div className={styles.header}>
