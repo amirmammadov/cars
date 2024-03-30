@@ -434,6 +434,8 @@ export const locationOfCity =
 
 export const ITEMS_PER_PAGE_FEATURED = 8;
 export const ITEMS_PER_PAGE_COMPANY = 8;
+export const ITEMS_PER_PAGE_NEW = 20;
+export const ITEMS_PER_PAGE_SIMILAR = 8;
 
 export const companies = [
   { title: "AutoStyle" },

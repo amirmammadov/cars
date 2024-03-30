@@ -26,16 +26,24 @@ import CarImgSlider from "../../scenes/CarImgSlider";
 
 import { useParams } from "react-router-dom";
 
-import { products } from "../../mockData/products";
+import { useNewCar, useSimilarCars } from "../../services/queries";
 
 const CarDetail = () => {
   const [isSliderOpen, setIsSliderOpen] = useState(false);
 
-  const params = useParams();
+  const { id } = useParams();
 
-  const product = products.filter(
-    (product) => product.id === Number(params.id)
-  );
+  const similarCars = useSimilarCars();
+
+  const { data: car, isPending, isError, error } = useNewCar(id);
+
+  if (isPending) {
+    return <div className="company__detail">Loading...</div>;
+  }
+
+  if (isError) {
+    return <div className="company__detail">{error}</div>;
+  }
 
   const handleOpenSlider = () => {
     setIsSliderOpen((prevValue) => !prevValue);
@@ -66,7 +74,7 @@ const CarDetail = () => {
           <div className="car__detail__general__header__info">
             Mercedes-Benz, S 500, 2021 il, 5.5 L, 110 000 km
           </div>
-          <CarDetailLinks product={product[0]} />
+          <CarDetailLinks product={car} />
         </div>
         <CarImgSlider handleSlider={setIsSliderOpen} />
         {isSliderOpen && (
@@ -83,12 +91,12 @@ const CarDetail = () => {
       </div>
       <div className="car__detail__additional">
         <div className="car__detail__additional__left">
-          <ExtraInfo product={product[0]} />
-          <Basic product={product[0]} />
-          <Note product={product[0]} />
+          <ExtraInfo product={car} />
+          <Basic product={car} />
+          <Note product={car} />
         </div>
         <div className="car__detail__additional__right">
-          <CurrencyConvertor product={product[0]} />
+          <CurrencyConvertor product={car} />
           <OwnerInfo />
           <div className="car__detail__additional__right__vin">
             <div className="car__detail__additional__right__vin__key">
@@ -104,9 +112,15 @@ const CarDetail = () => {
       <div className="car__detail__similar">
         <SectionHeader title="Bənzər Elanlar" filterTitle="Rating" />
         <div className="car__detail__similar__content">
-          {products.map((product) => {
-            return <ProductCart key={product.id} product={product} />;
-          })}
+          {similarCars.isPending ? (
+            <div>Loading...</div>
+          ) : similarCars.isError ? (
+            <div>{similarCars.error}</div>
+          ) : (
+            similarCars.data.map((product) => (
+              <ProductCart key={product.id} product={product} />
+            ))
+          )}
         </div>
       </div>
     </div>

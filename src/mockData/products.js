@@ -9,7 +9,7 @@ export const products = [
     year: "2018",
     distance: "180 800 km",
     location: "Sumqayıt",
-    date: "Bugün 08:45",
+    date: "Bugün",
     img: "audi",
     leasing: false,
     credit: false,
@@ -44,20 +44,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 2,
@@ -104,20 +90,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 3,
@@ -164,20 +136,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 4,
@@ -224,20 +182,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 5,
@@ -284,20 +228,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 6,
@@ -344,20 +274,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 7,
@@ -403,20 +319,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 8,
@@ -462,20 +364,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 9,
@@ -521,20 +409,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 10,
@@ -580,20 +454,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 11,
@@ -639,20 +499,6 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "/carDetail/person1.png",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "/carDetail/person2.png",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
   {
     id: 12,
@@ -698,19 +544,5 @@ export const products = [
       content:
         "Heç bir detalında vuruğu yoxdur. Rənglənən yeri yoxdur. Mercedes Servisindən alınıb. Çox baxımlı, səliqəli maşındır.",
     },
-    reviews: [
-      {
-        id: 1,
-        person: "Ruslan Qasımov",
-        imgUrl: "person1.jpg",
-        note: "Vüqar bəydən mən də maşın  almışam və təcrübəmi bölüşmək istəyirəm. Heç bir qüsuru yoxdur və artıq 3 ildir ki, sürürəm. ",
-      },
-      {
-        id: 2,
-        person: "Arif Bayramlı",
-        imgUrl: "person2.jpg",
-        note: "Vuruğu,udarı yoxdur. Otur sür. Artıq 3 ildir ki, sürürəm.",
-      },
-    ],
   },
 ];

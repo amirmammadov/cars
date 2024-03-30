@@ -4,13 +4,53 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 
-import { getFeaturedCars, getCompanies, getCompany } from "./api";
+import {
+  getFeaturedCars,
+  getCompanies,
+  getCompany,
+  getNewCars,
+  getNewCar,
+  getSimilarCars,
+} from "./api";
 
 export function useFeaturedCars(page) {
   return useQuery({
     queryKey: ["statcars", { page }],
     queryFn: () => getFeaturedCars(page),
     placeholderData: keepPreviousData,
+  });
+}
+
+export function useNewCars(page) {
+  return useQuery({
+    queryKey: ["newCars", { page }],
+    queryFn: () => getNewCars(page),
+    placeholderData: keepPreviousData,
+  });
+}
+
+export function useSimilarCars() {
+  return useQuery({
+    queryKey: ["newCars"],
+    queryFn: () => getSimilarCars(),
+    placeholderData: keepPreviousData,
+  });
+}
+
+export function useNewCar(id) {
+  const queryClient = useQueryClient();
+
+  return useQuery({
+    queryKey: ["newCars", { id }],
+    queryFn: () => getNewCar(id),
+    enabled: !!id,
+    placeholderData: () => {
+      const cachedNewCars = queryClient.getQueryData(["newCars"]);
+
+      if (cachedNewCars) {
+        return cachedNewCars.find((item) => item.id === id);
+      }
+    },
   });
 }
 
