@@ -69,20 +69,29 @@
   }
 }
 .modal{
-  max-width: 510px;
+  width: 100%;
   margin:0 auto;
-.modalContent{
-
-  padding: 30px 20px;
-  button{
-    margin: 0 !important;
+  .modalContent{
+    width: 510px;
+    padding: 30px 20px;
+@media (max-width:550px) {
+width: 300px;
+}
+    button{
+    cursor: pointer;
+  padding: 17px 0;
+  border-radius: 8px;
+  background-color: $primary;
+  color: $white;
+  border: none;
+    width: 100%;
+    font-size: 18px;
+font-weight: 500;
   }
   .buissnessBtn{
-    width: 100%;
-    // width: 405px;
     margin-top: 30px !important;
-    background-color: $white;
-    color: $primary;
+    background-color: $white !important;
+    color: $primary !important;
     border: 1px solid $primary;
   }
 }
@@ -97,15 +106,17 @@
       font-weight: 500;
       color: $font;
   }
+  .closeBtn{
+    margin: 0 !important;
+background-color: $white;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  top: 20px;
+  right: 0;
+  color: $font;
+  }
 }
 
-.closeBtn{
-  position: absolute;
-  width: 40px;
-  height: 40px;
-top: 30px;
-right: 20px;
-color: $font;
-}
 
 }

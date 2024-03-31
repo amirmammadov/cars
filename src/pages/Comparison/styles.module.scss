@@ -164,6 +164,7 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
+  padding: 15px 20px;
 }
 
 .products {
@@ -198,5 +199,14 @@
   .container {
     padding-left: 5%;
     padding-right: 5%;
+  }
+}
+.mobileTitle{
+  color: #777777;
+  font-size: 14px;
+  font-weight: 400;
+  display: none;
+  @media (max-width:768px) {
+    display: block;
   }
 }

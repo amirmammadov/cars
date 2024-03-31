@@ -90,7 +90,13 @@ function ComparisonPage() {
                 <ProductCart className={styles.product} product={product} />
                 <ul className={styles.infoList}>
                   {product.extraInfo.map((item, index) => (
-                    <li key={index}>{item.value}</li>
+                    <li key={index}>
+                      <p className={styles.mobileTitle}>{item.title}</p>
+                      <p>
+                        {item.value} 
+                        </p>
+                      
+                      </li>
                   ))}
                 </ul>
               </div>

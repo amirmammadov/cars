@@ -16,7 +16,7 @@ const Registration = () => {
     setModal(false);
   };
   return (
-    <div className={styles.container}>
+    <div className={styles.authContainer}>
       <div className={styles.login}>
         <h1>MOTO4-a xoş gəlmisiniz!</h1>
         <h3>Qeydiyyat</h3>

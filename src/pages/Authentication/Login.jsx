@@ -17,7 +17,7 @@ const Login = () => {
   };
   const [modalType, setModalType] = useState("forgot");
   return (
-    <div className={styles.container}>
+    <div className={styles.authContainer}>
       <div className={styles.login}>
         <h1>MOTO4-a xoş gəlmisiniz!</h1>
         <h3>Daxil olun</h3>
