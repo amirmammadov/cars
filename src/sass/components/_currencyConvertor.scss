@@ -11,6 +11,10 @@
     $gap: 1.25rem
   );
   width: 100%;
+  @include desktop {
+    background-color: transparent;
+    padding: 10px 0;
+  }
 
   &__amount {
     @extend %font-title3;

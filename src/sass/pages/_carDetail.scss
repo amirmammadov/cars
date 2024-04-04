@@ -105,6 +105,9 @@
         border-radius: 8px;
         background: $white;
         @include flexbox($justify: flex-start, $items: center, $gap: 0.625rem);
+        @include desktop {
+          display: none;
+        }
 
         &__key {
           font-size: 18px;

@@ -11,6 +11,10 @@
     $gap: 1.25rem
   );
   width: 100%;
+  @include desktop {
+    background-color: transparent;
+    padding: 10px 0;
+  }
 
   &__title {
     @extend %font-title6;
@@ -57,6 +61,9 @@
     border: none;
     outline: none;
     background-color: $green2;
+    @include desktop {
+      display: none;
+    }
 
     &:hover {
       cursor: pointer;

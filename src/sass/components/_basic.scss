@@ -38,12 +38,24 @@
         @extend %font-normal;
         letter-spacing: 0.16px;
         color: $grey1;
+        @include mobile {
+          font-size: 15px;
+        }
+        @include mobile3 {
+          font-size: 13px;
+        }
       }
 
       &__value {
         width: 50%;
         @extend %font-normal2;
         color: $font;
+        @include mobile {
+          font-size: 15px;
+        }
+        @include mobile3 {
+          font-size: 13px;
+        }
       }
     }
 
