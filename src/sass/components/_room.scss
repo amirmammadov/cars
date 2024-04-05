@@ -7,6 +7,9 @@
     $items: flex-start,
     $gap: 2rem
   );
+  @include tablet {
+    gap: 1.5rem;
+  }
 
   &__title {
     @extend %font-normal;
@@ -15,12 +18,23 @@
 
   &__content__control {
     @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
-    flex-direction: row;
+    width: 100%;
     flex-wrap: wrap;
 
     &__item {
       &__label {
         text-align: center;
+
+        .label__img {
+          width: 80px;
+          height: auto;
+          @include desktop {
+            width: 50px;
+          }
+          @include tablet {
+            display: none;
+          }
+        }
       }
     }
   }

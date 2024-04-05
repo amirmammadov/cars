@@ -31,12 +31,6 @@
       padding: 10px;
       outline: none;
       resize: vertical;
-      @include desktop {
-        width: 400px;
-      }
-      @include tablet {
-        width: 300px;
-      }
 
       &:focus {
         border: 1px solid $primary;

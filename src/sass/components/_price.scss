@@ -3,9 +3,23 @@
 .new__promotion__price {
   @include flexbox($justify: space-between, $items: center);
   width: 100%;
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
 
   &__inputs {
     @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
+    @include tablet {
+      gap: 1rem;
+    }
+    @include mobile {
+      order: 2;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     &__amount {
       padding: 10px;
@@ -16,10 +30,13 @@
       border: 1px solid $white;
       outline: none;
       @include desktop {
-        width: 150px;
+        width: 180px;
       }
       @include tablet {
-        width: 100px;
+        width: 120px;
+      }
+      @include mobile {
+        width: 100%;
       }
 
       &:focus {
@@ -55,9 +72,23 @@
 
   &__radios {
     @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
+    @include tablet {
+      gap: 0.5rem;
+    }
+    @include mobile {
+      order: 1;
+      width: 100%;
+      justify-content: space-between;
+      gap: 0.1rem;
+    }
 
     &__label {
       @extend %font-normal;
+      span {
+        @include mobile3 {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

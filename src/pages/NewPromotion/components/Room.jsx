@@ -17,7 +17,9 @@ const Room = () => {
             aria-labelledby="demo-row-radio-buttons-group-label"
             name="row-radio-buttons-group"
             className="new__promotion__room__content__control"
-            style={{ flexDirection: "row" }}
+            sx={{
+              flexDirection: "row",
+            }}
           >
             {carTypes.map((type, index) => (
               <FormControlLabel
@@ -36,8 +38,12 @@ const Room = () => {
                 }
                 label={
                   <div className="new__promotion__room__content__control__item__label">
-                    <img src={type.image} alt={type.name} />
-                    <p>{type.name}</p>
+                    <img
+                      src={type.image}
+                      alt={type.name}
+                      className="label__img"
+                    />
+                    <p className="label__text">{type.name}</p>
                   </div>
                 }
               />
