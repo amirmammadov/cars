@@ -1,0 +1,88 @@
+@import "../style";
+
+.owner__info {
+  padding: 20px;
+  border-radius: 8px;
+  background: $white;
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: flex-start,
+    $gap: 1.25rem
+  );
+  width: 100%;
+  @include tablet {
+    display: none;
+  }
+
+  &__title {
+    @extend %font-title6;
+    color: $font;
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+
+  &__detail {
+    @include flexbox($justify: flex-start, $items: center, $gap: 1rem);
+
+    &__img {
+      border-radius: 100px;
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+    }
+
+    &__content {
+      @include flexbox(
+        $direction: column,
+        $justify: space-between,
+        $items: flex-start,
+        $gap: 0.3rem
+      );
+
+      &__name {
+        @extend %font-normal2;
+        color: $font;
+      }
+
+      &__status,
+      &__city {
+        @extend %font-title2;
+        color: $lightFont;
+      }
+    }
+  }
+
+  &__btn {
+    border-radius: 8px;
+    background: $grayish;
+    padding: 15px 30px;
+    width: 100%;
+    @include flexbox($justify: center, $items: center, $gap: 0.5rem);
+    border: none;
+    outline: none;
+    background-color: $green2;
+    @include desktop {
+      padding: 10px 15px;
+      gap: 0.1rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    span {
+      color: $white;
+      @extend %font-normal2;
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import "../../sass/pages/_salonDetail.scss";
 
+import { useState, useEffect } from "react";
+
 import { useCompany, useCompanies } from "../../services/queries";
 
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -15,6 +17,7 @@ import OwnerInfo from "./components/OwnerInfo";
 import Countries from "./components/Countries";
 import Dealer from "./components/Dealer";
 
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import GppMaybeIcon from "@mui/icons-material/GppMaybe";
 import BalanceIcon from "@mui/icons-material/Balance";
 import UploadIcon from "@mui/icons-material/Upload";
@@ -22,6 +25,25 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 const SalonDetail = () => {
+  const [linksActive, setLinksActive] = useState(false);
+  const [innerWidth, setInnerWidth] = useState(0);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+
+    if (innerWidth > 592) {
+      setLinksActive(false);
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, [innerWidth]);
+
   const { id } = useParams();
 
   const similarCompanies = useCompanies(1);
@@ -48,6 +70,10 @@ const SalonDetail = () => {
     </Typography>,
   ];
 
+  const handleActiveLinks = () => {
+    setLinksActive(!linksActive);
+  };
+
   return (
     <main className="company__detail">
       <Breadcrumbs
@@ -60,7 +86,11 @@ const SalonDetail = () => {
         <div className="company__detail__topBar__car">
           {company.companyName}, Bakı
         </div>
-        <div className="company__detail__topBar__links">
+        <div
+          className={`company__detail__topBar__links ${
+            linksActive && "activeLinks"
+          }`}
+        >
           <button className="company__detail__topBar__links__btn">
             <FavoriteIcon
               iconname="HeartFill"
@@ -77,6 +107,12 @@ const SalonDetail = () => {
             <UploadIcon className="company__detail__topBar__links__btn__icon" />
           </button>
         </div>
+        <button
+          onClick={handleActiveLinks}
+          className="company__detail__topBar__more"
+        >
+          <MoreVertIcon />
+        </button>
       </div>
       <div className="company__detail__info">
         <div className="company__detail__info__img">
