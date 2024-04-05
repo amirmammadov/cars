@@ -105,7 +105,7 @@ function Header() {
               <Link className={styles.mobileNavListsItem} to="/elan">
                 Elanlar
               </Link>
-              <Link className={styles.mobileNavListsItem} to="/company">
+              <Link className={styles.mobileNavListsItem} to="/salons">
                 Şirkətlər
               </Link>
               <Link className={styles.mobileNavListsItem} to="/faq">

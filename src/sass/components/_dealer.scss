@@ -18,10 +18,81 @@
     color: $font;
   }
 
+  &__general {
+    display: none;
+    grid-template-columns: repeat(3, auto);
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1rem;
+    @include tablet {
+      display: grid;
+    }
+    @include mobile2 {
+      gap: 0.5rem;
+    }
+
+    &__img {
+      border-radius: 100px;
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      @include mobile2 {
+        width: 45px;
+        height: 45px;
+      }
+      @include mobile3 {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &__content {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $items: flex-start,
+        $gap: 0.5rem
+      );
+      @include mobile2 {
+        gap: 0.2rem;
+      }
+
+      &__name {
+        @extend %font-normal2;
+        color: $font;
+        font-size: 18px;
+        @include mobile2 {
+          font-size: 16px;
+        }
+      }
+
+      &__status,
+      &__city {
+        color: $lightFont;
+        font-size: 15px;
+        @include mobile2 {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__stat {
+      @extend %font-normal2;
+      color: $font;
+      font-size: 18px;
+      margin-left: 30px;
+      @include mobile2 {
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: space-between;
+    gap: 1.5rem;
     width: 100%;
 
     &__column {
@@ -37,6 +108,15 @@
         @extend %font-normal;
         letter-spacing: 0.16px;
         color: $font;
+        @include mobile2 {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__column:last-child {
+      @include tablet {
+        display: none;
       }
     }
   }

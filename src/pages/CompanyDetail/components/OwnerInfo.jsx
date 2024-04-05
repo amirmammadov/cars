@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "../../../sass/components/_ownerInfo.scss";
+import "../../../sass/components/_salonOwner.scss";
 
 const OwnerInfo = () => {
   const [showPhone, setShowPhone] = useState();
