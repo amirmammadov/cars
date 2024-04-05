@@ -190,17 +190,17 @@ const Pictures = () => {
       <div className="pictures__notes">
         <ul className="pictures__notes__list">
           <li className="pictures__notes__list__item">
-            Minimum – 3 şəkil (ön, arxa və bütöv ön panelin görüntüsü
+            - Minimum – 3 şəkil (ön, arxa və bütöv ön panelin görüntüsü
             mütləqdir).
           </li>
           <li className="pictures__notes__list__item">
-            Şəkillər Azərbaycan Respublikasının ərazisində çəkilməlidir.
+            - Şəkillər Azərbaycan Respublikasının ərazisində çəkilməlidir.
           </li>
           <li className="pictures__notes__list__item">
-            Maksimum 20 şəkil yerləşdirmək mümkündür.
+            - Maksimum 20 şəkil yerləşdirmək mümkündür.
           </li>
           <li className="pictures__notes__list__item">
-            Avtosalonda çəkilmiş şəkillər qeydiyyatdan keçmiş avtosalonun
+            - Avtosalonda çəkilmiş şəkillər qeydiyyatdan keçmiş avtosalonun
             hesabından уerləşdirilməlidir.
           </li>
         </ul>

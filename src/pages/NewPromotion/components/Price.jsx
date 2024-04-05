@@ -67,7 +67,10 @@ const Price = () => {
             value="barter"
             control={
               <Radio
-                sx={{ color: "#620985", "&.Mui-checked": { color: "#620985" } }}
+                sx={{
+                  color: "#620985",
+                  "&.Mui-checked": { color: "#620985" },
+                }}
               />
             }
             label="Barter"

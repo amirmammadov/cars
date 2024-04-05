@@ -4,7 +4,7 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
-import "../../../sass/components/_colors.scss";
+import "../../../sass/components/_promotionColors.scss";
 
 import { innerColors, outerColors } from "../../../constants/index";
 
@@ -18,8 +18,6 @@ const Colors = () => {
       setActiveBtn("inner");
     }
   };
-
-  const colors = activeBtn === "inner" ? innerColors : outerColors;
 
   return (
     <div className="colors">
@@ -38,7 +36,7 @@ const Colors = () => {
         </button>
       </div>
       <div className="colors__content">
-        {colors.map((color) => (
+        {(activeBtn === "inner" ? innerColors : outerColors).map((color) => (
           <div key={color.id} className="colors__content__item">
             <FormGroup>
               <FormControlLabel

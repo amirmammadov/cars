@@ -16,33 +16,36 @@
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
-
-    .vinItem {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-
-      &__input {
-        flex-grow: 1;
-        border-radius: 8px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        background: $white;
-        padding: 10px;
-        @extend %font-normal;
-        outline: none;
-
-        &:focus {
-          border: 1px solid $primary;
-        }
-      }
-
-      &__img {
-        cursor: pointer;
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      .contact__content__city {
+        order: 1;
       }
     }
+
+    // .vinItem {
+    //   display: flex;
+    //   align-items: center;
+    //   gap: 0.5rem;
+    //   flex-grow: 1;
+
+    //   &__input {
+    //     flex-grow: 1;
+    //     border-radius: 8px;
+    //     border: 1px solid rgba(0, 0, 0, 0.1);
+    //     background: $white;
+    //     padding: 10px;
+    //     @extend %font-normal;
+    //     outline: none;
+
+    //     &:focus {
+    //       border: 1px solid $primary;
+    //     }
+    //   }
+    // }
 
     &__item,
     &__select,
@@ -53,6 +56,7 @@
       background: $white;
       padding: 10px;
       outline: none;
+      width: 100%;
 
       &:focus {
         border: 1px solid $primary;

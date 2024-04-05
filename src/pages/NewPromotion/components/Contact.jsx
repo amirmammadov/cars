@@ -36,14 +36,16 @@ const Contact = () => {
           onChange={(e) => handleChange(e)}
           className="contact__content__item"
         />
-        <OptionInputSingle
-          options={cityOptions}
-          holder="Şəhər"
-          keyValue="city"
-          clear={clear}
-          setClear={setClear}
-          handleChange={handleChange}
-        />
+        <div className="contact__content__city">
+          <OptionInputSingle
+            options={cityOptions}
+            holder="Şəhər"
+            keyValue="city"
+            clear={clear}
+            setClear={setClear}
+            handleChange={handleChange}
+          />
+        </div>
         <select
           className="contact__content__select"
           name="phonePrefix"
@@ -60,7 +62,7 @@ const Contact = () => {
           placeholder="Mobil nömrə"
           className="contact__content__phone"
         />
-        <div className="vinItem">
+        {/* <div className="vinItem">
           <input
             type="text"
             placeholder="VİN/Ban kodu"
@@ -73,7 +75,7 @@ const Contact = () => {
             alt="question"
             className="vinItem__img"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
