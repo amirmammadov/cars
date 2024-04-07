@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../../sass/pages/_carDetail.scss";
 
@@ -30,6 +30,14 @@ import { useNewCar, useSimilarCars } from "../../services/queries";
 
 const CarDetail = () => {
   const [isSliderOpen, setIsSliderOpen] = useState(false);
+
+  useEffect(() => {
+    if (isSliderOpen) {
+      document.documentElement.classList.add("no-scroll");
+    } else {
+      document.documentElement.classList.remove("no-scroll");
+    }
+  }, [isSliderOpen]);
 
   const { id } = useParams();
 
@@ -66,6 +74,7 @@ const CarDetail = () => {
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}
         aria-label="breadcrumb"
+        className="car__detail__breadcrumb"
       >
         {breadcrumbs}
       </Breadcrumbs>
@@ -76,7 +85,7 @@ const CarDetail = () => {
           </div>
           <CarDetailLinks product={car} />
         </div>
-        <CarImgSlider handleSlider={setIsSliderOpen} />
+        <CarImgSlider handleSlider={handleOpenSlider} />
         {isSliderOpen && (
           <div className="car__detail__modal">
             <CarSwipper images={carPictures} />

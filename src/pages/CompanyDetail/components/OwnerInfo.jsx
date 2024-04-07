@@ -6,7 +6,7 @@ const OwnerInfo = () => {
   const [showPhone, setShowPhone] = useState();
 
   return (
-    <div className="owner__info">
+    <div className="salon__owner__info">
       <div className="owner__info__title">Car Fanatics Company</div>
       <div className="owner__info__detail">
         <img
@@ -29,11 +29,9 @@ const OwnerInfo = () => {
         }}
       >
         <img src="/carDetail/phone.png" alt="phone" />
-        {showPhone ? (
-          <span>(050) 555 67 72</span>
-        ) : (
-          <span>(050) 555 6* **</span>
-        )}
+        <div className="owner__info__btn__phone">{`${
+          showPhone ? "(050) 555 67 72" : "(050) 555 6* **"
+        }`}</div>
       </button>
     </div>
   );

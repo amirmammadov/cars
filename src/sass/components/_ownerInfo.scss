@@ -11,10 +11,6 @@
     $gap: 1.25rem
   );
   width: 100%;
-  @include desktop {
-    background-color: transparent;
-    padding: 10px 0;
-  }
 
   &__title {
     @extend %font-title6;
@@ -56,13 +52,17 @@
     border-radius: 8px;
     background: $grayish;
     padding: 15px 30px;
-    width: 100%;
+    width: max-content;
+    min-width: 100%;
     @include flexbox($justify: center, $items: center, $gap: 0.5rem);
     border: none;
     outline: none;
     background-color: $green2;
     @include desktop {
-      display: none;
+      min-width: initial;
+    }
+    @include mobile {
+      min-width: 100%;
     }
 
     &:hover {
@@ -70,16 +70,51 @@
       opacity: 0.9;
     }
 
+    &__phone {
+      color: $white;
+      @extend %font-normal2;
+      width: max-content;
+    }
+
     img {
+      display: block;
       width: 24px;
       height: 24px;
     }
+  }
 
-    span {
-      color: $white;
+  &__divider {
+    width: 100%;
+    height: 0.1px;
+    background-color: $grey3;
+    display: none;
+    @include desktop {
+      display: initial;
+    }
+  }
+
+  &__vin {
+    @include flexbox($justify: flex-start, $items: center, $gap: 0.5rem);
+    display: none;
+    @include desktop {
+      display: flex;
+    }
+
+    &__key {
       @extend %font-normal2;
-      display: block;
-      width: 100%;
+      color: $font;
+      @include mobile3 {
+        font-size: 15px;
+      }
+    }
+
+    &__value {
+      @extend %font-normal;
+      color: $font;
+      font-size: 15px;
+      @include mobile3 {
+        font-size: 14px;
+      }
     }
   }
 }
