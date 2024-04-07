@@ -19,6 +19,12 @@
     padding-right: 5%;
   }
 
+  &__breadcrumb {
+    @include mobile3 {
+      display: none;
+    }
+  }
+
   &__general {
     @include flexbox(
       $direction: column,
@@ -31,12 +37,23 @@
     &__header {
       @include flexbox($justify: space-between, $items: center);
       width: 100%;
+      position: relative;
 
       &__info {
         @extend %font-title1;
         color: $font;
+        max-width: 350px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
         @include tablet {
           font-size: 1.2rem;
+        }
+        @include mobile {
+          font-size: 1rem;
+        }
+        @include mobile2 {
+          font-size: 0.9rem;
         }
       }
     }

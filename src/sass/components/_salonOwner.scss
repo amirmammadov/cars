@@ -1,6 +1,6 @@
 @import "../style";
 
-.owner__info {
+.salon__owner__info {
   padding: 20px;
   border-radius: 8px;
   background: $white;
@@ -78,10 +78,9 @@
       height: 24px;
     }
 
-    span {
+    &__phone {
       color: $white;
       @extend %font-normal2;
-      display: block;
       width: 100%;
     }
   }

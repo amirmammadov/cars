@@ -35,7 +35,14 @@ const CarImgSlider = ({ handleSlider }) => {
           className="car__detail__general__pictures__main__img"
         />
         <AspectRatioIcon
-          sx={{ color: "#fff", width: 35, height: 35 }}
+          sx={{
+            color: "#fff",
+            width: 35,
+            height: 35,
+            "@media screen and (max-width: 500px)": {
+              display: "none",
+            },
+          }}
           className="car__detail__general__pictures__main__expand"
           onClick={(e) => {
             e.stopPropagation();

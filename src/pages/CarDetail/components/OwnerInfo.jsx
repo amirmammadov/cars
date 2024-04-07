@@ -21,6 +21,11 @@ const OwnerInfo = () => {
           <div className="owner__info__detail__content__city">Bakı</div>
         </div>
       </div>
+      <div className="owner__info__divider" />
+      <div className="owner__info__vin">
+        <div className="owner__info__vin__key">VİN kod:</div>
+        <div className="owner__info__vin__value">WDD12345678901234</div>
+      </div>
       <button
         className="owner__info__btn"
         onClick={() => {
@@ -28,11 +33,9 @@ const OwnerInfo = () => {
         }}
       >
         <img src="/carDetail/phone.png" alt="phone" />
-        {showPhone ? (
-          <span>(050) 555 67 72</span>
-        ) : (
-          <span>(050) 555 6* **</span>
-        )}
+        <div className="owner__info__btn__phone">{`${
+          showPhone ? "(050) 555 67 72" : "(050) 555 6* **"
+        }`}</div>
       </button>
     </div>
   );

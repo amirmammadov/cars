@@ -2,6 +2,9 @@
 
 .car__detail__general__header__links {
   @include flexbox($justify: flex-start, $items: center, $gap: 1.875rem);
+  @include tablet {
+    display: none;
+  }
 
   img {
     width: 24px;
@@ -14,5 +17,31 @@
     border: none;
     outline: none;
     cursor: pointer;
+  }
+}
+
+.car__detail__general__header__links.activeLinks {
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+}
+
+.car__detail__header__more {
+  display: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  @include tablet {
+    display: initial;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $primary;
   }
 }
