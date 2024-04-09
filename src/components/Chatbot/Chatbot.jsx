@@ -31,7 +31,7 @@ const Chatbot = () => {
         <div className="chatbot__content__body">
           <img src="./icons/chatbot.png" alt="bot" />
           <p className="chatbot__content__body__text">
-            Hörmətli istifadəçi, statistikaları izləmək üçün linkə keçid edin:
+            Hörmətli istifadəçi, bizi izləmək üçün linkə keçid edin:
             <a href="#" className="chatbot__content__body__text__link">
               Moto4
             </a>

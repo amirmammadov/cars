@@ -11,12 +11,12 @@ import { Dialog, IconButton } from "@mui/material";
 
 const TopBar = () => {
   const location = useLocation();
-const navigate=useNavigate();
+  const navigate = useNavigate();
   const isOpen = location.pathname === "/favorites";
-const [openModal,setOpenModal]=useState(false);
-const handleCloseModal=()=>{
-  setOpenModal(false)
-}
+  const [openModal, setOpenModal] = useState(false);
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
   return (
     <div className="topbar">
       <div className="topbar__phone">
@@ -24,10 +24,6 @@ const handleCloseModal=()=>{
         <div className="topbar__phone__text">+994 70 562 12 69</div>
       </div>
       <div className="topbar__more">
-        <select className="topbar__more__langOptions">
-          <option value="AZ">AZ</option>
-          <option value="EN">EN</option>
-        </select>
         <Link to="/comparison">
           <BalanceIcon
             className="topbar__more__balance"
@@ -41,7 +37,10 @@ const handleCloseModal=()=>{
             <Icon style={{ color: "#fff" }} iconName="HeartFill" />
           )}
         </Link>
-        <div className="topbar__more__account" onClick={()=>setOpenModal(true)} >
+        <div
+          className="topbar__more__account"
+          onClick={() => setOpenModal(true)}
+        >
           <PersonIcon
             className="topbar__more__account__icon"
             sx={{ color: "#fff" }}
@@ -50,25 +49,37 @@ const handleCloseModal=()=>{
       </div>
       <Dialog className="modal" open={openModal}>
         <div className="modalContent">
-
-      <div className="modalTitle">
-        <h1>Davam edin</h1>
-        <IconButton
-          aria-label="close"
-          onClick={handleCloseModal}
-          sx={{
-            color: (theme) => theme.palette.grey[500],
-          }}
-          className="closeBtn"
-        >
-          <CloseIcon />
-        </IconButton>
-      </div>
-      <button onClick={()=>{navigate('/register');setOpenModal(false);}}>Fərdi hesab ilə</button>
-      <button className="buissnessBtn" onClick={()=>{navigate("/register",
-    {state:{data:"salon"}});setOpenModal(false);}}>Biznes hesab ilə</button>
-      </div>
-
+          <div className="modalTitle">
+            <h1>Davam edin</h1>
+            <IconButton
+              aria-label="close"
+              onClick={handleCloseModal}
+              sx={{
+                color: (theme) => theme.palette.grey[500],
+              }}
+              className="closeBtn"
+            >
+              <CloseIcon />
+            </IconButton>
+          </div>
+          <button
+            onClick={() => {
+              navigate("/register");
+              setOpenModal(false);
+            }}
+          >
+            Fərdi hesab ilə
+          </button>
+          <button
+            className="buissnessBtn"
+            onClick={() => {
+              navigate("/register", { state: { data: "salon" } });
+              setOpenModal(false);
+            }}
+          >
+            Biznes hesab ilə
+          </button>
+        </div>
       </Dialog>
     </div>
   );
