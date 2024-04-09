@@ -53,12 +53,12 @@
 
       &:hover {
         cursor: pointer;
-        color: $grey1;
+        color: $primary;
       }
     }
 
     &__search {
-      width: 235px;
+      width: 220px;
       padding: 10px;
       border: none;
       outline: none;
@@ -67,6 +67,8 @@
       border-radius: 8px;
       height: 40px;
       @include flexbox($justify: center, $items: center, $gap: 0.5rem);
+      font-size: 16px;
+
       @include mobile {
         width: 160px;
       }

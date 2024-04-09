@@ -13,6 +13,10 @@
   width: 100%;
   grid-column-start: 1;
 
+  @include mobile2 {
+    padding: 10px;
+  }
+
   &__title {
     @extend %font-title5;
     color: $font;
@@ -22,6 +26,7 @@
     display: none;
     grid-template-columns: repeat(3, auto);
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
     gap: 1rem;
     @include tablet {

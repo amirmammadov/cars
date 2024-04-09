@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "../../sass/pages/_home.scss";
 
 import HomeCars from "../../scenes/HomeCars";
+import Chatbot from "../../components/Chatbot/Chatbot";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
@@ -39,6 +40,9 @@ function Homepage() {
           <KeyboardArrowUpIcon sx={{ color: "#7b7b7b", fontSize: 30 }} />
         </button>
       )}
+      <div className="home__chatbot">
+        <Chatbot />
+      </div>
     </main>
   );
 }

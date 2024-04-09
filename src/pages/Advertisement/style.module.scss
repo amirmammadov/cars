@@ -18,9 +18,10 @@
 
   .upArrow {
     position: fixed;
-    top: 50%;
-    right: 3%;
+    top: 70%;
+    right: 30px;
     padding: 10px;
+    @include flexbox($justify: center, $items: center);
     border-radius: 100px;
     border: none;
     outline: none;
@@ -30,6 +31,11 @@
     &:hover {
       opacity: 0.8;
       cursor: pointer;
+    }
+
+    @include large-screen {
+      padding: 8px;
+      right: 10px;
     }
 
     @include tablet {

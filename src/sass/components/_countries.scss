@@ -12,6 +12,10 @@
   );
   grid-column-start: 1;
 
+  @include mobile2 {
+    padding: 10px;
+  }
+
   &__title {
     @extend %font-title5;
     color: $font;
