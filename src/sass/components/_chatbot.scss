@@ -1,0 +1,97 @@
+@import "../style";
+
+.chatbot {
+  max-width: 250px;
+  height: auto;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-end,
+    $items: flex-end,
+    $gap: 1rem
+  );
+
+  &__content {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start
+    );
+    width: 100%;
+    visibility: hidden;
+
+    &.active {
+      visibility: visible;
+    }
+
+    &__header {
+      @include flexbox($justify: center, $items: center, $gap: 0.5rem);
+      width: 100%;
+      background-color: $primary;
+      padding: 10px;
+      border-radius: 0.5rem;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &__text {
+        color: $white;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+
+    &__body {
+      @include flexbox($justify: space-between, $items: flex-end, $gap: 0.5rem);
+      width: 100%;
+      background-color: $white;
+      padding: 20px 10px;
+      border-radius: 0.5rem;
+
+      img {
+        width: 30px;
+        height: 30px;
+        background-color: $primary;
+        border-radius: 100px;
+        padding: 4px;
+      }
+
+      &__text {
+        background-color: $chatbot__bg;
+        padding: 10px;
+        border-radius: 0.5rem;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $font;
+
+        &__link {
+          color: $focus;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    padding: 8px;
+    background-color: $primary;
+    color: $white;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    @include flexbox($justify: center, $items: center);
+    cursor: pointer;
+
+    &__icon {
+      width: 30px;
+      height: 30px;
+
+      @include large-screen {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
