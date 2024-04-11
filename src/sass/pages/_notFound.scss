@@ -1,0 +1,13 @@
+@import "../style";
+
+.notFound {
+  padding: 32px 15%;
+  background-color: $background;
+  @include flexbox($justify: center, $items: center);
+  height: 200px;
+
+  &__text {
+    font-size: 40px;
+    color: $primary;
+  }
+}

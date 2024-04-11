@@ -9,6 +9,8 @@ import Homepage from "./Homepage/Homepage";
 import MoreFilters from "./MoreFilters/MoreFilters";
 import NewPromotion from "./NewPromotion/NewPromotion";
 import SearchResult from "./SearchResult/SearchResult";
+import Account from "./Account/Account";
+import NotFound from "./NotFound/NotFound";
 
 export {
   CarDetail,
@@ -22,4 +24,6 @@ export {
   MoreFilters,
   NewPromotion,
   SearchResult,
+  Account,
+  NotFound,
 };
