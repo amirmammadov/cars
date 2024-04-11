@@ -52,10 +52,14 @@ const TopBar = () => {
           )}
         </Link>
         <div className="topbar__more__account" onClick={handleAccountClick}>
-          <PersonIcon
-            className="topbar__more__account__icon"
-            sx={{ color: "#fff" }}
-          />
+          {isLoggedIn ? (
+            <div className="topbar__more__account__user">MA</div>
+          ) : (
+            <PersonIcon
+              className="topbar__more__account__icon"
+              sx={{ color: "#fff" }}
+            />
+          )}
         </div>
       </div>
       <Dialog className="modal" open={openModal}>

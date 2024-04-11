@@ -1,1 +1,30 @@
 @import "../style";
+
+.account {
+  padding: 32px 15%;
+  background-color: $background;
+  width: 100%;
+  @include flexbox($justify: flex-start, $items: flex-start, $gap: 1.5rem);
+
+  @include x-large-screen {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @include large-screen {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__content {
+    flex-grow: 1;
+    height: auto;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
