@@ -22,9 +22,81 @@
   &__content {
     flex-grow: 1;
     height: auto;
+    width: 100%;
 
-    @include tablet {
-      display: none;
+    // @include tablet {
+    //   display: none;
+    // }
+  }
+
+  &__logout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    @include flexbox($justify: center, $items: center);
+
+    &__content {
+      width: 450px;
+      height: auto;
+      background-color: $white;
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $items: center,
+        $gap: 1.5rem
+      );
+      border-radius: 8px;
+      padding: 20px 25px;
+
+      &__header {
+        @include flexbox($justify: center, $items: center, $gap: 0.5rem);
+
+        &__title {
+          color: $font;
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        &__btn {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          line-height: 0;
+        }
+      }
+
+      &__btns {
+        @include flexbox($justify: center, $items: center, $gap: 1rem);
+        width: 100%;
+
+        &__item {
+          padding: 10px 25px;
+          border-radius: 8px;
+          border: none;
+          outline: none;
+          border: 1px solid $primary;
+          background-color: transparent;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.02px;
+          flex-grow: 1;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+          }
+        }
+      }
+
+      &__btns > *:first-child {
+        background-color: $primary;
+        color: $white;
+      }
     }
   }
 }

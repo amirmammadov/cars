@@ -10,9 +10,19 @@ const type = ["advert", "account", "logout"];
 
 const Account = () => {
   const [currUserTab, setCurrUserTab] = useState(type[0]);
+  const [showModal, setShowModal] = useState(false);
 
   const handleUserTab = (tab) => {
+    if (tab === "logout") {
+      setShowModal(true);
+      return;
+    }
+
     setCurrUserTab(tab);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
   };
 
   return (
@@ -24,9 +34,37 @@ const Account = () => {
         ) : currUserTab === type[1] ? (
           <Profile />
         ) : (
-          <div>log out will go here</div>
+          <></>
         )}
       </div>
+      {showModal && (
+        <div className="account__logout">
+          <div className="account__logout__content">
+            <div className="account__logout__content__header">
+              <div className="account__logout__content__header__title">
+                Çıxmaq istədiyinizə əminsiniz?
+              </div>
+              <button
+                className="account__logout__content__header__btn"
+                onClick={handleModalClose}
+              >
+                <img src="/icons/close.png" alt="close" />
+              </button>
+            </div>
+            <div className="account__logout__content__btns">
+              <button
+                className="account__logout__content__btns__item"
+                onClick={handleModalClose}
+              >
+                Xeyr
+              </button>
+              <button className="account__logout__content__btns__item">
+                Bəli
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
