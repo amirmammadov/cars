@@ -23,10 +23,6 @@
     flex-grow: 1;
     height: auto;
     width: 100%;
-
-    // @include tablet {
-    //   display: none;
-    // }
   }
 
   &__logout {
@@ -52,6 +48,19 @@
       border-radius: 8px;
       padding: 20px 25px;
 
+      @include mobile {
+        width: 400px;
+      }
+
+      @include mobile2 {
+        width: 300px;
+        padding: 10px 15px;
+      }
+
+      @include mobile3 {
+        width: 270px;
+      }
+
       &__header {
         @include flexbox($justify: center, $items: center, $gap: 0.5rem);
 
@@ -59,6 +68,10 @@
           color: $font;
           font-size: 20px;
           font-weight: 500;
+
+          @include mobile2 {
+            font-size: 16px;
+          }
         }
 
         &__btn {
@@ -74,6 +87,10 @@
         @include flexbox($justify: center, $items: center, $gap: 1rem);
         width: 100%;
 
+        @include mobile2 {
+          gap: 1rem;
+        }
+
         &__item {
           padding: 10px 25px;
           border-radius: 8px;
@@ -85,6 +102,11 @@
           font-weight: 400;
           letter-spacing: 0.02px;
           flex-grow: 1;
+
+          @include mobile2 {
+            padding: 10px 15px;
+            font-size: 15px;
+          }
 
           &:hover {
             cursor: pointer;
