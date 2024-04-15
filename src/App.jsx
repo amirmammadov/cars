@@ -14,11 +14,15 @@ import {
   MoreFilters,
   NewPromotion,
   SearchResult,
+  Account,
+  NotFound,
 } from "./pages/index";
 import Registration from "./pages/Authentication/Registration";
 import Login from "./pages/Authentication/Login";
 
 function App() {
+  const isLoggedIn = true;
+
   return (
     <Layout>
       <Routes>
@@ -36,6 +40,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/salons" element={<Salons />} />
         <Route path="/salons/:id" element={<CompanyDetail />} />
+        {isLoggedIn && <Route path="/user" element={<Account />} />}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );

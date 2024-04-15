@@ -1,0 +1,124 @@
+@import "../style";
+
+.account {
+  padding: 32px 15%;
+  background-color: $background;
+  width: 100%;
+  @include flexbox($justify: flex-start, $items: flex-start, $gap: 1.5rem);
+
+  @include x-large-screen {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @include large-screen {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__content {
+    flex-grow: 1;
+    height: auto;
+    width: 100%;
+  }
+
+  &__logout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    @include flexbox($justify: center, $items: center);
+
+    &__content {
+      width: 450px;
+      height: auto;
+      background-color: $white;
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $items: center,
+        $gap: 1.5rem
+      );
+      border-radius: 8px;
+      padding: 20px 25px;
+
+      @include mobile {
+        width: 400px;
+      }
+
+      @include mobile2 {
+        width: 300px;
+        padding: 10px 15px;
+      }
+
+      @include mobile3 {
+        width: 270px;
+      }
+
+      &__header {
+        @include flexbox($justify: center, $items: center, $gap: 0.5rem);
+
+        &__title {
+          color: $font;
+          font-size: 20px;
+          font-weight: 500;
+
+          @include mobile2 {
+            font-size: 16px;
+          }
+        }
+
+        &__btn {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          line-height: 0;
+        }
+      }
+
+      &__btns {
+        @include flexbox($justify: center, $items: center, $gap: 1rem);
+        width: 100%;
+
+        @include mobile2 {
+          gap: 1rem;
+        }
+
+        &__item {
+          padding: 10px 25px;
+          border-radius: 8px;
+          border: none;
+          outline: none;
+          border: 1px solid $primary;
+          background-color: transparent;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.02px;
+          flex-grow: 1;
+
+          @include mobile2 {
+            padding: 10px 15px;
+            font-size: 15px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+          }
+        }
+      }
+
+      &__btns > *:first-child {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}

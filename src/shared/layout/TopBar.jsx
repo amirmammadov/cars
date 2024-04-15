@@ -10,13 +10,27 @@ import { useState } from "react";
 import { Dialog, IconButton } from "@mui/material";
 
 const TopBar = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const isLoggedIn = true;
+
   const location = useLocation();
   const navigate = useNavigate();
+
   const isOpen = location.pathname === "/favorites";
-  const [openModal, setOpenModal] = useState(false);
+
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+
+  const handleAccountClick = () => {
+    if (!isLoggedIn) {
+      setOpenModal(true);
+    } else {
+      navigate("/user");
+    }
+  };
+
   return (
     <div className="topbar">
       <div className="topbar__phone">
@@ -37,14 +51,15 @@ const TopBar = () => {
             <Icon style={{ color: "#fff" }} iconName="HeartFill" />
           )}
         </Link>
-        <div
-          className="topbar__more__account"
-          onClick={() => setOpenModal(true)}
-        >
-          <PersonIcon
-            className="topbar__more__account__icon"
-            sx={{ color: "#fff" }}
-          />
+        <div className="topbar__more__account" onClick={handleAccountClick}>
+          {isLoggedIn ? (
+            <div className="topbar__more__account__user">MA</div>
+          ) : (
+            <PersonIcon
+              className="topbar__more__account__icon"
+              sx={{ color: "#fff" }}
+            />
+          )}
         </div>
       </div>
       <Dialog className="modal" open={openModal}>
