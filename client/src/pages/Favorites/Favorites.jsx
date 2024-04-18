@@ -5,6 +5,8 @@ import { products } from "../../mockData/products";
 
 import ProductCart from "../../components/productCard/ProductCart";
 
+import { Link } from "react-router-dom";
+
 const Favorites = () => {
   const favCarIds = useSelector((state) => state.favCarIds);
 
@@ -22,6 +24,9 @@ const Favorites = () => {
             className="no__car__img"
           />
           <div className="no__car__text">Seçilmiş avtomobil yoxdur.</div>
+          <Link to="/" className="no__car__link">
+            Ana səhifəyə qayıt.
+          </Link>
         </div>
       ) : (
         <div className="favorites__content">

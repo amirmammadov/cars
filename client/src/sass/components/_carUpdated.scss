@@ -1,0 +1,26 @@
+@import "../style";
+
+.extra__info__updated {
+  @include flexbox($justify: flex-start, $items: center, $gap: 1.25rem);
+  width: 100%;
+  @include desktop {
+    gap: 3rem;
+  }
+  @include mobile {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  &__item {
+    @include flexbox($justify: flex-start, $items: center, $gap: 0.5rem);
+    color: $lightFont;
+    @extend %font-normal;
+    letter-spacing: 0.16px;
+    @include mobile {
+      font-size: 15px;
+    }
+    @include mobile2 {
+      font-size: 13px;
+    }
+  }
+}
