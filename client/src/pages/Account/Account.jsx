@@ -44,12 +44,6 @@ const Account = () => {
               <div className="account__logout__content__header__title">
                 Çıxmaq istədiyinizə əminsiniz?
               </div>
-              <button
-                className="account__logout__content__header__btn"
-                onClick={handleModalClose}
-              >
-                <img src="/icons/close.png" alt="close" />
-              </button>
             </div>
             <div className="account__logout__content__btns">
               <button
@@ -62,6 +56,12 @@ const Account = () => {
                 Bəli
               </button>
             </div>
+            <button
+              className="account__logout__close"
+              onClick={handleModalClose}
+            >
+              <img src="/icons/close.png" alt="close" />
+            </button>
           </div>
         </div>
       )}

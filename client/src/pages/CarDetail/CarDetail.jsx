@@ -9,6 +9,7 @@ import {
   ExtraInfo,
   Note,
   OwnerInfo,
+  CarUpdated,
 } from "./components";
 
 import ProductCart from "../../components/productCard/ProductCart";
@@ -103,6 +104,7 @@ const CarDetail = () => {
           <ExtraInfo product={car} />
           <Basic product={car} />
           <Note product={car} />
+          <CarUpdated />
         </div>
         <div className="car__detail__additional__right">
           <CurrencyConvertor product={car} />

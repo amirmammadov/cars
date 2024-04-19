@@ -60,6 +60,13 @@
       color: $font;
     }
 
+    &__link {
+      color: $primary;
+      text-decoration: underline;
+      font-size: 16px;
+      letter-spacing: 0.02px;
+    }
+
     &__img {
       width: 100px;
       height: auto;

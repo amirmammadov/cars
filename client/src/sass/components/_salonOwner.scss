@@ -11,6 +11,8 @@
     $gap: 1.25rem
   );
   width: 100%;
+  height: fit-content;
+
   @include tablet {
     display: none;
   }

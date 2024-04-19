@@ -18,6 +18,7 @@
     );
     width: 100%;
     visibility: hidden;
+    box-shadow: $box-shadow;
 
     &.active {
       visibility: visible;

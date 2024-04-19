@@ -8,7 +8,7 @@
 
   .up__arrow {
     position: fixed;
-    top: 70%;
+    bottom: 50%;
     right: 30px;
     @include flexbox($justify: center, $items: center);
     padding: 10px;
@@ -36,12 +36,12 @@
 
   &__hero {
     width: 100%;
-    height: 465px;
+    height: auto;
     background-image: url("../../assets/home/bg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20px 15%;
+    padding: 50px 15%;
     @include x-large-screen {
       padding-left: 10%;
       padding-right: 10%;
@@ -54,12 +54,14 @@
       background-image: none;
       animation: none;
       height: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 
   &__chatbot {
     position: fixed;
-    top: 15%;
+    bottom: 10%;
     right: 30px;
     z-index: 999;
     @include large-screen {

@@ -47,6 +47,7 @@
       );
       border-radius: 8px;
       padding: 20px 25px;
+      position: relative;
 
       @include mobile {
         width: 400px;
@@ -62,6 +63,7 @@
       }
 
       &__header {
+        width: 100%;
         @include flexbox($justify: center, $items: center, $gap: 0.5rem);
 
         &__title {
@@ -72,14 +74,6 @@
           @include mobile2 {
             font-size: 16px;
           }
-        }
-
-        &__btn {
-          background-color: transparent;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          line-height: 0;
         }
       }
 
@@ -119,6 +113,17 @@
         background-color: $primary;
         color: $white;
       }
+    }
+
+    &__close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      line-height: 0;
     }
   }
 }
