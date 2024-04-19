@@ -1,16 +1,15 @@
 @import "../style";
 
 .new__promotion__main__type {
-  @include flexbox($justify: flex-start, $items: center, $gap: 2rem);
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: center,
+    $gap: 2rem
+  );
   width: 100%;
-  @include tablet {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  &__item {
-    flex-grow: 1;
-
+  &__checkboxes {
     &__group {
       @include flexbox($justify: flex-start, $items: center, $gap: 2.5rem);
       width: 100%;
@@ -18,8 +17,34 @@
       .radio__group__label {
         @extend %font-normal;
         margin-right: 0;
+
+        @include mobile {
+          span {
+            font-size: 13px;
+            align-items: center;
+          }
+        }
       }
     }
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 20px;
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 15px;
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
   }
 
   &__item:last-child {

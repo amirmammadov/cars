@@ -201,7 +201,7 @@ const HeroFilter = () => {
             />
           </div>
         </div>
-        <div className="home__hero__content__thirdLine__item">
+        <div className="home__hero__content__thirdLine__item elanCode">
           <input
             type="text"
             name="code"

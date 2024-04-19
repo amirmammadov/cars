@@ -10,7 +10,11 @@ import "../../../sass/components/_type.scss";
 import { useDispatch } from "react-redux";
 import { setNewPromotionState } from "../../../features/appSlice";
 
-import { brandOptions, modelOptions } from "../../../constants/index";
+import {
+  brandOptions,
+  modelOptions,
+  salonOptions,
+} from "../../../constants/index";
 
 import OptionInputSingle from "../../../components/OptionInputSingle/OptionInputSingle";
 
@@ -25,36 +29,14 @@ const Type = () => {
 
   return (
     <div className="new__promotion__main__type">
-      <div className="new__promotion__main__type__item">
-        <OptionInputSingle
-          options={brandOptions}
-          holder="Marka"
-          keyValue="brand"
-          clear={clear}
-          setClear={setClear}
-          handleChange={handleChange}
-          key="brand"
-        />
-      </div>
-      <div className="new__promotion__main__type__item">
-        <OptionInputSingle
-          options={modelOptions}
-          holder="Model"
-          keyValue="model"
-          clear={clear}
-          setClear={setClear}
-          handleChange={handleChange}
-          key="model"
-        />
-      </div>
-      <div className="new__promotion__main__type__item">
+      <div className="new__promotion__main__type__checkboxes">
         <FormControl>
           <RadioGroup
             row
             aria-labelledby="demo-row-radio-buttons-group-label"
             name="row-radio-buttons-group"
             defaultValue="new"
-            className="new__promotion__main__type__item__group"
+            className="new__promotion__main__type__checkboxes__group"
           >
             <FormControlLabel
               value="new"
@@ -84,6 +66,41 @@ const Type = () => {
             />
           </RadioGroup>
         </FormControl>
+      </div>
+      <div className="new__promotion__main__type__inputs">
+        <div className="new__promotion__main__type__inputs__item">
+          <OptionInputSingle
+            options={brandOptions}
+            holder="Marka"
+            keyValue="brand"
+            clear={clear}
+            setClear={setClear}
+            handleChange={handleChange}
+            key="brand"
+          />
+        </div>
+        <div className="new__promotion__main__type__inputs__item">
+          <OptionInputSingle
+            options={modelOptions}
+            holder="Model"
+            keyValue="model"
+            clear={clear}
+            setClear={setClear}
+            handleChange={handleChange}
+            key="model"
+          />
+        </div>
+        <div className="new__promotion__main__type__inputs__item">
+          <OptionInputSingle
+            options={salonOptions}
+            holder="Avtomobil Salonu"
+            keyValue="salon"
+            clear={clear}
+            setClear={setClear}
+            handleChange={handleChange}
+            key="salon"
+          />
+        </div>
       </div>
     </div>
   );

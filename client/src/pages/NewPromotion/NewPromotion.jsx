@@ -1,9 +1,7 @@
 import {
   Type,
-  Room,
   Price,
   MoreOptions,
-  Colors,
   CarSupply,
   Others,
   Comment,
@@ -59,11 +57,9 @@ const NewPromotion = () => {
       </div>
       <div className="new__promotion__content">
         <Type />
-        <Room />
         <Price />
         <MoreOptions />
         <div className="new__promotion__content__divider" />
-        <Colors />
         <CarSupply />
         <Others />
         <div className="new__promotion__content__divider" />

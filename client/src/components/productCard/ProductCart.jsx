@@ -58,7 +58,7 @@ function ProductCart({ product }) {
             {isFav ? (
               <Icon style={{ color: "red" }} iconName="HeartFill" />
             ) : (
-              <Icon iconName="HeartFill" />
+              <Icon iconName="HeartFill" style={{ color: "#620985" }} />
             )}
           </button>
         </div>
@@ -79,11 +79,11 @@ function ProductCart({ product }) {
         <ul className={styles.dateInfo}>
           <li>
             <FmdGoodIcon className={styles.icon} sx={{ color: "#94a684" }} />
-            {product.location}
+            <span>{product.location}</span>
           </li>
           <li>
             <AccessTimeIcon className={styles.icon} sx={{ color: "#94a684" }} />
-            {product.date}
+            <span>{product.date}</span>
           </li>
         </ul>
       </div>

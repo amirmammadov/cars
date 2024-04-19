@@ -7,16 +7,16 @@
   column-gap: 20px;
   width: 100%;
   @include tablet {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
   }
-  @include mobile2 {
-    grid-template-columns: repeat(1, 1fr);
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 15px;
   }
 
   &__input {
-    flex-grow: 1;
+    width: 100%;
     border: none;
     outline: none;
     border-radius: 8px;

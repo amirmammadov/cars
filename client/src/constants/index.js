@@ -22,6 +22,17 @@ export const modelOptions = [
   { title: "118" },
 ];
 
+export const salonOptions = [
+  { title: "SUV" },
+  { title: "Compact Car" },
+  { title: "Luxury Car" },
+  { title: "Sedan" },
+  { title: "Hatchback" },
+  { title: "Pickup" },
+  { title: "Van" },
+  { title: "Convertible" },
+];
+
 export const banOptions = [{ title: "Pikap" }, { title: "Sedan" }];
 
 export const cityOptions = [
@@ -183,99 +194,63 @@ export const ownNumbers = [
   },
 ];
 
-export const innerColors = [
+export const outerColors = [
   {
-    id: 1,
     title: "Qara",
-    code: "#1E1E1E",
   },
   {
-    id: 2,
     title: "Bənövşəyi",
-    code: "#9361FF",
   },
   {
-    id: 3,
     title: "Yaşıl",
-    code: "#7EBA30",
   },
   {
-    id: 4,
     title: "Gümüşü",
-    code: "#EEE ",
   },
   {
-    id: 5,
     title: "Qəhvəyi",
-    code: "#855E1B",
   },
   {
-    id: 6,
     title: "Gold",
-    code: "#FFD200 ",
   },
   {
-    id: 7,
     title: "Narıncı",
-    code: "#FF7F23",
   },
   {
-    id: 8,
     title: "Ağ",
-    code: "#FFF",
   },
   {
-    id: 9,
     title: "Mavi",
-    code: "#376EDB",
   },
   {
-    id: 10,
     title: "Boz",
-    code: "#ABABAB",
   },
   {
-    id: 11,
     title: "Qırmızı",
-    code: "#FF4040",
   },
   {
-    id: 12,
     title: "Metalik",
-    code: "#DFDFDF",
   },
   {
-    id: 13,
     title: "Sarı",
-    code: "#F5D300",
   },
   {
-    id: 14,
     title: "Bej",
-    code: "#DBB67F",
   },
 ];
 
-export const outerColors = [
+export const innerColors = [
   {
-    id: 1,
     title: "Qara",
-    code: "#1E1E1E",
   },
   {
-    id: 2,
     title: "Bənövşəyi",
-    code: "#9361FF",
   },
   {
-    id: 3,
     title: "Yaşıl",
-    code: "#7EBA30",
   },
   {
-    id: 4,
     title: "Gümüşü",
-    code: "#EEE ",
   },
 ];
 
@@ -426,6 +401,18 @@ export const moreOptionsIterator = [
     options: forMarket,
     holder: "Yığıldığı bazar",
     keyValue: "formarket",
+  },
+  {
+    id: 12,
+    options: innerColors,
+    holder: "Daxili rəng",
+    keyValue: "innerColor",
+  },
+  {
+    id: 12,
+    options: outerColors,
+    holder: "Xarici rəng",
+    keyValue: "outerColor",
   },
 ];
 
