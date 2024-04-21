@@ -94,7 +94,7 @@ const Pictures = () => {
           onClick={() => handleUploadClick(frontView)}
         >
           <img
-            src={urlFront ? urlFront : "/promotion/car_front.png"}
+            src={urlFront ? urlFront : "/promotion/frontin.png"}
             alt="car__front"
             className="pictures__content__item__img"
           />
@@ -113,7 +113,7 @@ const Pictures = () => {
           onClick={() => handleUploadClick(backView)}
         >
           <img
-            src={urlBack ? urlBack : "/promotion/car_back.png"}
+            src={urlBack ? urlBack : "/promotion/back.png"}
             alt="car__front"
             className="pictures__content__item__img"
           />
@@ -132,7 +132,7 @@ const Pictures = () => {
           onClick={() => handleUploadClick(panelView)}
         >
           <img
-            src={urlPanel ? urlPanel : "/promotion/car_panel.jpeg"}
+            src={urlPanel ? urlPanel : "/promotion/panel.jpeg"}
             alt="car__front"
             className="pictures__content__item__img"
           />
@@ -149,7 +149,6 @@ const Pictures = () => {
         {images.otherImages.length > 0 &&
           images.otherImages.map((img, index) => {
             const url = URL.createObjectURL(img);
-
             return (
               <div key={index} className="pictures__content__item">
                 <img
