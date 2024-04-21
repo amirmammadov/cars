@@ -42,6 +42,7 @@ const HeroFilter = () => {
   const [data, setData] = useState(INITIAL_DATA);
   const [tabOneDefaultValue, setTabOneDefaultValue] = useState("all");
   const [tabTwoDefaultValue, setTwoOneDefaultValue] = useState("all");
+
   const navigate = useNavigate();
 
   const [clear, setClear] = useState(false);
@@ -67,6 +68,7 @@ const HeroFilter = () => {
     setTabOneDefaultValue("all");
     setTwoOneDefaultValue("all");
     setClear(true);
+    navigate("/result");
   };
 
   const handleClear = () => {

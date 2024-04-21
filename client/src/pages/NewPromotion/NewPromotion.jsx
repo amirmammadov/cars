@@ -27,11 +27,8 @@ const NewPromotion = () => {
 
   const submitNewPromotion = (e) => {
     e.preventDefault();
-
     console.log(newPromotion);
-
     navigate("/");
-
     window.scrollTo(0, 0);
   };
 

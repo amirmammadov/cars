@@ -23,24 +23,42 @@
     @include tablet {
       grid-template-columns: repeat(3, 1fr);
       gap: 0.5rem;
-
-      &__item:last-child {
-        grid-column: span 3;
-      }
     }
 
     &__item {
-      flex-grow: 1;
+      @include flexbox(
+        $direction: column,
+        $justify: space-between,
+        $items: center
+      );
+      flex: 1;
       border-radius: 8px;
       border: 1px dashed var(--Second-Color, $primary);
       background: $white;
       padding: 20px;
       outline: none;
+      height: 210px;
+
+      @include desktop {
+        height: 180px;
+      }
+
+      @include tablet {
+        height: 160px;
+      }
+
       @include mobile {
         padding: 10px;
+        height: 140px;
       }
+
       @include mobile2 {
         padding: 5px;
+        height: 120px;
+      }
+
+      @include mobile3 {
+        height: 100px;
       }
 
       &:hover {
@@ -49,20 +67,11 @@
 
       &__img {
         width: 100%;
-        height: auto;
+        height: 80%;
         border-radius: 8px;
         object-fit: cover;
         display: block;
         margin: 0 auto;
-      }
-
-      &__extraImg {
-        width: 24px;
-        height: 24px;
-        @include mobile {
-          width: 20px;
-          height: 20px;
-        }
       }
 
       &__text,
@@ -98,8 +107,15 @@
         $items: center,
         $gap: 3rem
       );
-      @include tablet {
-        gap: 0.2rem;
+      position: relative;
+
+      .pictures__content__item__extraImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
       }
     }
   }

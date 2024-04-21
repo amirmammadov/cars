@@ -13,6 +13,7 @@ import {
 } from "./components";
 
 import ProductCart from "../../components/productCard/ProductCart";
+import PriceOffer from "./components/PriceOffer";
 
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
@@ -31,14 +32,19 @@ import { useNewCar, useSimilarCars } from "../../services/queries";
 
 const CarDetail = () => {
   const [isSliderOpen, setIsSliderOpen] = useState(false);
+  const [priceOffer, setPriceOffer] = useState(false);
+
+  const handleOffer = () => {
+    setPriceOffer((prev) => !prev);
+  };
 
   useEffect(() => {
-    if (isSliderOpen) {
+    if (isSliderOpen || priceOffer) {
       document.documentElement.classList.add("no-scroll");
     } else {
       document.documentElement.classList.remove("no-scroll");
     }
-  }, [isSliderOpen]);
+  }, [isSliderOpen, priceOffer]);
 
   const { id } = useParams();
 
@@ -108,7 +114,7 @@ const CarDetail = () => {
         </div>
         <div className="car__detail__additional__right">
           <CurrencyConvertor product={car} />
-          <OwnerInfo />
+          <OwnerInfo handleOffer={handleOffer} />
           <div className="car__detail__additional__right__vin">
             <div className="car__detail__additional__right__vin__key">
               VİN kod:
@@ -134,6 +140,7 @@ const CarDetail = () => {
           )}
         </div>
       </div>
+      {priceOffer && <PriceOffer handleOffer={handleOffer} />}
     </div>
   );
 };

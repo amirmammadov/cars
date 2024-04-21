@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "../../../sass/components/_ownerInfo.scss";
 
-const OwnerInfo = () => {
+const OwnerInfo = ({ handleOffer }) => {
   const [showPhone, setShowPhone] = useState();
 
   return (
@@ -36,6 +36,9 @@ const OwnerInfo = () => {
         <div className="owner__info__btn__phone">{`${
           showPhone ? "(050) 555 67 72" : "(050) 555 6* **"
         }`}</div>
+      </button>
+      <button className="owner__info__offer" onClick={handleOffer}>
+        Öz qiymət təklifini göndər
       </button>
     </div>
   );
