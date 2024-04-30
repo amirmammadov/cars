@@ -36,6 +36,7 @@ const initialState = {
   },
   favCarIds: JSON.parse(localStorage.getItem("favCars")) || [],
   isLoggedIn: true,
+  mobileForAccActive: false,
 };
 
 export const appSlice = createSlice({
@@ -67,8 +68,10 @@ export const appSlice = createSlice({
       }
     },
     setLoggedIn: (state, action) => {
-      console.log(action.payload);
       state.isLoggedIn = action.payload;
+    },
+    setMobileAccActive: (state, action) => {
+      state.mobileForAccActive = action.payload;
     },
   },
 });
@@ -78,6 +81,7 @@ export const {
   setNewPromotionState,
   setFavCarIds,
   setLoggedIn,
+  setMobileAccActive,
 } = appSlice.actions;
 
 export default appSlice.reducer;

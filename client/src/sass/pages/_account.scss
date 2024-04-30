@@ -23,6 +23,14 @@
     flex-grow: 1;
     height: auto;
     width: 100%;
+
+    @include tablet {
+      display: none;
+
+      &.opened {
+        display: initial;
+      }
+    }
   }
 
   &__logout {

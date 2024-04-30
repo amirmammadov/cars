@@ -1,9 +1,21 @@
 import "../../../sass/components/_accProfile.scss";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+
+import { useDispatch } from "react-redux";
+import { setMobileAccActive } from "../../../features/appSlice";
 
 const Profile = () => {
+  const dispatch = useDispatch();
+
+  const handleBackProfile = () => {
+    dispatch(setMobileAccActive(false));
+  };
   return (
     <div className="acc__profile">
-      <div className="acc__profile__title">Hesabım</div>
+      <div className="acc__profile__title">
+        <ArrowBackIosNewIcon onClick={handleBackProfile} />
+        <div>Hesabım</div>
+      </div>
       <div className="acc__profile__content">
         <form className="acc__profile__content__form">
           <input

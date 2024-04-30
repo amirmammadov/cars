@@ -13,6 +13,7 @@
     font-weight: 500;
     font-size: 20px;
     color: $font;
+    line-height: 0;
 
     &.back {
       cursor: pointer;
@@ -23,9 +24,24 @@
   }
 
   &__title {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     color: $font;
+    @include flexbox($justify: flex-start, $items: center, $gap: 0.7rem);
+
+    *:first-child {
+      font-size: 20px;
+      display: none;
+      cursor: pointer;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    *:last-child {
+      line-height: 0;
+    }
   }
 
   &__content {
