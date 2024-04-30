@@ -1,0 +1,89 @@
+@import "../style";
+
+.acc__offers {
+  width: 100%;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 1.5rem
+  );
+
+  .acc__offers__links__item {
+    font-weight: 500;
+    font-size: 20px;
+    color: $font;
+
+    &.back {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    color: $font;
+  }
+
+  &__content {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start,
+      $gap: 0.5rem
+    );
+    width: 100%;
+
+    &__titles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 12px;
+      width: 100%;
+
+      *:nth-child(2) {
+        justify-self: center;
+      }
+
+      *:last-child {
+        justify-self: flex-end;
+      }
+
+      &__item {
+        font-size: 16px;
+        color: $lightFont;
+        font-weight: 500;
+      }
+    }
+
+    &__result {
+      background-color: $white;
+      border-radius: 8px;
+      padding: 12px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      color: $font;
+      font-size: 16px;
+      font-weight: 500;
+
+      @include mobile {
+        font-size: 15px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__code {
+        justify-self: center;
+      }
+
+      &__count {
+        justify-self: flex-end;
+      }
+    }
+  }
+}

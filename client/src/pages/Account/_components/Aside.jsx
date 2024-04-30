@@ -3,27 +3,34 @@ import "../../../sass/components/_accAside.scss";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
+import PaymentsIcon from "@mui/icons-material/Payments";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const type = ["advert", "account", "logout"];
+import { accountAsideBtns } from "../../../constants/index";
 
 const allTabs = [
   {
     id: 1,
     text: "Elanlarım",
-    key: type[0],
+    key: accountAsideBtns[0],
     icon: <CreditCardIcon />,
   },
   {
     id: 2,
     text: "Hesabım",
-    key: type[1],
+    key: accountAsideBtns[1],
     icon: <PersonIcon />,
   },
   {
     id: 3,
+    text: "Qiymət təklifləri",
+    key: accountAsideBtns[2],
+    icon: <PaymentsIcon />,
+  },
+  {
+    id: 4,
     text: "Çıxış",
-    key: type[2],
+    key: accountAsideBtns[3],
     icon: <LogoutIcon />,
   },
 ];
@@ -32,8 +39,8 @@ const Aside = ({ tab, handleTab }) => {
   return (
     <aside className="account__aside">
       <div className="account__aside__header">
-        <div className="account__aside__header__caps">KM</div>
-        <div className="account__aside__header__user">Kevin Medina</div>
+        <div className="account__aside__header__caps">UU</div>
+        <div className="account__aside__header__user">User User</div>
       </div>
       <div className="account__aside__btns">
         {allTabs.map((tabItem) => (
