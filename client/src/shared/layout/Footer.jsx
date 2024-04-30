@@ -1,4 +1,5 @@
-import styles from "./styles.module.scss";
+import styles from "./footer.module.scss";
+
 import logo from "../../assets/logo.png";
 import { Icon } from "@fluentui/react";
 import InstagramIcon from "@mui/icons-material/Instagram";
