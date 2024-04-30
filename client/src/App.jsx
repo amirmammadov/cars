@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 
 import Layout from "./shared/layout";
 
+import { useLoggedIn } from "./hooks/useLoggedIn";
+
 import {
   CarDetail,
   Advertisement,
@@ -21,7 +23,7 @@ import Registration from "./pages/Authentication/Registration";
 import Login from "./pages/Authentication/Login";
 
 function App() {
-  const isLoggedIn = true;
+  const isLoggedIn = useLoggedIn();
 
   return (
     <Layout>

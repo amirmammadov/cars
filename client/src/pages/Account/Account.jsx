@@ -1,21 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../../sass/pages/_account.scss";
 
 import Aside from "./_components/Aside";
 import Advert from "./_components/Advert";
 import Profile from "./_components/Profile";
+import OfferMain from "./_components/OfferMain";
+import Logout from "./_components/Logout";
 
-const type = ["advert", "account", "logout"];
+import { accountAsideBtns } from "../../constants/index";
+
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { setMobileAccActive } from "../../features/appSlice";
+
+import { useDeviceSize } from "../../hooks/useDeviceSize";
+
+const accTabsContent = {
+  advert: <Advert />,
+  account: <Profile />,
+  offer: <OfferMain />,
+};
 
 const Account = () => {
-  const [currUserTab, setCurrUserTab] = useState(type[0]);
+  const [currUserTab, setCurrUserTab] = useState(accountAsideBtns[0]);
   const [showModal, setShowModal] = useState(false);
+
+  const width = useDeviceSize()[0];
+
+  const isContentHide = useSelector((state) => state.mobileForAccActive);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setMobileAccActive(false));
+  }, [dispatch, width]);
 
   const handleUserTab = (tab) => {
     if (tab === "logout") {
       setShowModal(true);
       return;
+    }
+
+    if (window.innerWidth < 768) {
+      dispatch(setMobileAccActive(true));
     }
 
     setCurrUserTab(tab);
@@ -27,44 +54,11 @@ const Account = () => {
 
   return (
     <div className="account">
-      <Aside tab={currUserTab} handleTab={handleUserTab} />
-      <div className="account__content">
-        {currUserTab === type[0] ? (
-          <Advert />
-        ) : currUserTab === type[1] ? (
-          <Profile />
-        ) : (
-          <></>
-        )}
+      {!isContentHide && <Aside tab={currUserTab} handleTab={handleUserTab} />}
+      <div className={`account__content ${isContentHide && "opened"}`}>
+        {accTabsContent[currUserTab]}
       </div>
-      {showModal && (
-        <div className="account__logout">
-          <div className="account__logout__content">
-            <div className="account__logout__content__header">
-              <div className="account__logout__content__header__title">
-                Çıxmaq istədiyinizə əminsiniz?
-              </div>
-            </div>
-            <div className="account__logout__content__btns">
-              <button
-                className="account__logout__content__btns__item"
-                onClick={handleModalClose}
-              >
-                Xeyr
-              </button>
-              <button className="account__logout__content__btns__item">
-                Bəli
-              </button>
-            </div>
-            <button
-              className="account__logout__close"
-              onClick={handleModalClose}
-            >
-              <img src="/icons/close.png" alt="close" />
-            </button>
-          </div>
-        </div>
-      )}
+      {showModal && <Logout handleClose={handleModalClose} />}
     </div>
   );
 };

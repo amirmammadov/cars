@@ -11,10 +11,14 @@ import PrimaryBtn from "../../components/buttons/PrimaryBtn";
 
 import { Icon } from "@fluentui/react";
 
+import { useLoggedIn } from "../../hooks/useLoggedIn";
+
 function Header() {
   const [activePage, setActivePage] = useState("/");
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
   const [windowSize, setWindowSize] = useState(0);
+
+  const isLoggedIn = useLoggedIn;
 
   const location = useLocation();
 
@@ -117,10 +121,13 @@ function Header() {
               <Link className={styles.mobileNavListsItem} to="/comparison">
                 Müqayisələr
               </Link>
+              <Link
+                className={styles.mobileNavListsItem}
+                to={`${isLoggedIn ? "/user" : "/login"}`}
+              >
+                {isLoggedIn ? "Hesab" : "Login"}
+              </Link>
             </div>
-            <Link to="#" className={styles.loginBtn}>
-              Login
-            </Link>
           </div>
         </div>
       )}

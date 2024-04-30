@@ -444,3 +444,5 @@ export const rating = [
   { title: 4 },
   { title: 5 },
 ];
+
+export const accountAsideBtns = ["advert", "account", "offer", "logout"];

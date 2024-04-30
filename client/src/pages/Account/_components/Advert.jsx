@@ -3,6 +3,10 @@ import { useState } from "react";
 import "../../../sass/components/_accAdvert.scss";
 
 import ProductCart from "../../../components/productCard/ProductCart";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+
+import { useDispatch } from "react-redux";
+import { setMobileAccActive } from "../../../features/appSlice";
 
 const tabs = [
   {
@@ -47,15 +51,24 @@ const mockCarData = {
 const Advert = () => {
   const [currTab, setCurrTab] = useState(tabs[0]);
 
+  const dispatch = useDispatch();
+
   const handleCurTab = (id) => {
     const newTab = tabs.filter((tab) => tab.id === id);
 
     setCurrTab(newTab[0]);
   };
 
+  const handleBackProfile = () => {
+    dispatch(setMobileAccActive(false));
+  };
+
   return (
     <div className="account__advert">
-      <div className="account__advert__title">Elanlarım</div>
+      <div className="account__advert__title">
+        <ArrowBackIosNewIcon onClick={handleBackProfile} />
+        <div>Elanlarım</div>
+      </div>
       <div className="account__advert__tabs">
         {tabs.map((tab) => (
           <div
