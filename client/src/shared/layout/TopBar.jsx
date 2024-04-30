@@ -14,7 +14,7 @@ import { useLoggedIn } from "../../hooks/useLoggedIn";
 const TopBar = () => {
   const [openModal, setOpenModal] = useState(false);
 
-  const isLoggedIn = useLoggedIn;
+  const isLoggedIn = useLoggedIn();
 
   const location = useLocation();
   const navigate = useNavigate();

@@ -190,11 +190,20 @@
   }
 
   &__fourthLine {
-    @include flexbox($justify: center, $items: center, $gap: 5.5rem);
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
 
-    &__clearBtn {
-      margin-right: auto;
+    > * {
+      flex-grow: 1;
+      width: 25%;
+    }
+
+    .helper {
+      @include tablet {
+        display: none;
+      }
     }
 
     &__clearBtn,
@@ -221,7 +230,6 @@
     }
 
     &__search {
-      width: 250px;
       padding: 10px;
       border: none;
       outline: none;

@@ -221,6 +221,7 @@ const HeroFilter = () => {
         >
           Təmizlə <CloseIcon />
         </button>
+        <div className="helper" />
         <button
           onClick={() => navigate("/more-filters")}
           className="home__hero__content__fourthLine__moreFilter"
