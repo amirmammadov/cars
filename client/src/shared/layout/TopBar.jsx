@@ -9,10 +9,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, IconButton } from "@mui/material";
 
+import { useLoggedIn } from "../../hooks/useLoggedIn";
+
 const TopBar = () => {
   const [openModal, setOpenModal] = useState(false);
 
-  const isLoggedIn = true;
+  const isLoggedIn = useLoggedIn;
 
   const location = useLocation();
   const navigate = useNavigate();

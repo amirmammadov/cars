@@ -35,6 +35,7 @@ const initialState = {
     vin: "",
   },
   favCarIds: JSON.parse(localStorage.getItem("favCars")) || [],
+  isLoggedIn: true,
 };
 
 export const appSlice = createSlice({
@@ -65,10 +66,18 @@ export const appSlice = createSlice({
         localStorage.setItem("favCars", JSON.stringify(state.favCarIds));
       }
     },
+    setLoggedIn: (state, action) => {
+      console.log(action.payload);
+      state.isLoggedIn = action.payload;
+    },
   },
 });
 
-export const { setEmptyNewPromotion, setNewPromotionState, setFavCarIds } =
-  appSlice.actions;
+export const {
+  setEmptyNewPromotion,
+  setNewPromotionState,
+  setFavCarIds,
+  setLoggedIn,
+} = appSlice.actions;
 
 export default appSlice.reducer;
