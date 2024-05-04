@@ -12,13 +12,14 @@ import PrimaryBtn from "../../components/buttons/PrimaryBtn";
 import { Icon } from "@fluentui/react";
 
 import { useLoggedIn } from "../../hooks/useLoggedIn";
+import { useDeviceSize } from "../../hooks/useDeviceSize";
 
 function Header() {
   const [activePage, setActivePage] = useState("/");
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
-  const [windowSize, setWindowSize] = useState(0);
 
-  const isLoggedIn = useLoggedIn;
+  const isLoggedIn = useLoggedIn();
+  const windowSize = useDeviceSize();
 
   const location = useLocation();
 
@@ -28,19 +29,9 @@ function Header() {
   }, [location]);
 
   useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize(window.innerWidth);
-    };
-
     if (windowSize > 768) {
       setHamburgerClicked(false);
     }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
   }, [windowSize]);
 
   useEffect(() => {

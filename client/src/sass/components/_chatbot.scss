@@ -1,6 +1,7 @@
 @import "../style";
 
 .chatbot {
+  display: none;
   max-width: 250px;
   height: auto;
   @include flexbox(

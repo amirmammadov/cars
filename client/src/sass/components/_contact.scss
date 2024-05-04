@@ -52,15 +52,27 @@
     &__phone {
       flex-grow: 1;
       border-radius: 8px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 1px solid transparent;
       background: $white;
-      padding: 10px;
+      padding: 13px;
       outline: none;
       width: 100%;
 
       &:focus {
         border: 1px solid $primary;
       }
+    }
+
+    &__item::placeholder {
+      color: $inputColor;
+    }
+
+    &__phone::placeholder {
+      color: $inputColor;
+    }
+
+    select {
+      color: $inputColor;
     }
   }
 }

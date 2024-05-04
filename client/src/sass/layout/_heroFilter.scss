@@ -42,23 +42,17 @@
     justify-content: space-between;
     gap: 1.25rem;
 
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     &__item {
       flex-grow: 1;
       width: 25%;
-      @include desktop {
-        width: initial;
-      }
-      @include tablet {
-        width: 25%;
-      }
-      @include mobile {
-        width: initial;
-      }
-    }
 
-    &__item.tablet__none {
       @include tablet {
-        display: none;
+        width: 100%;
       }
     }
   }
@@ -82,8 +76,7 @@
           margin: 0;
           border: none;
           outline: none;
-          padding: 10px;
-          border: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 12px;
           background: $white;
           font-size: 16px;
           font-style: normal;
@@ -92,6 +85,10 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+        }
+
+        input::placeholder {
+          color: $inputColor;
         }
 
         input::-webkit-outer-spin-button,
@@ -121,13 +118,14 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        padding: 8px 10px;
+        padding: 11px;
         border-radius: 8px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
         background: $white;
+        border: none;
         outline: none;
         display: flex;
         align-self: flex-start;
+        color: $inputColor;
 
         &:focus {
           border-color: $primary;
@@ -144,7 +142,7 @@
         padding: 14px;
         border-radius: 8px;
         outline: none;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: none;
         background: $white;
         font-size: 16px;
         font-style: normal;
@@ -154,6 +152,10 @@
         &:focus {
           border-color: $primary;
         }
+      }
+
+      &__code::placeholder {
+        color: $inputColor;
       }
     }
 

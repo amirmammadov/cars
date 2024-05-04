@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 
 import "../../../sass/components/_pictures.scss";
 
+import CloseIcon from "@mui/icons-material/Close";
+
 import { useDispatch } from "react-redux";
 import { setNewPromotionState } from "../../../features/appSlice";
 
@@ -98,7 +100,13 @@ const Pictures = () => {
             alt="car__front"
             className="pictures__content__item__img"
           />
-          <p className="pictures__content__item__text">Ön görünüş</p>
+          <p
+            className={`pictures__content__item__text ${
+              images.frontView === "" && "active"
+            }`}
+          >
+            Ön görünüş
+          </p>
           <input
             type="file"
             accept="image/*"
@@ -107,6 +115,16 @@ const Pictures = () => {
             style={{ display: "none" }}
             onChange={handleFileChange}
           />
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className={`pictures__content__item__close ${
+              images.frontView !== "" && "active"
+            }`}
+          >
+            <CloseIcon sx={{ color: "#18072b", fontSize: "22px" }} />
+          </button>
         </button>
         <button
           className="pictures__content__item"
@@ -117,7 +135,13 @@ const Pictures = () => {
             alt="car__front"
             className="pictures__content__item__img"
           />
-          <p className="pictures__content__item__text">Arxa görünüş</p>
+          <p
+            className={`pictures__content__item__text ${
+              images.backView === "" && "active"
+            }`}
+          >
+            Arxa görünüş
+          </p>
           <input
             type="file"
             accept="image/*"
@@ -126,6 +150,16 @@ const Pictures = () => {
             style={{ display: "none" }}
             onChange={handleFileChange}
           />
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className={`pictures__content__item__close ${
+              images.backView !== "" && "active"
+            }`}
+          >
+            <CloseIcon sx={{ color: "#18072b", fontSize: "22px" }} />
+          </button>
         </button>
         <button
           className="pictures__content__item"
@@ -136,7 +170,13 @@ const Pictures = () => {
             alt="car__front"
             className="pictures__content__item__img"
           />
-          <p className="pictures__content__item__text">Ön panel</p>
+          <p
+            className={`pictures__content__item__text ${
+              images.panelView === "" && "active"
+            }`}
+          >
+            Ön panel
+          </p>
           <input
             type="file"
             accept="image/*"
@@ -145,6 +185,16 @@ const Pictures = () => {
             style={{ display: "none" }}
             onChange={handleFileChange}
           />
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className={`pictures__content__item__close ${
+              images.panelView !== "" && "active"
+            }`}
+          >
+            <CloseIcon sx={{ color: "#18072b", fontSize: "22px" }} />
+          </button>
         </button>
         {images.otherImages.length > 0 &&
           images.otherImages.map((img, index) => {
@@ -157,10 +207,10 @@ const Pictures = () => {
                   className="pictures__content__item__img"
                 />
                 <button
-                  className="pictures__content__item__deleteBtn"
                   onClick={() => handleImageDelete(img)}
+                  className={`pictures__content__item__close active`}
                 >
-                  Sil
+                  <CloseIcon sx={{ color: "#18072b", fontSize: "22px" }} />
                 </button>
               </div>
             );
@@ -174,7 +224,7 @@ const Pictures = () => {
             alt="car__front"
             className="pictures__content__item__extraImg"
           />
-          <p className="pictures__content__item__text">Şəkil əlavə et</p>
+          <p className="pictures__content__item__text active">Şəkil əlavə et</p>
           <input
             type="file"
             accept="image/*"

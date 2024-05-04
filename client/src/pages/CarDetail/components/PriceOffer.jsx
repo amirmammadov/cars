@@ -38,7 +38,7 @@ const PriceOffer = ({ handleOffer }) => {
             className="offer__content__title__close"
             onClick={handleOffer}
           >
-            <img src="/public/icons/close.png" alt="close" />
+            <img src="/icons/close.png" alt="close" />
           </button>
         </div>
         <form className="offer__content__form" onSubmit={handleSubmit}>

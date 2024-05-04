@@ -23,9 +23,19 @@ function Faq() {
             className={styles.qstn}
             expandIcon={
               expanded !== item.id ? (
-                <Icon iconName="Add" style={{ marginLeft: "15px" }} />
+                <Icon
+                  iconName="Add"
+                  style={{
+                    marginLeft: "16px",
+                    fontWeight: "500",
+                    color: "#18072b",
+                  }}
+                />
               ) : (
-                <Icon iconName="Cancel" />
+                <Icon
+                  iconName="Cancel"
+                  style={{ fontWeight: "500", color: "#18072b" }}
+                />
               )
             }
           >

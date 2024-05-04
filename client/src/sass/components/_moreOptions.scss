@@ -6,6 +6,7 @@
   row-gap: 30px;
   column-gap: 20px;
   width: 100%;
+
   @include tablet {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
@@ -20,12 +21,17 @@
     border: none;
     outline: none;
     border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
     background: $white;
-    padding: 16px;
+    padding: 14px;
+    font-size: 15px;
 
     &:focus {
       border: 1px solid $primary;
     }
+  }
+
+  &__input::placeholder {
+    color: $inputColor;
   }
 }

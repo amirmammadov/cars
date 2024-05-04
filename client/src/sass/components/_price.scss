@@ -1,7 +1,6 @@
 @import "../style";
 
 .new__promotion__price {
-  // @include flexbox($justify: space-between, $items: center);
   width: 100%;
 
   display: grid;
@@ -19,8 +18,6 @@
   }
 
   &__inputs {
-    // @include flexbox($justify: flex-start, $items: center, $gap: 1.5rem);
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -46,19 +43,13 @@
       outline: none;
       width: 100%;
 
-      // @include desktop {
-      //   width: 180px;
-      // }
-      // @include tablet {
-      //   width: 120px;
-      // }
-      // @include mobile {
-      //   width: 100%;
-      // }
-
       &:focus {
         border: 1px solid $primary;
       }
+    }
+
+    &__amount::placeholder {
+      color: $inputColor;
     }
 
     &__amount::-webkit-outer-spin-button,
@@ -80,6 +71,7 @@
       @extend %font-normal;
       border: 1px solid $white;
       outline: none;
+      color: $inputColor;
 
       &:focus {
         border: 1px solid $primary;

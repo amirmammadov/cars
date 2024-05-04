@@ -41,7 +41,7 @@ export default function OptionInputSingle({
         width: "100%",
         margin: `${isYear && "0"}`,
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-          { borderColor: "#620985", borderRadius: "8px", borderWidth: "1px" },
+          { border: "1px solid #620985", borderRadius: "8px" },
         "& .MuiAutocomplete-inputRoot": { padding: "5px" },
         borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
