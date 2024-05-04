@@ -19,7 +19,7 @@ function Header() {
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
 
   const isLoggedIn = useLoggedIn();
-  const windowSize = useDeviceSize();
+  const windowSize = useDeviceSize()[0];
 
   const location = useLocation();
 
