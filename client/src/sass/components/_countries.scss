@@ -22,7 +22,7 @@
   }
 
   &__list {
-    @include flexbox($justify: flex-start, $items: flex-start, $gap: 1.25rem);
+    @include flexbox($justify: flex-start, $items: flex-start, $gap: 0.7rem);
     flex-wrap: wrap;
 
     &__item {

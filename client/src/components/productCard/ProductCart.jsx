@@ -1,10 +1,13 @@
 import styles from "./style.module.scss";
 import { Icon } from "@fluentui/react";
+
 import { useSelector, useDispatch } from "react-redux";
 import { setFavCarIds } from "../../features/appSlice";
 
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import { useNavigate } from "react-router-dom";
 
@@ -56,9 +59,9 @@ function ProductCart({ product }) {
             }}
           >
             {isFav ? (
-              <Icon style={{ color: "red" }} iconName="HeartFill" />
+              <FavoriteIcon sx={{ color: "#ff2c2c", fontSize: "28px" }} />
             ) : (
-              <Icon iconName="HeartFill" style={{ color: "#620985" }} />
+              <FavoriteBorderIcon sx={{ color: "#fff", fontSize: "28px" }} />
             )}
           </button>
         </div>

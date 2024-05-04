@@ -9,7 +9,7 @@ export const offers = [
         id: 1,
         userName: "Nazim Hikmətli",
         phone: "0505642121",
-        amount: 10020,
+        amount: 15020,
         currency: "AZN",
       },
       {
@@ -31,7 +31,7 @@ export const offers = [
         id: 3,
         userName: "Nazim Hikmətli",
         phone: "0505642121",
-        amount: 10020,
+        amount: 15020,
         currency: "AZN",
       },
       {

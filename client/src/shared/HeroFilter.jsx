@@ -123,7 +123,7 @@ const HeroFilter = () => {
             key="model"
           />
         </div>
-        <div className="home__hero__content__secondLine__item tablet__none">
+        <div className="home__hero__content__secondLine__item">
           <OptionInputMultiple
             options={banOptions}
             holder="Ban növü"
@@ -134,7 +134,7 @@ const HeroFilter = () => {
             key="banType"
           />
         </div>
-        <div className="home__hero__content__secondLine__item tablet__none">
+        <div className="home__hero__content__secondLine__item">
           <OptionInputSingle
             options={cityOptions}
             holder="Şəhər"
