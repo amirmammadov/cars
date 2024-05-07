@@ -44,9 +44,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width:800px) {
+      flex-direction: column;
+      gap: 10px;
+    }
     .inputs {
       justify-content: space-between;
       display: flex;
+      
+      @media (max-width:768px) {
+align-items: center;
+  width: 100%;
+}
     }
   }
   .autocomplete {
@@ -55,6 +64,10 @@
     border: 1px solid #0000001a !important;
     border-radius: 8px !important;
     background-color: $white !important;
+@media (max-width:768px) {
+  width: 49%;
+  margin-right: 0;
+}
     &:focus-within {
       border: 1px solid $primary !important;
     }
@@ -63,15 +76,18 @@
       .Mui-focused,
       .MuiAutocomplete-hasPopupIcon {
         border: 1px solid $primary !important;
+
       }
     }
     label {
       color: $font !important;
+
     }
     * {
       font-family: "Montserrat", sans-serif !important;
       border: none !important;
       box-shadow: none !important;
+
     }
   }
 
@@ -79,6 +95,9 @@
     display: flex !important;
     flex-direction: row !important;
     font-size: 16px;
+    @media (max-width:768px) {
+      width: 100%;
+    }
     label {
       margin-right: 30px !important;
     }
@@ -92,8 +111,16 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+
     .dflex {
       margin-bottom: 0;
+    }
+    @media (max-width:768px) {
+      flex-direction: column;
+    gap: 10px;
+    .dflex{
+      width: 100%;
+    }
     }
   }
   .doubleInputs {
@@ -101,11 +128,19 @@
     background-color: $white !important;
     border-radius: 8px;
     display: flex;
+@media (max-width:768px) {
+  width: 100%;
+div{
+  width: 49% !important;
+
+}
+}
     border: 1px solid #0000001a;
     label {
       color: $lightFont;
     }
     div {
+
       width: 118px;
     }
     fieldset {
@@ -210,10 +245,10 @@
 .endBtns {
   position: fixed;
   bottom: 0;
-  left: 30%;
+  left: 20%;
   margin: 30px auto !important;
   border-radius: 8px;
-  width: 40%;
+  width: 600px;
   z-index: 999;
   background-color: #ffffff;
   display: flex;
@@ -222,8 +257,13 @@
   padding: 15px;
   gap: 20px;
   box-shadow: 0px 4px 12px -10px rgba(0, 0, 0, 0.1);
+  @media (max-width:768px) {
+    flex-direction: column;
+    width: 90%;
+    left: 0;
+  }
   button {
-    width: 25%;
+    width: 200px;
     border: none;
     background-color: transparent;
     display: flex;

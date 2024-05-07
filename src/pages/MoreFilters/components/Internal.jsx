@@ -117,7 +117,7 @@ function Internal() {
           label="Digər"
         />
       </FormGroup>
-      <h3>Hava yastıqları</h3>
+      {/* <h3>Hava yastıqları</h3>
 
       <FormControl className={styles.radioGroup}>
         <RadioGroup>
@@ -194,7 +194,7 @@ function Internal() {
             label="Daha çox"
           />
         </RadioGroup>
-      </FormControl>
+      </FormControl> */}
       <h3>Avtomobilin təchizatları</h3>
       <FormGroup className={`${styles.flexInputs} ${styles.gridStyle}`}>
         {accessories.map((item, index) => (

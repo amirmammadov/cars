@@ -11,18 +11,20 @@ import { externalColors } from "../../../mockData/mock";
 
 function External() {
   const others = [
-    "ABS",
-    "Məsafə xəbərdarlıq sistemi",
+    // "Məsafə xəbərdarlıq sistemi",
+    "Vuruğu yoxdur",
     "Mərkəzi qapanma",
-    "Start-stop sistemi",
+    // "Start-stop sistemi",
     "Lyuk",
-    "Adaptiv döngə işıqları",
-    "Ehtiyyat təkər",
+    "Rənglənməyib",
+    // "Adaptiv döngə işıqları",
+    // "Ehtiyyat təkər",
     "Yağış sensoru",
     "Ksenon lampalar",
+    "ABS",
     "Yüngül lehimli disklər",
-    "Qızdırılan ön şüşə",
-    "Duman əleyhinə lampa",
+    // "Qızdırılan ön şüşə",
+    // "Duman əleyhinə lampa",
   ];
   return (
     <section>

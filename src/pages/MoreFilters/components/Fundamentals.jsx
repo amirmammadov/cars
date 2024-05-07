@@ -120,8 +120,8 @@ function Fundamentals() {
         </FormControl>
       </div>
 
-      <h3>Avtomobil salonu</h3>
-      <ShowRoom />
+      <h3 className={styles.salon}>Avtomobil salonu</h3>
+      <ShowRoom className={styles.salon}/>
 
       <div className={styles.dflex}>
         <div className={styles.dflex}>
@@ -260,19 +260,6 @@ function Fundamentals() {
         />{" "}
         <Autocomplete
           className={styles.autocomplete}
-          options={ownercount}
-          componentsProps={{
-            paper: {
-              sx: {
-                borderRadius: "8px",
-                marginTop: "10px",
-              },
-            },
-          }}
-          renderInput={(params) => <TextField {...params} label="Sahib sayı" />}
-        />{" "}
-        <Autocomplete
-          className={styles.autocomplete}
           options={cities}
           renderInput={(params) => <TextField {...params} label="Şəhər" />}
           componentsProps={{
@@ -284,6 +271,19 @@ function Fundamentals() {
             },
           }}
         />
+            <Autocomplete
+              className={styles.autocomplete}
+              options={ownercount}
+              componentsProps={{
+                paper: {
+                  sx: {
+                    borderRadius: "8px",
+                    marginTop: "10px",
+                  },
+                },
+              }}
+              renderInput={(params) => <TextField {...params} label="Yığıldığı bazar" />}
+            />{" "}
       </div>
     </section>
   );

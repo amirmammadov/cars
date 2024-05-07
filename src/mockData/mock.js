@@ -137,18 +137,19 @@ export const fuelTypes = [
 //   { name: "Van", image: Van, id: 8 },
 // ];
 export const accessories = [
-  "Tv",
-  "Siqnalizasiya sistemi",
+  // "Tv",
+  // "Siqnalizasiya sistemi",
   "Dəri sükan",
   "Oturacaqların havalandırılması",
-  "USB ports",
-  "Təcili zəng sistemi",
+  // "USB ports",
+  // "Təcili zəng sistemi",
   "Bluetooth",
-  "Toxunma ekran",
-  "Elektrik pəncərələr",
+  "Yan pərdələr",
+  // "Toxunma ekran",
+  // "Elektrik pəncərələr",
   "Oturacaqların isidilməsi",
-  "Naviqasiya sistemi",
-  "WI-FI",
+  // "Naviqasiya sistemi",
+  // "WI-FI",
   "Kondisioner",
 ];
 
