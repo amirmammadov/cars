@@ -1,0 +1,129 @@
+@import "../style";
+
+.currency__convertor {
+  padding: 20px;
+  border-radius: 8px;
+  background: $white;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 1.25rem
+  );
+  width: 100%;
+
+  &__amount {
+    @extend %font-title3;
+    color: $font;
+  }
+
+  &__options {
+    @include flexbox($justify: space-between, $items: center);
+    width: 100%;
+
+    &__cases {
+      @include flexbox($justify: space-between, $items: center, $gap: 0.5rem);
+
+      &__item {
+        @include flexbox($justify: center, $items: center);
+        padding: 5px;
+        border-radius: 100px;
+        width: 26px;
+        height: 26px;
+      }
+
+      &__item.leasing {
+        background: $primary;
+      }
+
+      &__item.barter {
+        background: $orange;
+      }
+
+      &__item.credit {
+        background: $green;
+      }
+    }
+
+    &__calc {
+      @extend %font-title4;
+      text-decoration: underline;
+      color: $grey2;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      @include desktop {
+        font-size: 16px;
+        letter-spacing: 0.01px;
+      }
+    }
+  }
+
+  &__justice {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start,
+      $gap: 0.5rem
+    );
+    width: 100%;
+
+    &__rank {
+      @include flexbox($justify: flex-start, $items: center, $gap: 0.625rem);
+
+      &__item {
+        width: 34px;
+        height: 14px;
+        border-radius: 3px;
+        background-color: $grey2;
+      }
+
+      &__item.filled {
+        background-color: $orange;
+      }
+    }
+
+    &__text {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: $lightFont;
+    }
+  }
+
+  &__btn {
+    padding: 15px 45px;
+    border-radius: 8px;
+    background: $primary;
+    border: none;
+    outline: none;
+    @include flexbox($justify: center, $items: center, $gap: 1rem);
+    width: 100%;
+    max-width: 0 auto;
+    color: $white;
+    @extend %font-normal2;
+
+    img {
+      width: 12px;
+      height: 16px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
+}
+
+.currency__convertor__credit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 90;
+  @include flexbox($justify: center, $items: center);
+}

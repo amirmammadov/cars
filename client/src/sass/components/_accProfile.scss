@@ -1,0 +1,151 @@
+@import "../style";
+
+.acc__profile {
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 1.5rem
+  );
+  width: 100%;
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    color: $font;
+    @include flexbox($justify: flex-start, $items: center, $gap: 0.7rem);
+
+    *:first-child {
+      font-size: 20px;
+      display: none;
+      cursor: pointer;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    *:last-child {
+      line-height: 0;
+    }
+  }
+
+  &__content {
+    @include flexbox($justify: flex-start, $items: flex-start, $gap: 1.5rem);
+    width: 100%;
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+
+    &__form {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $items: flex-start,
+        $gap: 1rem
+      );
+      flex: 7;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &__item {
+        width: 100%;
+        border-radius: 8px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      &__btn {
+        background-color: $primary;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.02px;
+        color: $white;
+        margin-left: auto;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.9;
+        }
+      }
+    }
+
+    &__img {
+      flex: 5;
+      @include flexbox($justify: flex-start, $items: center, $gap: 1rem);
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &__preview {
+        width: 65px;
+        height: 65px;
+
+        @include desktop {
+          width: 80px;
+          height: 80px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &__info {
+        @include flexbox(
+          $direction: column,
+          $justify: center,
+          $items: flex-start,
+          $gap: 0.5rem
+        );
+
+        &__title {
+          color: $font;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        &__note {
+          font-size: 14px;
+          font-weight: 400;
+          color: $lightFont;
+        }
+
+        &__btn {
+          @include flexbox($justify: flex-start, $items: center, $gap: 0.5rem);
+          border: none;
+          outline: none;
+          background-color: transparent;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+          }
+
+          &__img {
+            width: 18px;
+            height: 18px;
+          }
+
+          &__text {
+            color: $primary;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

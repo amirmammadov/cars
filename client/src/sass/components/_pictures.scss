@@ -1,0 +1,182 @@
+@import "../style";
+
+.pictures {
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 1.25rem
+  );
+  width: 100%;
+
+  &__title {
+    @extend %font-normal;
+    color: $mainDark;
+    line-height: 16px;
+  }
+
+  &__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+
+    &__item {
+      @include flexbox(
+        $direction: column,
+        $justify: space-between,
+        $items: center
+      );
+      flex: 1;
+      border-radius: 8px;
+      border: 1px dashed var(--Second-Color, $primary);
+      background: $white;
+      padding: 20px;
+      outline: none;
+      height: 210px;
+      position: relative;
+
+      @include desktop {
+        height: 180px;
+      }
+
+      @include tablet {
+        height: 160px;
+      }
+
+      @include mobile {
+        padding: 10px;
+        height: 140px;
+      }
+
+      @include mobile2 {
+        padding: 5px;
+        height: 120px;
+      }
+
+      @include mobile3 {
+        height: 100px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__img {
+        width: 100%;
+        height: 90%;
+        border-radius: 8px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+
+      &__text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        color: $mainDark;
+        margin-top: 10px;
+        @include mobile {
+          font-size: 10px;
+        }
+        display: none;
+
+        &.active {
+          display: initial;
+        }
+      }
+
+      &__deleteBtn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+          color: $red;
+          text-decoration: underline;
+        }
+      }
+
+      &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        outline: none;
+        background-color: $grey3;
+        border-radius: 50%;
+        line-height: 0;
+        padding: 2px;
+        display: none;
+
+        &.active {
+          display: initial;
+        }
+      }
+    }
+
+    &__item.extra {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-end,
+        $items: center,
+        $gap: 3rem
+      );
+      position: relative;
+
+      .pictures__content__item__extraImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__notes {
+    width: 100%;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 15px;
+      row-gap: 5px;
+      list-style-type: disc !important;
+      width: 100%;
+      align-content: center;
+      list-style-position: inside;
+
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      &__item {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: $lightFont;
+        vertical-align: middle;
+
+        @include mobile {
+          font-size: 13px;
+          line-height: 20px;
+        }
+
+        @include mobile2 {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

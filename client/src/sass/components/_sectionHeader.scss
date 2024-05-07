@@ -1,0 +1,35 @@
+@import "../style";
+
+.section__header {
+  @include flexbox($justify: space-between, $items: center);
+  width: 100%;
+  margin: 0 auto;
+
+  @include tablet {
+    padding: 5px;
+  }
+
+  &__title {
+    @extend %font-title7;
+    color: $mainDark;
+    @include mobile3 {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__link {
+    color: $primary;
+    @extend %font-normal2;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    @include flexbox($justify: center, $items: center, $gap: 1rem);
+    cursor: pointer;
+
+    &__text {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}

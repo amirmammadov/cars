@@ -1,0 +1,108 @@
+@import "../style";
+
+.new__promotion__price {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include tablet {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+      order: 2;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__amount {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: $white;
+      @extend %font-normal;
+      border: 1px solid $white;
+      outline: none;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid $primary;
+      }
+    }
+
+    &__amount::placeholder {
+      color: $inputColor;
+    }
+
+    &__amount::-webkit-outer-spin-button,
+    &__amount::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &__amount[type="number"] {
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+
+    &__currency {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: $white;
+      @extend %font-normal;
+      border: 1px solid $white;
+      outline: none;
+      color: $inputColor;
+
+      &:focus {
+        border: 1px solid $primary;
+      }
+    }
+  }
+
+  &__radios {
+    @include flexbox($justify: flex-end, $items: center, $gap: 1.5rem);
+
+    @include tablet {
+      gap: 0.5rem;
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      order: 1;
+      width: 100%;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    &__label {
+      @extend %font-normal;
+
+      span {
+        @include mobile3 {
+          font-size: 13px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

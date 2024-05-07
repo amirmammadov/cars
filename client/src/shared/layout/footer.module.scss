@@ -1,0 +1,129 @@
+@import "../../assets/colors.scss";
+
+.footer {
+  padding: 30px 15%;
+
+  .footerContent {
+    padding: 30px 0;
+    border-bottom: 1px solid #c9c9c9;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+
+    .footerContentItem:last-child {
+      display: flex;
+      align-items: flex-end;
+
+      .lastItemContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
+
+    .footerContentItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+
+      .footerHeading {
+        font-size: 20px;
+        color: $font;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .footerLists {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+
+        .footerListsItem {
+          display: flex;
+          gap: 10px;
+          align-items: flex-end;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: $font;
+
+          .footerListsItemText {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: $font;
+          }
+        }
+      }
+
+      .footerSocialLinks {
+        display: flex;
+        gap: 20px;
+
+        .footerSocialLinksItem {
+          color: $font;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: $lightFont;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .footer {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    .footerContentItem:last-child {
+      grid-column: span 2;
+      align-items: center;
+      .footerHeading {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 592px) {
+  .footer .footerContent {
+    column-gap: 10px;
+  }
+
+  .footer .footerContent .footerContentItem .footerLists .footerListsItem {
+    font-size: 13px;
+    .footerListsItemText {
+      font-size: 13px;
+    }
+  }
+}
