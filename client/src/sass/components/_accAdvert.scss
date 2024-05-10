@@ -35,6 +35,16 @@
     background-color: $white;
     border-radius: 8px;
 
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+      overflow: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
     &__item {
       font-size: 16px;
       font-weight: 500;
@@ -42,6 +52,7 @@
       height: 100%;
       position: relative;
       cursor: pointer;
+      text-align: center;
 
       span {
         position: absolute;

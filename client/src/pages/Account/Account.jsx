@@ -32,7 +32,9 @@ const Account = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setMobileAccActive(false));
+    if (window.innerWidth > 768) {
+      dispatch(setMobileAccActive(false));
+    }
   }, [dispatch, width]);
 
   const handleUserTab = (tab) => {

@@ -50,7 +50,7 @@ export default function OptionInputSingle({
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
           borderColor: "transparent",
-          borderWidth: "1px",
+          borderWidth: "0",
         },
       }}
       componentsProps={{
