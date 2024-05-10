@@ -31,5 +31,9 @@
         display: none;
       }
     }
+
+    &.disable {
+      display: none;
+    }
   }
 }

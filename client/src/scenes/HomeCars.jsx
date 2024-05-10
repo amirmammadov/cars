@@ -29,7 +29,11 @@ const HomeCars = () => {
   return (
     <main className="home__cars">
       <section className="home__cars__section">
-        <SectionHeader title="Önə çəkilmiş elanlar" filterTitle="Rating" />
+        <SectionHeader
+          title="Önə çəkilmiş elanlar"
+          filterTitle="Rating"
+          hasText
+        />
         <div className="home__cars__section__content">
           {isPending ? (
             <div>Loading...</div>

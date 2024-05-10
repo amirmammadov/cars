@@ -2,7 +2,7 @@ import "../../sass/pages/_salonDetail.scss";
 
 import { useState, useEffect } from "react";
 
-import { useCompany, useCompanies } from "../../services/queries";
+import { useCompany } from "../../services/queries";
 
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
@@ -10,8 +10,6 @@ import Link from "@mui/material/Link";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 import { useParams } from "react-router-dom";
-
-import SalonItem from "../../components/SalonItem/SalonItem";
 
 import OwnerInfo from "./components/OwnerInfo";
 import Countries from "./components/Countries";
@@ -22,7 +20,6 @@ import GppMaybeIcon from "@mui/icons-material/GppMaybe";
 import BalanceIcon from "@mui/icons-material/Balance";
 import UploadIcon from "@mui/icons-material/Upload";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 const SalonDetail = () => {
   const [linksActive, setLinksActive] = useState(false);
@@ -45,8 +42,6 @@ const SalonDetail = () => {
   }, [innerWidth]);
 
   const { id } = useParams();
-
-  const similarCompanies = useCompanies(1);
 
   const { data: company, isPending, isError, error } = useCompany(id);
 
@@ -125,21 +120,6 @@ const SalonDetail = () => {
         <OwnerInfo />
         <Countries />
         <Dealer />
-      </div>
-      <div className="company__detail__divider" />
-      <div className="company__detail__similar">
-        <SectionHeader title="Bənzər Salonlar" />
-        <div className="company__detail__similar__content">
-          {similarCompanies.isPending ? (
-            <div>Loading...</div>
-          ) : similarCompanies.isError ? (
-            <div>{similarCompanies.error}</div>
-          ) : (
-            similarCompanies.data.currentItems.map((company) => (
-              <SalonItem key={company.id} {...company} />
-            ))
-          )}
-        </div>
       </div>
     </main>
   );

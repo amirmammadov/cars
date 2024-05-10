@@ -6,9 +6,15 @@
   align-items: center;
   justify-content: space-between;
 
-  img {
-    margin: 14px 0;
+  .logoLink {
+    text-decoration: none;
+    line-height: 0;
+
+    img {
+      margin: 14px 0;
+    }
   }
+
   .nav {
     width: 55%;
     display: flex;

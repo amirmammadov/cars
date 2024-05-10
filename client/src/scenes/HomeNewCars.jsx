@@ -26,7 +26,7 @@ const HomeNewCars = () => {
 
   return (
     <section className="home__cars__section">
-      <SectionHeader title="Yeni elanlar" filterTitle="Tarix" />
+      <SectionHeader title="Yeni elanlar" filterTitle="Tarix" hasText />
       <div className="home__cars__section__content">
         {isPending ? (
           <div>Loading...</div>

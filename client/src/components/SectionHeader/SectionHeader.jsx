@@ -2,14 +2,14 @@ import "../../sass/components/_sectionHeader.scss";
 
 import { useNavigate } from "react-router-dom";
 
-const SectionHeader = ({ title }) => {
+const SectionHeader = ({ title, hasText }) => {
   const navigate = useNavigate();
 
   return (
     <div className="section__header">
       <div className="section__header__title">{title}</div>
       <button
-        className="section__header__link"
+        className={`section__header__link ${!hasText && "disable"}`}
         onClick={() => {
           window.scroll(0, 0);
           navigate("/elan");
