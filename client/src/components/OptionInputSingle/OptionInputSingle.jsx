@@ -17,7 +17,7 @@ export default function OptionInputSingle({
 }) {
   const [selectedValue, setSelectedValue] = useState(null);
 
-  const handleAutocompleteChange = (event, value) => {
+  const handleAutocompleteChange = (_, value) => {
     setSelectedValue(value);
     setClear(false);
     handleChange({
@@ -46,10 +46,11 @@ export default function OptionInputSingle({
         borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
           borderColor: "transparent",
+          borderRadius: "8px",
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
-          borderColor: "#fff",
-          borderWidth: 0,
+          borderColor: "transparent",
+          borderWidth: "1px",
         },
       }}
       componentsProps={{
