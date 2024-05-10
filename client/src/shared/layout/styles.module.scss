@@ -1,14 +1,21 @@
 @import "../../assets/colors.scss";
 
 .header {
+  z-index: 900;
   padding: 0 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  img {
-    margin: 14px 0;
+  .logoLink {
+    text-decoration: none;
+    line-height: 0;
+
+    img {
+      margin: 14px 0;
+    }
   }
+
   .nav {
     width: 55%;
     display: flex;

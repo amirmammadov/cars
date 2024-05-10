@@ -1,14 +1,19 @@
 import { useState, useEffect } from "react";
 
-import GppMaybeIcon from "@mui/icons-material/GppMaybe";
-import BalanceIcon from "@mui/icons-material/Balance";
-import UploadIcon from "@mui/icons-material/Upload";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 import "../../sass/components/_carDetailLinks.scss";
 
 import { useSelector, useDispatch } from "react-redux";
+
+import {
+  scaleOutline,
+  heartOutline,
+  heart,
+  warningOutline,
+  shareOutline,
+} from "ionicons/icons";
+import { IonIcon } from "@ionic/react";
 
 import { setFavCarIds } from "../../features/appSlice";
 
@@ -61,24 +66,22 @@ const CarDetailLinks = ({ product }) => {
           }}
         >
           {isFav ? (
-            <FavoriteIcon sx={{ color: "red" }} iconname="HeartFill" />
+            <IonIcon icon={heartOutline} style={{ fontSize: "22px" }} />
           ) : (
-            <FavoriteIcon
-              iconname="HeartFill"
-              sx={{
-                color: "#620985",
-              }}
+            <IonIcon
+              icon={heart}
+              style={{ fontSize: "22px", color: "#620985" }}
             />
           )}
         </button>
         <button className="car__detail__general__header__links__btn">
-          <BalanceIcon sx={{ color: "#620985" }} />
+          <IonIcon icon={scaleOutline} style={{ fontSize: "22px" }} />
         </button>
         <button className="car__detail__general__header__links__btn">
-          <GppMaybeIcon sx={{ color: "#620985" }} />
+          <IonIcon icon={warningOutline} style={{ fontSize: "22px" }} />
         </button>
         <button className="car__detail__general__header__links__btn">
-          <UploadIcon sx={{ color: "#620985" }} />
+          <IonIcon icon={shareOutline} style={{ fontSize: "22px" }} />
         </button>
       </div>
       <button onClick={handleActiveLinks} className="car__detail__header__more">

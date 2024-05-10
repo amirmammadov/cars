@@ -53,7 +53,9 @@ function Header() {
         <span></span>
         <span></span>
       </div>
-      <img src={logo} alt="" className={styles.logo} />
+      <Link to="/" className={styles.logoLink}>
+        <img src={logo} alt="" className={styles.logo} />
+      </Link>
       <div className={styles.nav}>
         <Link className={activePage === "/" ? styles.active : ""} to="/">
           Ana səhifə
@@ -68,7 +70,7 @@ function Header() {
           className={activePage === "/salons" ? styles.active : ""}
           to="/salons"
         >
-          Salonlar
+          Şirkətlər
         </Link>
         <Link className={activePage === "/faq" ? styles.active : ""} to="/faq">
           FAQ

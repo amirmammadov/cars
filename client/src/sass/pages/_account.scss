@@ -132,6 +132,11 @@
       outline: none;
       cursor: pointer;
       line-height: 0;
+
+      @include mobile2 {
+        top: 5px;
+        right: 5px;
+      }
     }
   }
 }

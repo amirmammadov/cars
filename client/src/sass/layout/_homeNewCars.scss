@@ -1,6 +1,6 @@
 @import "../style";
 
-.home__cars__section {
+.home__newcars__section {
   @include flexbox(
     $direction: column,
     $justify: space-between,

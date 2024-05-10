@@ -26,20 +26,22 @@ const OwnerInfo = ({ handleOffer }) => {
         <div className="owner__info__vin__key">VİN kod:</div>
         <div className="owner__info__vin__value">WDD12345678901234</div>
       </div>
-      <button
-        className="owner__info__btn"
-        onClick={() => {
-          setShowPhone((prev) => !prev);
-        }}
-      >
-        <img src="/carDetail/phone.png" alt="phone" />
-        <div className="owner__info__btn__phone">{`${
-          showPhone ? "(050) 555 67 72" : "(050) 555 6* **"
-        }`}</div>
-      </button>
-      <button className="owner__info__offer" onClick={handleOffer}>
-        Öz qiymət təklifini göndər
-      </button>
+      <div className="owner__info__btns">
+        <button
+          className="owner__info__btns__btn"
+          onClick={() => {
+            setShowPhone((prev) => !prev);
+          }}
+        >
+          <img src="/carDetail/phone.png" alt="phone" />
+          <div className="owner__info__btns__btn__phone">{`${
+            showPhone ? "(050) 555 67 72" : "(050) 555 6* **"
+          }`}</div>
+        </button>
+        <button className="owner__info__btns__offer" onClick={handleOffer}>
+          Öz qiymət təklifini göndər
+        </button>
+      </div>
     </div>
   );
 };
