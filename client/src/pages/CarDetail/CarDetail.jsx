@@ -12,7 +12,7 @@ import {
   CarUpdated,
 } from "./components";
 
-import ProductCart from "../../components/productCard/ProductCart";
+import Car from "../../components/Car/Car";
 import PriceOffer from "./components/PriceOffer";
 
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
@@ -135,7 +135,7 @@ const CarDetail = () => {
             <div>{similarCars.error}</div>
           ) : (
             similarCars.data.map((product) => (
-              <ProductCart key={product.id} product={product} />
+              <Car key={product.id} product={product} />
             ))
           )}
         </div>
