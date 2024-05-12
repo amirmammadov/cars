@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./style.module.scss";
-import ProductCart from "../../components/productCard/ProductCart";
+import Car from "../../components/Car/Car";
 import { Pagination } from "@mui/material";
 
 import HeroFilter from "../../shared/HeroFilter";
@@ -41,7 +41,7 @@ function Advertisement() {
 
       <div className={styles.products}>
         {products.map((item) => (
-          <ProductCart key={item.id} product={item} />
+          <Car key={item.id} product={item} />
         ))}
       </div>
 
@@ -49,7 +49,7 @@ function Advertisement() {
 
       <div className={styles.products}>
         {products.map((item) => (
-          <ProductCart key={item.id} product={item} />
+          <Car key={item.id} product={item} />
         ))}
       </div>
 
@@ -57,7 +57,7 @@ function Advertisement() {
 
       <div className={styles.products}>
         {products.map((item) => (
-          <ProductCart key={item.id} product={item} />
+          <Car key={item.id} product={item} />
         ))}
       </div>
 

@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Icon } from "@fluentui/react";
 import SearchBar from "./components/SearchBar";
 // import { products } from "../../mockData/products";
-import ProductCart from "../../components/productCard/ProductCart";
+import Car from "../../components/Car/Car";
 import OrderFilter from "../../components/orderFilter/OrderFilter";
 import notFound from "../../assets/Unhappy Result.svg";
 
@@ -43,7 +43,7 @@ function SearchResult() {
           <div className={styles.products}>
             {products.length ? (
               products.map((product) => (
-                <ProductCart key={product.id} product={product} />
+                <Car key={product.id} product={product} />
               ))
             ) : (
               <div className={styles.notFound}>

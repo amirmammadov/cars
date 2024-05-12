@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { comparisons } from "../../mockData/mock";
 // import { products } from "../../mockData/products";
-import ProductCart from "../../components/productCard/ProductCart";
+import Car from "../../components/Car/Car";
 
 // import { useProjects } from "../../services/queries";
 import { products } from "../../mockData/products";
@@ -78,31 +78,27 @@ function ComparisonPage() {
               </ul>
             </div>
             <div className={styles.productWrapper}>
-
-            {comparisonPrdoucts.map((product) => (
-              <div key={product.id} className={styles.products}>
-                <button
-                  className={styles.cancelBtn}
-                  onClick={() => setCount(count - 1)}
-                >
-                  <Icon iconName="ChromeClose" />
-                </button>
-                <ProductCart className={styles.product} product={product} />
-                <ul className={styles.infoList}>
-                  {product.extraInfo.map((item, index) => (
-                    <li key={index}>
-                      <p className={styles.mobileTitle}>{item.title}</p>
-                      <p>
-                        {item.value} 
-                        </p>
-                      
+              {comparisonPrdoucts.map((product) => (
+                <div key={product.id} className={styles.products}>
+                  <button
+                    className={styles.cancelBtn}
+                    onClick={() => setCount(count - 1)}
+                  >
+                    <Icon iconName="ChromeClose" />
+                  </button>
+                  <Car className={styles.product} product={product} />
+                  <ul className={styles.infoList}>
+                    {product.extraInfo.map((item, index) => (
+                      <li key={index}>
+                        <p className={styles.mobileTitle}>{item.title}</p>
+                        <p>{item.value}</p>
                       </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                    ))}
+                  </ul>
+                </div>
+              ))}
 
-            {/* {count < 3 && ( */}
+              {/* {count < 3 && ( */}
               <div
                 onClick={() => {
                   setCount(count + 1);

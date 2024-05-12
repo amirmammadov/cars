@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../sass/layout/_homeNewCars.scss";
 
 import SectionHeader from "../components/SectionHeader/SectionHeader";
-import ProductCart from "../components/productCard/ProductCart";
+import Car from "../components/Car/Car";
 
 import { Pagination } from "@mui/material";
 
@@ -34,7 +34,7 @@ const HomeNewCars = () => {
           <div>{error}</div>
         ) : (
           data.currentItems.map((product) => {
-            return <ProductCart key={product.id} product={product} />;
+            return <Car key={product.id} product={product} />;
           })
         )}
       </div>

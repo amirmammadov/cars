@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "../../../sass/components/_accAdvert.scss";
 
-import ProductCart from "../../../components/productCard/ProductCart";
+import Car from "../../../components/Car/Car";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 import { useDispatch } from "react-redux";
@@ -89,7 +89,7 @@ const Advert = () => {
           </div>
         ) : (
           [...Array(currTab.count).keys()].map((_, index) => (
-            <ProductCart key={index} product={mockCarData} />
+            <Car key={index} product={mockCarData} />
           ))
         )}
       </div>
