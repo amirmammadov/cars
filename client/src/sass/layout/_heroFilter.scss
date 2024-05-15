@@ -11,6 +11,8 @@
     $items: flex-start,
     $gap: 1.25rem
   );
+  position: relative;
+  z-index: 1;
 
   &__title {
     display: none;
