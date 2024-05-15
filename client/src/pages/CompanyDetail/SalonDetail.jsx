@@ -57,7 +57,7 @@ const SalonDetail = () => {
     <Link underline="hover" key="1" color="inherit" href="/">
       Ana Səhifə
     </Link>,
-    <Link underline="hover" key="2" color="inherit" href="/company">
+    <Link underline="hover" key="2" color="inherit" href="/salons">
       Şirkətlər
     </Link>,
     <Typography key="3" color="text.primary">
