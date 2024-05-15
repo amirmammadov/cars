@@ -1,6 +1,6 @@
 @import "../style";
 
-.home__cars__section {
+.home__newcars__section {
   @include flexbox(
     $direction: column,
     $justify: space-between,
@@ -24,11 +24,8 @@
     @include desktop {
       grid-template-columns: repeat(3, 1fr);
     }
-    @include tablet {
+    @include mobile {
       grid-template-columns: repeat(2, 1fr);
-    }
-    @include mobile3 {
-      grid-template-columns: repeat(1, 1fr);
     }
   }
 

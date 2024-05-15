@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../sass/layout/_homeNewCars.scss";
 
 import SectionHeader from "../components/SectionHeader/SectionHeader";
-import ProductCart from "../components/productCard/ProductCart";
+import Car from "../components/Car/Car";
 
 import { Pagination } from "@mui/material";
 
@@ -25,16 +25,16 @@ const HomeNewCars = () => {
   }
 
   return (
-    <section className="home__cars__section">
-      <SectionHeader title="Yeni elanlar" filterTitle="Tarix" />
-      <div className="home__cars__section__content">
+    <section className="home__newcars__section">
+      <SectionHeader title="Yeni elanlar" filterTitle="Tarix" hasText />
+      <div className="home__newcars__section__content">
         {isPending ? (
           <div>Loading...</div>
         ) : isError ? (
           <div>{error}</div>
         ) : (
           data.currentItems.map((product) => {
-            return <ProductCart key={product.id} product={product} />;
+            return <Car key={product.id} product={product} />;
           })
         )}
       </div>

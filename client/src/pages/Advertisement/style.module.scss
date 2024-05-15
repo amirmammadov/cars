@@ -91,11 +91,8 @@
   @include desktop {
     grid-template-columns: repeat(3, 1fr);
   }
-  @include tablet {
+  @include mobile {
     grid-template-columns: repeat(2, 1fr);
-  }
-  @include mobile3 {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
 

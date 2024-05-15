@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 
 import { products } from "../../mockData/products";
 
-import ProductCart from "../../components/productCard/ProductCart";
-
 import { Link } from "react-router-dom";
+
+import Car from "../../components/Car/Car";
 
 const Favorites = () => {
   const favCarIds = useSelector((state) => state.favCarIds);
@@ -31,7 +31,7 @@ const Favorites = () => {
       ) : (
         <div className="favorites__content">
           {favoriteProducts.map((product) => {
-            return <ProductCart key={product.id} product={product} />;
+            return <Car key={product.id} product={product} />;
           })}
         </div>
       )}

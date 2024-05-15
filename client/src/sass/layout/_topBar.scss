@@ -6,6 +6,7 @@
   background-color: $primary;
   @include flexbox($justify: space-between, $items: center);
   padding: 0 15%;
+
   &__phone {
     @include flexbox($justify: space-between, $items: center, $gap: 0.625rem);
 

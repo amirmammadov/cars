@@ -8,7 +8,7 @@ import { useFeaturedCars } from "../services/queries";
 
 import { Pagination } from "@mui/material";
 
-import ProductCart from "../components/productCard/ProductCart";
+import Car from "../components/Car/Car";
 import SectionHeader from "../components/SectionHeader/SectionHeader";
 
 import { ITEMS_PER_PAGE_FEATURED } from "../constants";
@@ -29,7 +29,11 @@ const HomeCars = () => {
   return (
     <main className="home__cars">
       <section className="home__cars__section">
-        <SectionHeader title="Önə çəkilmiş elanlar" filterTitle="Rating" />
+        <SectionHeader
+          title="Önə çəkilmiş elanlar"
+          filterTitle="Rating"
+          hasText
+        />
         <div className="home__cars__section__content">
           {isPending ? (
             <div>Loading...</div>
@@ -38,7 +42,7 @@ const HomeCars = () => {
           ) : (
             data.currentItems.map((product) => {
               if (product.leasing) {
-                return <ProductCart key={product.id} product={product} />;
+                return <Car key={product.id} product={product} />;
               } else {
                 return undefined;
               }
