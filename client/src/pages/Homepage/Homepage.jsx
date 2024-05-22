@@ -33,6 +33,7 @@ function Homepage() {
     <main className="home">
       <div className="home__hero">
         <HeroFilter />
+        <div className="home__hero__overlay"></div>
       </div>
       <HomeCars />
       {isSeenUpArrow && (
