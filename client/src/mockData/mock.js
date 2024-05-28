@@ -77,6 +77,17 @@ export const years = [
   2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2003, 2002, 2001, 2000, 1999,
   1998,
 ];
+export const carTypes = [
+  "SUV",
+  "Kompakt",
+  "Sport maşın",
+  "Sedan",
+  "Hetçbek",
+  "Kabriolet",
+
+  "Pikap",
+  "Van/Minibus",
+];
 export const fuelConsumption = ["51/100 km", "61/100 km", "71/100 km"];
 export const externalColors = [
   { id: 1, name: "Qara", color: "#000000" },
@@ -97,6 +108,22 @@ export const externalColors = [
     name: "Bej",
     color: "#DBB67F",
   },
+];
+export const externalColorsTwo = [
+  "Qara",
+  "Bənövşəyi",
+  "Yaşıl",
+  "Gümüşü",
+  "Qəhvəyi",
+  "Gold",
+  "Narıncı",
+  "Ağ",
+  "Mavi",
+  "Boz",
+  "Qırmızı",
+  "Metalik",
+  "Sarı",
+  "Bej",
 ];
 export const internalColors = [
   { id: 1, name: "Qara", color: "#000000" },
@@ -153,22 +180,35 @@ export const accessories = [
   "Kondisioner",
 ];
 
-export const status = [ {id:1,label:"Hamısı",value:"all"},{id:2,label:"Yeni",value:"new"},{ id:3,label:"Sürülmüş",value:"old"}];
-export const seller = [{id:1,label:"Hamısı",value:"all"},{ id:2,label:"Satıcı",value:"seller"}, {id:3,label:"Şəxsi satıcı",value:"private"}];
-export const rating=[
+export const status = [
+  { id: 1, label: "Hamısı", value: "all" },
+  { id: 2, label: "Yeni", value: "new" },
+  { id: 3, label: "Sürülmüş", value: "old" },
+];
+export const seller = [
+  { id: 1, label: "Hamısı", value: "all" },
+  { id: 2, label: "Satıcı", value: "seller" },
+  { id: 3, label: "Şəxsi satıcı", value: "private" },
+];
+export const rating = [
   {
-    id:1,
-    label:"3",value:3
-  }, {
-    id:2,
-    label:"4",value:4
-  }, {
-    id:3,
-    label:"5",value:5
+    id: 1,
+    label: "3",
+    value: 3,
   },
-]
-export const comparisons=[
-  {id:1,label:"Hamısı",value:"all"},
-  {id:2,label:"Oxşarlıqlar",value:"similar"},
-  {id:3,label:"Fərqlər",value:"difference"},
-]
+  {
+    id: 2,
+    label: "4",
+    value: 4,
+  },
+  {
+    id: 3,
+    label: "5",
+    value: 5,
+  },
+];
+export const comparisons = [
+  { id: 1, label: "Hamısı", value: "all" },
+  { id: 2, label: "Oxşarlıqlar", value: "similar" },
+  { id: 3, label: "Fərqlər", value: "difference" },
+];

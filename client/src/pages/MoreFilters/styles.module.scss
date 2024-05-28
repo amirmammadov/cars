@@ -21,6 +21,9 @@
       color: $lightFont !important;
     }
     margin-bottom: 30px;
+    @media (max-width:650px) {
+      display: none;
+    }
   }
 
   h1 {
@@ -40,21 +43,42 @@
     margin-bottom: 20px;
     color: $font;
   }
+  @media (max-width:650px) {
+    section{
+padding-top: 10px !important;    
+    }
+    h1{
+      font-size: 18px;
+    }h2{
+      font-size: 16px;
+    margin-bottom: 10px;
+
+    }h3{
+    margin-top: 15px;
+    margin-bottom: 15px;
+      
+      font-size: 14px;
+    }
+  }
   .baseInfo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     @media (max-width:800px) {
-      flex-direction: column;
+      // flex-direction: column;
       gap: 10px;
+      display: grid;
+      grid-column: auto auto;
     }
     .inputs {
       justify-content: space-between;
       display: flex;
-      
+      flex-wrap: wrap;
       @media (max-width:768px) {
-align-items: center;
-  width: 100%;
+// align-items: center;
+//   width: 100%;
+
 }
     }
   }
@@ -65,8 +89,16 @@ align-items: center;
     border-radius: 8px !important;
     background-color: $white !important;
 @media (max-width:768px) {
-  width: 49%;
-  margin-right: 0;
+  max-width: calc(50% - 10px); /* Two elements in a row, accounting for margins */
+  margin-right: 10px; /* Half of the usual margin */
+  margin-bottom: 10px;
+&:nth-child(3) {
+    min-width: 100%;
+    margin-right: 0;
+  }
+  &:nth-child(2n) {
+    margin-right: 0; /* No margin on the right for the second element in a row */
+  }
 }
     &:focus-within {
       border: 1px solid $primary !important;
@@ -81,23 +113,37 @@ align-items: center;
     }
     label {
       color: $font !important;
-
-    }
+      @media (max-width:560px) {
+        font-size: 14px !important;
+      }    }
     * {
       font-family: "Montserrat", sans-serif !important;
       border: none !important;
       box-shadow: none !important;
 
     }
-  }
 
+  }
+  .fullWidth{
+    @media (max-width:768px) {
+      // align-items: center;
+        min-width: 100% !important;
+      
+      }  }
   .radioGroup div {
     display: flex !important;
     flex-direction: row !important;
     font-size: 16px;
     @media (max-width:768px) {
       width: 100%;
-    }
+gap: 5px;
+}
+@media (max-width:560px) {
+  *{
+    font-size: 14px;
+
+  }
+}
     label {
       margin-right: 30px !important;
     }
@@ -111,15 +157,18 @@ align-items: center;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-
+    
     .dflex {
       margin-bottom: 0;
     }
     @media (max-width:768px) {
       flex-direction: column;
-    gap: 10px;
+      // margin-left:10px ;
+
+      gap: 10px;
     .dflex{
       width: 100%;
+
     }
     }
   }
@@ -130,6 +179,7 @@ align-items: center;
     display: flex;
 @media (max-width:768px) {
   width: 100%;
+  margin-right: 0;
 div{
   width: 49% !important;
 
@@ -138,6 +188,9 @@ div{
     border: 1px solid #0000001a;
     label {
       color: $lightFont;
+      @media (max-width:560px) {
+        font-size: 14px !important;
+      } 
     }
     div {
 
@@ -148,6 +201,7 @@ div{
     }
     * {
       font-family: "Montserrat", sans-serif !important;
+  
     }
     .first {
       border-right: 1px solid #0000001a;
@@ -164,6 +218,10 @@ div{
     margin-right: 20px !important;
     label {
       color: $lightFont;
+      @media (max-width:560px) {
+      
+        font-size: 14px !important;
+      }
     }
     fieldset {
       border: none !important;
@@ -173,24 +231,40 @@ div{
       * {
         font-family: "Montserrat", sans-serif !important;
       }
-
+      
       width: 118px !important;
       border-right: 1px solid #0000001a;
     }
     .second {
       border: none !important;
     }
+    @media (max-width:768px) {
+      width: 100% !important;
+      margin-right: 0 !important;
+      .first,
+      .second {
+      width:50% !important;
+    }
+  }
+
+
   }
   .currency {
     background-color: $white;
     width: 103px;
     border-radius: 8px !important;
     border: 1px solid #0000001a !important;
+@media (max-width:768px) {
+  width: 100%;
+}
     &:focus-within {
       border: 1px solid $primary !important;
     }
     * {
       font-family: "Montserrat", sans-serif !important ;
+          @media (max-width:560px) {
+        font-size: 14px !important;
+      } 
     }
     fieldset {
       border: none !important;
@@ -202,13 +276,26 @@ div{
   }
   .flexInputs {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    
     label {
       color: $font;
+      
       span {
         &:nth-child(2) {
           padding-left: 10px !important;
+          
+          @media (max-width:768px) {
+            margin-top: -8px;
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-left: 0px !important;
+          }
         }
+
       }
     }
     * {
@@ -216,23 +303,41 @@ div{
     }
 
     gap: 30px;
+    @media (max-width:768px) {
+      gap: 5px !important;
+    }
+    @media (max-width:560px) {
+      *{
+        font-size: 14px;
+    
+      }
+    }
+
   }
   .technicalInputs {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
     margin: 30px 0;
+    
   }
   .gridStyle {
     gap: 15px;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    @media (max-width:768px) {
+      grid-template-columns: auto auto;
+  gap: 30px;
+}
   }
   .colors {
+    
     label {
       width: 120px;
     }
     gap: 20px;
+
   }
   .ratings {
     margin-top: 5px;
@@ -245,7 +350,8 @@ div{
 .endBtns {
   position: fixed;
   bottom: 0;
-  left: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 30px auto !important;
   border-radius: 8px;
   width: 600px;
@@ -260,7 +366,8 @@ div{
   @media (max-width:768px) {
     flex-direction: column;
     width: 90%;
-    left: 0;
+    // left: 0;
+    position: relative;
   }
   button {
     width: 200px;

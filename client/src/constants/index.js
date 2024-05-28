@@ -61,7 +61,9 @@ export const carTypes = [
   { name: "Pikap", image: "/carTypes/pickup.svg", id: 7 },
   { name: "Van/Minibus", image: "/carTypes/van.svg", id: 8 },
 ];
-
+export const carNames=[
+  
+]
 export const typeOfFuel = [
   {
     title: "Benzin",
