@@ -49,19 +49,21 @@ export const yearOptions = [
 
 export const carTypes = [
   { name: "SUV", image: "/carTypes/suv.svg", id: 1 },
-  { name: "Compact Car", image: "/carTypes/compact.svg", id: 2 },
-  { name: "Luxury Car", image: "/carTypes/luxury.svg", id: 3 },
+  { name: "Kompakt", image: "/carTypes/compact.svg", id: 2 },
+  { name: "Sport maşın", image: "/carTypes/luxury.svg", id: 3 },
   { name: "Sedan", image: "/carTypes/sedan.svg", id: 4 },
-  { name: "Hatchback", image: "/carTypes/hatchback.svg", id: 5 },
+  { name: "Hetçbek", image: "/carTypes/hatchback.svg", id: 5 },
   {
-    name: "Convertible",
+    name: "Kabriolet",
     image: "/carTypes/convertible.svg",
     id: 6,
   },
-  { name: "Pickup", image: "/carTypes/pickup.svg", id: 7 },
-  { name: "Van", image: "/carTypes/van.svg", id: 8 },
+  { name: "Pikap", image: "/carTypes/pickup.svg", id: 7 },
+  { name: "Van/Minibus", image: "/carTypes/van.svg", id: 8 },
 ];
-
+export const carNames=[
+  
+]
 export const typeOfFuel = [
   {
     title: "Benzin",

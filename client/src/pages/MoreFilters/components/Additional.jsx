@@ -41,7 +41,7 @@ function Additional() {
               />
             }
             value="Private "
-            label="Şəxsi satıcı"
+            label=" Salon"
           />
 
           <FormControlLabel
@@ -74,7 +74,7 @@ function Additional() {
           />
         </RadioGroup>
       </FormControl>
-      <h3>Satıcı reytinqi</h3>
+      {/* <h3>Satıcı reytinqi</h3>
       <FormControl className={`${styles.radioGroup} `}>
         <RadioGroup>
           <FormControlLabel
@@ -156,7 +156,7 @@ function Additional() {
             }
           />
         </RadioGroup>
-      </FormControl>
+      </FormControl> */}
     </section>
   );
 }

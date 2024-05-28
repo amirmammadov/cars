@@ -17,6 +17,7 @@ import {
   models,
   ownercount,
   seatCount,
+  carTypes,
   years,
 } from "../../../mockData/mock";
 import ShowRoom from "../../../components/showRoom/ShowRoom";
@@ -26,51 +27,7 @@ function Fundamentals() {
   return (
     <section className={styles.firstSection}>
       <h2>Təməl məlumatlar</h2>
-      <div className={styles.baseInfo}>
-        <div className={styles.inputs}>
-          <Autocomplete
-            className={styles.autocomplete}
-            options={brands}
-            componentsProps={{
-              paper: {
-                sx: {
-                  borderRadius: "8px",
-                  marginTop: "10px",
-                },
-              },
-            }}
-            renderInput={(params) => <TextField {...params} label="Marka" />}
-          />
-          <Autocomplete
-            className={styles.autocomplete}
-            multiple
-            disableCloseOnSelect
-            componentsProps={{
-              paper: {
-                sx: {
-                  borderRadius: "8px",
-                  marginTop: "10px",
-                },
-              },
-            }}
-            renderOption={(props, option, { selected }) => (
-              <li {...props}>
-                <Checkbox
-                  // icon={icon}
-                  // checkedIcon={checkedIcon}
-                  style={{ marginRight: 8, display: "block", marginLeft: "0" }}
-                  checked={selected}
-                />
-                {option}
-              </li>
-            )}
-            options={models}
-            sx={{ color: "red" }}
-            renderInput={(params) => <TextField {...params} label="Model" />}
-          />
-        </div>
-
-        <FormControl className={styles.radioGroup}>
+      <FormControl className={styles.radioGroup}>
           <RadioGroup>
             <FormControlLabel
               control={
@@ -118,10 +75,71 @@ function Fundamentals() {
             />
           </RadioGroup>
         </FormControl>
-      </div>
+        <br />
+        <br />
+      <div className={styles.baseInfo}>
+        <div className={styles.inputs}>
+          <Autocomplete
+            className={styles.autocomplete}
+            options={brands}
+            componentsProps={{
+              paper: {
+                sx: {
+                  borderRadius: "8px",
+                  marginTop: "10px",
+                },
+              },
+            }}
+            renderInput={(params) => <TextField {...params} label="Marka" />}
+          />
+          <Autocomplete
+            className={styles.autocomplete}
+            multiple
+            disableCloseOnSelect
+            componentsProps={{
+              paper: {
+                sx: {
+                  borderRadius: "8px",
+                  marginTop: "10px",
+                },
+              },
+            }}
+            renderOption={(props, option, { selected }) => (
+              <li {...props}>
+                <Checkbox
+                  // icon={icon}
+                  // checkedIcon={checkedIcon}
+                  style={{ marginRight: 8, display: "block", marginLeft: "0" }}
+                  checked={selected}
+                />
+                {option}
+              </li>
+            )}
+            options={models}
+            sx={{ color: "red" }}
+            renderInput={(params) => <TextField {...params} label="Model" />}
+          />
+         
+           <Autocomplete
+            className={styles.autocomplete}
+            options={carTypes}
+            componentsProps={{
+              paper: {
+                sx: {
+                  borderRadius: "8px",
+                  marginTop: "10px",
+                },
+              },
+            }}
+            renderInput={(params) => <TextField {...params} label="Avtomobil salonu" />}
+          />
+        </div>
 
-      <h3>Avtomobil salonu</h3>
-      <ShowRoom />
+    
+      </div>
+<br />
+<br />
+      {/* <ShowRoom className={styles.salon}/> */}
 
       <div className={styles.dflex}>
         <div className={styles.dflex}>
@@ -244,7 +262,7 @@ function Fundamentals() {
           />
         </div>
         <Autocomplete
-          className={styles.autocomplete}
+          className={`${styles.autocomplete} ${styles.fullWidth}`}
           options={seatCount}
           componentsProps={{
             paper: {
@@ -260,19 +278,6 @@ function Fundamentals() {
         />{" "}
         <Autocomplete
           className={styles.autocomplete}
-          options={ownercount}
-          componentsProps={{
-            paper: {
-              sx: {
-                borderRadius: "8px",
-                marginTop: "10px",
-              },
-            },
-          }}
-          renderInput={(params) => <TextField {...params} label="Sahib sayı" />}
-        />{" "}
-        <Autocomplete
-          className={styles.autocomplete}
           options={cities}
           renderInput={(params) => <TextField {...params} label="Şəhər" />}
           componentsProps={{
@@ -284,6 +289,19 @@ function Fundamentals() {
             },
           }}
         />
+            <Autocomplete
+          className={`${styles.autocomplete} ${styles.fullWidth}`}
+          options={ownercount}
+              componentsProps={{
+                paper: {
+                  sx: {
+                    borderRadius: "8px",
+                    marginTop: "10px",
+                  },
+                },
+              }}
+              renderInput={(params) => <TextField {...params} label="Yığıldığı bazar" />}
+            />{" "}
       </div>
     </section>
   );
