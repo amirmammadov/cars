@@ -1,14 +1,28 @@
-from django.shortcuts import render
+from rest_framework import generics, status
+from rest_framework.response import Response
+from .models import Country, Company, PhoneNumber
+from .serializers import CountrySerializer, CompanySerializer, PhoneNumberSerializer
 
-from rest_framework import generics
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.filters import SearchFilter
-from .models import Company
-from .serializers import CompanySerializer
+class CountryListCreateView(generics.ListCreateAPIView):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
 
-class CompanyListView(generics.ListAPIView):
+class CountryDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
+
+class CompanyListCreateView(generics.ListCreateAPIView):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
-    filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ['rating', 'operating_country__name']
-    search_fields = ['name', 'operating_country__name']
+
+class CompanyDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Company.objects.all()
+    serializer_class = CompanySerializer
+
+class PhoneNumberListCreateView(generics.ListCreateAPIView):
+    queryset = PhoneNumber.objects.all()
+    serializer_class = PhoneNumberSerializer
+
+class PhoneNumberDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = PhoneNumber.objects.all()
+    serializer_class = PhoneNumberSerializer
