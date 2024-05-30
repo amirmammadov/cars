@@ -1,3 +1,24 @@
+export const INITIAL_DATA = {
+  tabOne: "hamısı",
+  tabTwo: "hamısı",
+  brand: "",
+  model: [],
+  banType: [],
+  city: "",
+  minPrice: "",
+  maxPrice: "",
+  currency: "AZN",
+  minYear: { title: "" },
+  maxYear: { title: "" },
+  code: "",
+};
+
+export const tabsDefaultValues = {
+  tabOne: "all",
+  tabTwo: "all",
+  tabThree: "all",
+};
+
 export const filterTabOne = {
   all: "hamısı",
   new: "yeni",
@@ -8,6 +29,11 @@ export const filterTabTwo = {
   all: "hamısı",
   credit: "kredit",
   barter: "barter",
+};
+
+export const filterTabThree = {
+  all: "Önə çəkilmiş",
+  other: "Statistik",
 };
 
 export const brandOptions = [
@@ -61,9 +87,7 @@ export const carTypes = [
   { name: "Pikap", image: "/carTypes/pickup.svg", id: 7 },
   { name: "Van/Minibus", image: "/carTypes/van.svg", id: 8 },
 ];
-export const carNames=[
-  
-]
+export const carNames = [];
 export const typeOfFuel = [
   {
     title: "Benzin",
