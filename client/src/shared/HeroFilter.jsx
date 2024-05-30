@@ -12,8 +12,11 @@ import CloseIcon from "@mui/icons-material/Close";
 import "../sass/layout/_heroFilter.scss";
 
 import {
+  INITIAL_DATA,
+  tabsDefaultValues,
   filterTabOne,
   filterTabTwo,
+  filterTabThree,
   brandOptions,
   modelOptions,
   banOptions,
@@ -23,25 +26,9 @@ import {
 
 import { useNavigate } from "react-router-dom";
 
-const INITIAL_DATA = {
-  tabOne: "hamısı",
-  tabTwo: "hamısı",
-  brand: "",
-  model: [],
-  banType: [],
-  city: "",
-  minPrice: "",
-  maxPrice: "",
-  currency: "AZN",
-  minYear: { title: "" },
-  maxYear: { title: "" },
-  code: "",
-};
-
 const HeroFilter = () => {
   const [data, setData] = useState(INITIAL_DATA);
-  const [tabOneDefaultValue, setTabOneDefaultValue] = useState("all");
-  const [tabTwoDefaultValue, setTwoOneDefaultValue] = useState("all");
+  const [tabsDefault, setTabsDefault] = useState(tabsDefaultValues);
 
   const navigate = useNavigate();
 
@@ -65,16 +52,14 @@ const HeroFilter = () => {
     console.log(data);
 
     setData(INITIAL_DATA);
-    setTabOneDefaultValue("all");
-    setTwoOneDefaultValue("all");
+    setTabsDefault(tabsDefaultValues);
     setClear(true);
     navigate("/result");
   };
 
   const handleClear = () => {
     setData(INITIAL_DATA);
-    setTabOneDefaultValue("all");
-    setTwoOneDefaultValue("all");
+    setTabsDefault(tabsDefaultValues);
 
     setClear(true);
   };
@@ -86,18 +71,26 @@ const HeroFilter = () => {
         <FilterTab
           handleChange={handleChange}
           tabs={filterTabOne}
-          tabDefaultValue={tabOneDefaultValue}
-          setTabDefaultValue={setTabOneDefaultValue}
+          tabDefaultValue={tabsDefault.tabOne}
+          setTabDefaultValue={setTabsDefault}
           tabKey="tabOne"
           key="tabOne"
         />
         <FilterTab
           handleChange={handleChange}
           tabs={filterTabTwo}
-          tabDefaultValue={tabTwoDefaultValue}
-          setTabDefaultValue={setTwoOneDefaultValue}
+          tabDefaultValue={tabsDefault.tabTwo}
+          setTabDefaultValue={setTabsDefault}
           tabKey="tabTwo"
           key="tabTwo"
+        />
+        <FilterTab
+          handleChange={handleChange}
+          tabs={filterTabThree}
+          tabDefaultValue={tabsDefault.tabThree}
+          setTabDefaultValue={setTabsDefault}
+          tabKey="tabThree"
+          key="tabThree"
         />
       </div>
       <div className="home__hero__content__secondLine">

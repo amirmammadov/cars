@@ -8,7 +8,9 @@ const FilterTab = ({
   setTabDefaultValue,
 }) => {
   const handleActiveItem = (e) => {
-    setTabDefaultValue(e.target.id);
+    setTabDefaultValue((prev) => {
+      return { ...prev, [tabKey]: e.target.id };
+    });
 
     handleChange({
       target: { name: tabKey, value: tabs[e.target.id] },

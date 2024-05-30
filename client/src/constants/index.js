@@ -1,3 +1,24 @@
+export const INITIAL_DATA = {
+  tabOne: "hamısı",
+  tabTwo: "hamısı",
+  brand: "",
+  model: [],
+  banType: [],
+  city: "",
+  minPrice: "",
+  maxPrice: "",
+  currency: "AZN",
+  minYear: { title: "" },
+  maxYear: { title: "" },
+  code: "",
+};
+
+export const tabsDefaultValues = {
+  tabOne: "all",
+  tabTwo: "all",
+  tabThree: "all",
+};
+
 export const filterTabOne = {
   all: "hamısı",
   new: "yeni",
@@ -8,6 +29,11 @@ export const filterTabTwo = {
   all: "hamısı",
   credit: "kredit",
   barter: "barter",
+};
+
+export const filterTabThree = {
+  all: "Önə çəkilmiş",
+  other: "Statistik",
 };
 
 export const brandOptions = [
@@ -49,19 +75,19 @@ export const yearOptions = [
 
 export const carTypes = [
   { name: "SUV", image: "/carTypes/suv.svg", id: 1 },
-  { name: "Compact Car", image: "/carTypes/compact.svg", id: 2 },
-  { name: "Luxury Car", image: "/carTypes/luxury.svg", id: 3 },
+  { name: "Kompakt", image: "/carTypes/compact.svg", id: 2 },
+  { name: "Sport maşın", image: "/carTypes/luxury.svg", id: 3 },
   { name: "Sedan", image: "/carTypes/sedan.svg", id: 4 },
-  { name: "Hatchback", image: "/carTypes/hatchback.svg", id: 5 },
+  { name: "Hetçbek", image: "/carTypes/hatchback.svg", id: 5 },
   {
-    name: "Convertible",
+    name: "Kabriolet",
     image: "/carTypes/convertible.svg",
     id: 6,
   },
-  { name: "Pickup", image: "/carTypes/pickup.svg", id: 7 },
-  { name: "Van", image: "/carTypes/van.svg", id: 8 },
+  { name: "Pikap", image: "/carTypes/pickup.svg", id: 7 },
+  { name: "Van/Minibus", image: "/carTypes/van.svg", id: 8 },
 ];
-
+export const carNames = [];
 export const typeOfFuel = [
   {
     title: "Benzin",
@@ -170,7 +196,7 @@ export const seatNumbers = [
   },
 ];
 
-export const seller = [
+export const sellerType = [
   {
     title: "Şəxsi satıcı",
   },
@@ -392,9 +418,9 @@ export const moreOptionsIterator = [
   },
   {
     id: 10,
-    options: seller,
+    options: sellerType,
     holder: "Satıcı",
-    keyValue: "seller",
+    keyValue: "sellerType",
   },
   {
     id: 11,

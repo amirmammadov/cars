@@ -1,55 +1,54 @@
 import {
+  Autocomplete,
   Checkbox,
   FormControl,
   FormControlLabel,
   FormGroup,
   Radio,
   RadioGroup,
+  TextField,
 } from "@mui/material";
 import styles from "../styles.module.scss";
-import { externalColors } from "../../../mockData/mock";
+import { externalColors, externalColorsTwo } from "../../../mockData/mock";
+import { fuelConsumption } from "../../../constants";
 
 function External() {
   const others = [
-    "ABS",
-    "Məsafə xəbərdarlıq sistemi",
+    // "Məsafə xəbərdarlıq sistemi",
+    "Vuruğu yoxdur",
     "Mərkəzi qapanma",
-    "Start-stop sistemi",
+    // "Start-stop sistemi",
     "Lyuk",
-    "Adaptiv döngə işıqları",
-    "Ehtiyyat təkər",
+    "Rənglənməyib",
+    // "Adaptiv döngə işıqları",
+    // "Ehtiyyat təkər",
     "Yağış sensoru",
     "Ksenon lampalar",
+    "ABS",
     "Yüngül lehimli disklər",
-    "Qızdırılan ön şüşə",
-    "Duman əleyhinə lampa",
+    // "Qızdırılan ön şüşə",
+    // "Duman əleyhinə lampa",
   ];
   return (
     <section>
       <h2>Xarici</h2>
-      <h3>Xarici rəng</h3>
-      <FormGroup className={`${styles.flexInputs} ${styles.colors}`}>
-        {externalColors.map((item, index) => (
-          <FormControlLabel
-            key={index}
-            control={
-              <Checkbox
-                sx={{
-                  "& .MuiSvgIcon-root": {
-                    color: item.color,
-                  },
-                  "&.Mui-checked": {
-                    "& .MuiSvgIcon-root": {
-                      backgroundColor: "transparent",
-                    },
-                  },
-                }}
-              />
-            }
-            label={item.name}
-          />
-        ))}
-      </FormGroup>
+      {/* <h3>Xarici rəng</h3> */}
+  
+        <Autocomplete
+          className={`${styles.autocomplete} ${styles.fullWidth}`}
+          options={externalColorsTwo}
+          componentsProps={{
+            paper: {
+              sx: {
+                borderRadius: "8px",
+                marginTop: "10px",
+              },
+            },
+          }}
+          renderInput={(params) => (
+            <TextField {...params} label="Xarici rəng" />
+          )}
+        />{" "}
       <h3>Parkinq sensoru</h3>
       <FormGroup className={styles.flexInputs}>
         <FormControlLabel

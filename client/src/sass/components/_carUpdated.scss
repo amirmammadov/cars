@@ -1,4 +1,4 @@
-@import "../style";
+@import "../index";
 
 .extra__info__updated {
   @include flexbox($justify: flex-start, $items: center, $gap: 1.25rem);

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -9,7 +11,16 @@ import { setNewPromotionState } from "../../../features/appSlice";
 import "../../../sass/components/_price.scss";
 
 const Price = () => {
+  const [radioValue, setRadioValue] = useState("all");
+
   const dispatch = useDispatch();
+
+  const handleRadioChange = (event) => {
+    const { name, value } = event.target;
+    setRadioValue(event.target.value);
+
+    dispatch(setNewPromotionState({ name, value }));
+  };
 
   const handleChange = (target) => {
     dispatch(setNewPromotionState({ name: target.name, value: target.value }));
@@ -23,6 +34,7 @@ const Price = () => {
           className="new__promotion__price__inputs__amount"
           placeholder="Qiymət"
           name="price"
+          autoComplete="off"
           onChange={(e) => handleChange(e.target)}
         />
         <select
@@ -42,9 +54,12 @@ const Price = () => {
           name="row-radio-buttons-group"
           defaultValue="all"
           className="new__promotion__price__radios"
+          value={radioValue}
+          onChange={handleRadioChange}
         >
           <FormControlLabel
             value="all"
+            name="paymentOptions"
             control={
               <Radio
                 sx={{ color: "#620985", "&.Mui-checked": { color: "#620985" } }}
@@ -55,6 +70,7 @@ const Price = () => {
           />
           <FormControlLabel
             value="credit"
+            name="paymentOptions"
             control={
               <Radio
                 sx={{ color: "#620985", "&.Mui-checked": { color: "#620985" } }}
@@ -65,6 +81,7 @@ const Price = () => {
           />
           <FormControlLabel
             value="barter"
+            name="paymentOptions"
             control={
               <Radio
                 sx={{

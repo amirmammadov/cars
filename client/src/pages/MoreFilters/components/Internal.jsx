@@ -1,20 +1,22 @@
 import styles from "../styles.module.scss";
 import {
+  Autocomplete,
   Checkbox,
   FormControl,
   FormControlLabel,
   FormGroup,
   Radio,
   RadioGroup,
+  TextField,
 } from "@mui/material";
-import { accessories, internalColors } from "../../../mockData/mock";
+import { accessories, externalColorsTwo, internalColors } from "../../../mockData/mock";
 
 function Internal() {
   return (
     <section>
       <h2>Daxili</h2>
-      <h3>Daxili rəng</h3>
-      <FormGroup className={`${styles.flexInputs} ${styles.colors}`}>
+      {/* <h3>Daxili rəng</h3> */}
+      {/* <FormGroup className={`${styles.flexInputs} ${styles.colors}`}>
         {internalColors.map((item, index) => (
           <FormControlLabel
             key={index}
@@ -35,7 +37,22 @@ function Internal() {
             label={item.name}
           />
         ))}
-      </FormGroup>
+      </FormGroup> */}
+      <Autocomplete
+          className={`${styles.autocomplete} ${styles.fullWidth}`}
+          options={externalColorsTwo}
+          componentsProps={{
+            paper: {
+              sx: {
+                borderRadius: "8px",
+                marginTop: "10px",
+              },
+            },
+          }}
+          renderInput={(params) => (
+            <TextField {...params} label="Daxili rəng" />
+          )}
+        />{" "}
       <h3>Daxili material</h3>
       <FormGroup className={styles.flexInputs}>
         <FormControlLabel
@@ -117,7 +134,7 @@ function Internal() {
           label="Digər"
         />
       </FormGroup>
-      <h3>Hava yastıqları</h3>
+      {/* <h3>Hava yastıqları</h3>
 
       <FormControl className={styles.radioGroup}>
         <RadioGroup>
@@ -194,7 +211,7 @@ function Internal() {
             label="Daha çox"
           />
         </RadioGroup>
-      </FormControl>
+      </FormControl> */}
       <h3>Avtomobilin təchizatları</h3>
       <FormGroup className={`${styles.flexInputs} ${styles.gridStyle}`}>
         {accessories.map((item, index) => (

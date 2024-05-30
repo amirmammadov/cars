@@ -91,10 +91,8 @@ const Registration = () => {
               </div>
             </div>
           </div>
-
           <button  onClick={(e)=>{e.preventDefault();setModal(true)}}>Qeydiyyatdan keçin</button>
         </form>
-
         <p>
           Hesabınız var?
           <span
