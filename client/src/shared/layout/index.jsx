@@ -4,12 +4,12 @@ import TopBar from "./TopBar";
 
 function Layout({ children }) {
   return (
-    <>
+    <main className="layout-main">
       <TopBar />
       <Header />
       {children}
       <Footer />
-    </>
+    </main>
   );
 }
 

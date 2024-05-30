@@ -1,8 +1,4 @@
 @import "./base/reset";
-@import "./base/typography";
-@import "./utils/colors";
-@import "./utils/mixins";
-@import "./utils/variables";
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -13,7 +9,6 @@ code {
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -30,9 +25,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: $background;
+}
+
+main.layout-main {
   max-width: 1920px;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

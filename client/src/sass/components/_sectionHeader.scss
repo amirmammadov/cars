@@ -1,4 +1,4 @@
-@import "../style";
+@import "../index";
 
 .section__header {
   @include flexbox($justify: space-between, $items: center);
