@@ -26,6 +26,7 @@ const MoreOptions = () => {
         name="distance"
         onChange={(e) => handleChange(e)}
         className="more__options__input"
+        autoComplete="off"
       />
       <input
         type="text"
@@ -33,6 +34,7 @@ const MoreOptions = () => {
         name="volume"
         onChange={(e) => handleChange(e)}
         className="more__options__input"
+        autoComplete="off"
       />
       <input
         type="text"
@@ -40,6 +42,7 @@ const MoreOptions = () => {
         name="power"
         onChange={(e) => handleChange(e)}
         className="more__options__input"
+        autoComplete="off"
       />
       {moreOptionsIterator.map((option) => {
         return (

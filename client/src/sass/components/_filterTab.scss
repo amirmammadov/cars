@@ -1,13 +1,15 @@
-@import "../style";
+@import "../index";
 
 .filter__tab {
-  min-width: 340px;
-  height: 60px;
-  padding: 10px;
+  flex-grow: 1;
+  width: max-content;
+  height: auto;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: $white;
   @include flexbox($justify: center, $items: center, $gap: 0.625rem);
+
   @include tablet {
     width: 100%;
     padding: 5px;
@@ -17,9 +19,10 @@
   }
 
   &__item {
-    min-width: 100px;
-    min-height: 40px;
-    padding: 10px 22px;
+    flex-grow: 1;
+    width: max-content;
+    height: auto;
+    padding: 10px 15px;
     border-radius: 8px;
     color: $mainDark;
     font-size: 16px;
@@ -27,12 +30,17 @@
     font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
+
+    @include desktop {
+      font-size: 13px;
+      padding: 10px;
+    }
     @include tablet {
       width: 100%;
+      font-size: 16px;
       padding: 10px 5px;
     }
     @include mobile2 {
-      min-width: 40px;
       padding: 10px 2px;
     }
 
