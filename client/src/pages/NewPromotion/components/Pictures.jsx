@@ -115,7 +115,7 @@ const Pictures = () => {
             style={{ display: "none" }}
             onChange={handleFileChange}
           />
-          <button
+          <div
             onClick={(e) => {
               e.stopPropagation();
             }}
@@ -124,7 +124,7 @@ const Pictures = () => {
             }`}
           >
             <CloseIcon sx={{ color: "#18072b", fontSize: "22px" }} />
-          </button>
+          </div>
         </button>
         <button
           className="pictures__content__item"
@@ -150,7 +150,7 @@ const Pictures = () => {
             style={{ display: "none" }}
             onChange={handleFileChange}
           />
-          <button
+          <div
             onClick={(e) => {
               e.stopPropagation();
             }}
@@ -159,7 +159,7 @@ const Pictures = () => {
             }`}
           >
             <CloseIcon sx={{ color: "#18072b", fontSize: "22px" }} />
-          </button>
+          </div>
         </button>
         <button
           className="pictures__content__item"
@@ -185,7 +185,7 @@ const Pictures = () => {
             style={{ display: "none" }}
             onChange={handleFileChange}
           />
-          <button
+          <div
             onClick={(e) => {
               e.stopPropagation();
             }}
@@ -194,7 +194,7 @@ const Pictures = () => {
             }`}
           >
             <CloseIcon sx={{ color: "#18072b", fontSize: "22px" }} />
-          </button>
+          </div>
         </button>
         {images.otherImages.length > 0 &&
           images.otherImages.map((img, index) => {

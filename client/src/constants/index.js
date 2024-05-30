@@ -196,7 +196,7 @@ export const seatNumbers = [
   },
 ];
 
-export const seller = [
+export const sellerType = [
   {
     title: "Şəxsi satıcı",
   },
@@ -418,9 +418,9 @@ export const moreOptionsIterator = [
   },
   {
     id: 10,
-    options: seller,
+    options: sellerType,
     holder: "Satıcı",
-    keyValue: "seller",
+    keyValue: "sellerType",
   },
   {
     id: 11,

@@ -19,9 +19,17 @@ import {
 import OptionInputSingle from "../../../components/OptionInputSingle/OptionInputSingle";
 
 const Type = () => {
+  const [radioValue, setRadioValue] = useState("new");
   const [clear, setClear] = useState(false);
 
   const dispatch = useDispatch();
+
+  const handleRadioChange = (event) => {
+    const { name, value } = event.target;
+    setRadioValue(event.target.value);
+
+    dispatch(setNewPromotionState({ name, value }));
+  };
 
   const handleChange = ({ target }) => {
     dispatch(setNewPromotionState({ name: target.name, value: target.value }));
@@ -37,9 +45,12 @@ const Type = () => {
             name="row-radio-buttons-group"
             defaultValue="new"
             className="new__promotion__main__type__checkboxes__group"
+            value={radioValue}
+            onChange={handleRadioChange}
           >
             <FormControlLabel
               value="new"
+              name="isNew"
               control={
                 <Radio
                   sx={{
@@ -53,6 +64,7 @@ const Type = () => {
             />
             <FormControlLabel
               value="old"
+              name="isNew"
               control={
                 <Radio
                   sx={{

@@ -25,16 +25,18 @@ const Contact = () => {
         <input
           type="text"
           placeholder="Ad"
-          name="firstName"
+          name="sellerName"
           onChange={(e) => handleChange(e)}
           className="contact__content__item"
+          autoComplete="off"
         />
         <input
           type="text"
           placeholder="Soyad"
-          name="lastName"
+          name="sellerSurname"
           onChange={(e) => handleChange(e)}
           className="contact__content__item"
+          autoComplete="off"
         />
         <div className="contact__content__city">
           <OptionInputSingle
@@ -57,10 +59,11 @@ const Contact = () => {
         </select>
         <input
           type="number"
-          name="phone"
+          name="phoneNumber"
           onChange={(e) => handleChange(e)}
           placeholder="Mobil nömrə"
           className="contact__content__phone"
+          autoComplete="off"
         />
         {/* <div className="vinItem">
           <input

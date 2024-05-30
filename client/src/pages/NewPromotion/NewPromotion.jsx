@@ -9,10 +9,7 @@ import {
   Contact,
 } from "./components/index";
 
-import Breadcrumbs from "@mui/material/Breadcrumbs";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import CrumbNewProm from "../../components/BreadCrumbs/CrumbNewProm";
 
 import { useNavigate } from "react-router-dom";
 
@@ -32,24 +29,10 @@ const NewPromotion = () => {
     window.scrollTo(0, 0);
   };
 
-  const breadcrumbs = [
-    <Link underline="hover" key="1" color="inherit" href="/">
-      Ana Səhifə
-    </Link>,
-    <Typography key="2" color="text.primary">
-      Elan yerləşdir
-    </Typography>,
-  ];
-
   return (
     <main className="new__promotion">
       <div className="new__promotion__titles">
-        <Breadcrumbs
-          separator={<NavigateNextIcon fontSize="small" />}
-          aria-label="breadcrumb"
-        >
-          {breadcrumbs}
-        </Breadcrumbs>
+        <CrumbNewProm />
         <div className="new__promotion__titles__main">Elan yerləşdir</div>
       </div>
       <div className="new__promotion__content">
