@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "../../../sass/components/_moreOptions.scss";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setNewPromotionState } from "../../../features/appSlice";
 
 import OptionInputSingle from "../../../components/OptionInputSingle/OptionInputSingle";
@@ -11,6 +11,8 @@ import { moreOptionsIterator } from "../../../constants/index";
 
 const MoreOptions = () => {
   const [clear, setClear] = useState(false);
+
+  const emptyValues = useSelector((state) => state.promotionEmpty);
 
   const dispatch = useDispatch();
 
@@ -25,7 +27,9 @@ const MoreOptions = () => {
         placeholder="Yürüş, km"
         name="distance"
         onChange={(e) => handleChange(e)}
-        className="more__options__input"
+        className={`more__options__input ${
+          emptyValues.includes("distance") && "isEmpty"
+        }`}
         autoComplete="off"
       />
       <input
@@ -33,7 +37,9 @@ const MoreOptions = () => {
         placeholder="Həcm, (sm3)"
         name="volume"
         onChange={(e) => handleChange(e)}
-        className="more__options__input"
+        className={`more__options__input ${
+          emptyValues.includes("volume") && "isEmpty"
+        }`}
         autoComplete="off"
       />
       <input
@@ -41,7 +47,9 @@ const MoreOptions = () => {
         placeholder="Güc, kW"
         name="power"
         onChange={(e) => handleChange(e)}
-        className="more__options__input"
+        className={`more__options__input ${
+          emptyValues.includes("power") && "isEmpty"
+        }`}
         autoComplete="off"
       />
       {moreOptionsIterator.map((option) => {
@@ -54,6 +62,7 @@ const MoreOptions = () => {
             setClear={setClear}
             handleChange={handleChange}
             key={option.keyValue}
+            isEmpty={emptyValues.includes(option.keyValue)}
           />
         );
       })}

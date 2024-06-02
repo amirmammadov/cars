@@ -4,7 +4,7 @@ import "../../../sass/components/_pictures.scss";
 
 import CloseIcon from "@mui/icons-material/Close";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setNewPromotionState } from "../../../features/appSlice";
 
 const INITIAL__IMAGES = {
@@ -20,6 +20,8 @@ const Pictures = () => {
   const backView = useRef();
   const panelView = useRef();
   const otherslView = useRef();
+
+  const emptyValues = useSelector((state) => state.promotionEmpty);
 
   const dispatch = useDispatch();
 
@@ -92,7 +94,9 @@ const Pictures = () => {
       <div className="pictures__title">Şəkillər</div>
       <div className="pictures__content">
         <button
-          className="pictures__content__item"
+          className={`pictures__content__item ${
+            emptyValues.includes("frontView") && "isEmpty"
+          }`}
           onClick={() => handleUploadClick(frontView)}
         >
           <img
@@ -127,7 +131,9 @@ const Pictures = () => {
           </div>
         </button>
         <button
-          className="pictures__content__item"
+          className={`pictures__content__item ${
+            emptyValues.includes("backView") && "isEmpty"
+          }`}
           onClick={() => handleUploadClick(backView)}
         >
           <img
@@ -162,7 +168,9 @@ const Pictures = () => {
           </div>
         </button>
         <button
-          className="pictures__content__item"
+          className={`pictures__content__item ${
+            emptyValues.includes("panelView") && "isEmpty"
+          }`}
           onClick={() => handleUploadClick(panelView)}
         >
           <img

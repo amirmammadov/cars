@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "../../../sass/components/_contact.scss";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setNewPromotionState } from "../../../features/appSlice";
 
 import OptionInputSingle from "../../../components/OptionInputSingle/OptionInputSingle";
@@ -11,6 +11,8 @@ import { cityOptions } from "../../../constants";
 
 const Contact = () => {
   const dispatch = useDispatch();
+
+  const emptyValues = useSelector((state) => state.promotionEmpty);
 
   const [clear, setClear] = useState(false);
 
@@ -27,7 +29,9 @@ const Contact = () => {
           placeholder="Ad"
           name="sellerName"
           onChange={(e) => handleChange(e)}
-          className="contact__content__item"
+          className={`contact__content__item ${
+            emptyValues.includes("sellerName") && "isEmpty"
+          }`}
           autoComplete="off"
         />
         <input
@@ -35,7 +39,9 @@ const Contact = () => {
           placeholder="Soyad"
           name="sellerSurname"
           onChange={(e) => handleChange(e)}
-          className="contact__content__item"
+          className={`contact__content__item ${
+            emptyValues.includes("sellerSurname") && "isEmpty"
+          }`}
           autoComplete="off"
         />
         <div className="contact__content__city">
@@ -46,6 +52,7 @@ const Contact = () => {
             clear={clear}
             setClear={setClear}
             handleChange={handleChange}
+            isEmpty={emptyValues.includes("city")}
           />
         </div>
         <select
@@ -62,7 +69,9 @@ const Contact = () => {
           name="phoneNumber"
           onChange={(e) => handleChange(e)}
           placeholder="Mobil nömrə"
-          className="contact__content__phone"
+          className={`contact__content__phone ${
+            emptyValues.includes("phoneNumber") && "isEmpty"
+          }`}
           autoComplete="off"
         />
         {/* <div className="vinItem">

@@ -5,13 +5,15 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setNewPromotionState } from "../../../features/appSlice";
 
 import "../../../sass/components/_price.scss";
 
 const Price = () => {
   const [radioValue, setRadioValue] = useState("all");
+
+  const emptyValues = useSelector((state) => state.promotionEmpty);
 
   const dispatch = useDispatch();
 
@@ -31,7 +33,9 @@ const Price = () => {
       <div className="new__promotion__price__inputs">
         <input
           type="number"
-          className="new__promotion__price__inputs__amount"
+          className={`new__promotion__price__inputs__amount ${
+            emptyValues.includes("brand") && "isEmpty"
+          }`}
           placeholder="Qiymət"
           name="price"
           autoComplete="off"

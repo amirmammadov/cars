@@ -29,6 +29,10 @@
     &:focus {
       border: 1px solid $primary;
     }
+
+    &.isEmpty {
+      border-color: $red;
+    }
   }
 
   &__input::placeholder {

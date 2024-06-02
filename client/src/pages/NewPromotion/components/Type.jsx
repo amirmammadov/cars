@@ -18,9 +18,13 @@ import {
 
 import OptionInputSingle from "../../../components/OptionInputSingle/OptionInputSingle";
 
+import { useSelector } from "react-redux";
+
 const Type = () => {
   const [radioValue, setRadioValue] = useState("new");
   const [clear, setClear] = useState(false);
+
+  const emptyValues = useSelector((state) => state.promotionEmpty);
 
   const dispatch = useDispatch();
 
@@ -89,6 +93,7 @@ const Type = () => {
             setClear={setClear}
             handleChange={handleChange}
             key="brand"
+            isEmpty={emptyValues.includes("brand")}
           />
         </div>
         <div className="new__promotion__main__type__inputs__item">
@@ -100,6 +105,7 @@ const Type = () => {
             setClear={setClear}
             handleChange={handleChange}
             key="model"
+            isEmpty={emptyValues.includes("model")}
           />
         </div>
         <div className="new__promotion__main__type__inputs__item">
@@ -111,6 +117,7 @@ const Type = () => {
             setClear={setClear}
             handleChange={handleChange}
             key="salon"
+            isEmpty={emptyValues.includes("salon")}
           />
         </div>
       </div>
