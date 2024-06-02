@@ -8,8 +8,8 @@ const initialState = {
     brand: "",
     model: "",
     salon: "",
-    price: -1,
-    currency: "",
+    price: 0,
+    currency: "AZN",
     paymentOptions: "all",
     frontView: null,
     backView: null,
@@ -20,17 +20,14 @@ const initialState = {
     fuelConsumption: "",
     gearBox: "",
     transmission: "",
-    pankingSensor: [],
-    speedControl: [],
+    pankingSensor: "",
+    speedControl: "",
     innerMaterial: "",
     seatNumbers: "",
     sellerType: "",
     city: "",
-    firstName: "",
-    lastName: "",
-    phonePrefix: "",
+    phonePrefix: "050",
     phoneNumber: "",
-    mail: "",
     distance: "",
     volume: "",
     power: "",
@@ -39,7 +36,9 @@ const initialState = {
     comment: "",
     supplies: [],
     suppliesOther: [],
+    forMarket: "",
   },
+  promotionEmpty: [],
   favCarIds: JSON.parse(localStorage.getItem("favCars")) || [],
   isLoggedIn: true,
   mobileForAccActive: false,
@@ -49,8 +48,11 @@ export const appSlice = createSlice({
   name: "app",
   initialState,
   reducers: {
-    setEmptyNewPromotion: (state) => {
-      state.newPromotion = {};
+    setPromotionEmpty: (state, action) => {
+      state.promotionEmpty.push(action.payload);
+    },
+    resetPromotionEmpty: (state) => {
+      state.promotionEmpty = [];
     },
     setNewPromotionState: (state, action) => {
       const { name, value } = action.payload;
@@ -83,8 +85,9 @@ export const appSlice = createSlice({
 });
 
 export const {
-  setEmptyNewPromotion,
   setNewPromotionState,
+  setPromotionEmpty,
+  resetPromotionEmpty,
   setFavCarIds,
   setLoggedIn,
   setMobileAccActive,

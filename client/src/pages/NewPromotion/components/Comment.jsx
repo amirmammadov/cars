@@ -1,10 +1,12 @@
 import "../../../sass/components/_comment.scss";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setNewPromotionState } from "../../../features/appSlice";
 
 const Comment = () => {
   const dispatch = useDispatch();
+
+  const emptyValues = useSelector((state) => state.promotionEmpty);
 
   const handleChange = ({ target }) => {
     dispatch(setNewPromotionState({ name: target.name, value: target.value }));
@@ -17,7 +19,9 @@ const Comment = () => {
         <textarea
           rows="5"
           placeholder="Əlavə məlumatlarınızı qeyd edin."
-          className="comment__content__area"
+          className={`comment__content__area ${
+            emptyValues.includes("comment") && "isEmpty"
+          }`}
           name="comment"
           onChange={(e) => handleChange(e)}
         ></textarea>

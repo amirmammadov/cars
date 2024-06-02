@@ -40,6 +40,10 @@
       height: 210px;
       position: relative;
 
+      &.isEmpty {
+        border-color: $red;
+      }
+
       @include desktop {
         height: 180px;
       }

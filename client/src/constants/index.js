@@ -426,7 +426,7 @@ export const moreOptionsIterator = [
     id: 11,
     options: forMarket,
     holder: "Yığıldığı bazar",
-    keyValue: "formarket",
+    keyValue: "forMarket",
   },
   {
     id: 12,

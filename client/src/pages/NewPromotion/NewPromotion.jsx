@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Type,
   Price,
@@ -13,18 +15,44 @@ import CrumbNewProm from "../../components/BreadCrumbs/CrumbNewProm";
 
 import { useNavigate } from "react-router-dom";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setPromotionEmpty,
+  resetPromotionEmpty,
+} from "../../features/appSlice";
 
 import "../../sass/pages/_newPromotion.scss";
 
 const NewPromotion = () => {
+  const [hasEmptyField, setHasEmptyField] = useState(false);
+
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   const newPromotion = useSelector((state) => state.newPromotion);
 
   const submitNewPromotion = (e) => {
     e.preventDefault();
-    console.log(newPromotion);
+
+    dispatch(resetPromotionEmpty());
+    setHasEmptyField(false);
+
+    let selectedValues = Object.entries(newPromotion);
+    let emptyPairs = [];
+
+    selectedValues.forEach((pair) => {
+      if (!pair[1]) {
+        emptyPairs.push(pair[0]);
+        dispatch(setPromotionEmpty(pair[0]));
+      }
+    });
+
+    if (emptyPairs.length !== 0) {
+      setHasEmptyField(true);
+      return;
+    }
+
     navigate("/");
     window.scrollTo(0, 0);
   };
@@ -54,9 +82,11 @@ const NewPromotion = () => {
         >
           Elan yerləşdir
         </button>
-        <p className="new__promotion__content__text" style={{}}>
-          * olan qırmızı xanaları doldurmaq mütləqdir.
-        </p>
+        {hasEmptyField && (
+          <p className="new__promotion__content__text">
+            Bütün qırmızı xanaları doldurmaq mütləqdir.
+          </p>
+        )}
       </div>
     </main>
   );

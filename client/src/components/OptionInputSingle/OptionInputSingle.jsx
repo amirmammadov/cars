@@ -14,6 +14,7 @@ export default function OptionInputSingle({
   keyValue,
   clear,
   setClear,
+  isEmpty,
 }) {
   const [selectedValue, setSelectedValue] = useState(null);
 
@@ -41,16 +42,19 @@ export default function OptionInputSingle({
         width: "100%",
         margin: `${isYear && "0"}`,
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-          { border: "1px solid #620985", borderRadius: "8px" },
+          {
+            border: `1px solid ${isEmpty ? "#ff2c2c" : "#620985"}`,
+            borderRadius: "8px",
+          },
         "& .MuiAutocomplete-inputRoot": { padding: "5px" },
         borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
-          borderColor: "transparent",
+          borderColor: `${isEmpty ? "#ff2c2c" : "transparent"}`,
           borderRadius: "8px",
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
-          borderColor: "transparent",
-          borderWidth: "0",
+          borderColor: `${isEmpty ? "#ff2c2c" : "transparent"}`,
+          borderWidth: `${isEmpty ? "1px" : "0"}`,
         },
       }}
       componentsProps={{
