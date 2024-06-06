@@ -10,10 +10,6 @@
     $gap: 1.375rem
   );
   width: 100%;
-  @include x-large-screen {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
   @include large-screen {
     padding-left: 5%;
     padding-right: 5%;

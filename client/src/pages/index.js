@@ -2,7 +2,7 @@ import CarDetail from "./CarDetail/CarDetail";
 import Advertisement from "./Advertisement/Advertisement";
 import Salons from "./Salons/Salons";
 import CompanyDetail from "./CompanyDetail/SalonDetail";
-import ComparisonPage from "./Comparison/ComparisonPage";
+import Comparison from "./Comparison/Comparison";
 import Faq from "./Faq/Faq";
 import Favorites from "./Favorites/Favorites";
 import Homepage from "./Homepage/Homepage";
@@ -17,7 +17,7 @@ export {
   Advertisement,
   Salons,
   CompanyDetail,
-  ComparisonPage,
+  Comparison,
   Faq,
   Favorites,
   Homepage,

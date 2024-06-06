@@ -1,7 +1,9 @@
 @import "../../assets/colors.scss";
+@import "../../sass/utils/colors";
 
 .footer {
   padding: 30px 15%;
+  background-color: $white;
 
   .footerContent {
     padding: 30px 0;

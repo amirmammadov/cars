@@ -9,7 +9,7 @@ import {
   Advertisement,
   Salons,
   CompanyDetail,
-  ComparisonPage,
+  Comparison,
   Faq,
   Favorites,
   Homepage,
@@ -35,7 +35,7 @@ function App() {
         <Route path="/new-promotion" element={<NewPromotion />} />
         <Route path="/auto/:id" element={<CarDetail />} />
         <Route path="/result" element={<SearchResult />} />
-        <Route path="/comparison" element={<ComparisonPage />} />
+        <Route path="/comparison" element={<Comparison />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/company/:id" element={<CompanyDetail />} />
         <Route path="/register" element={<Registration />} />
