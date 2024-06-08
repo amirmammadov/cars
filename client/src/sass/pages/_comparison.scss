@@ -37,6 +37,15 @@
       font-weight: 400;
       color: $font;
       letter-spacing: 0.1px;
+      text-align: center;
+
+      @include mobile {
+        font-size: 18px;
+      }
+
+      @include mobile3 {
+        font-size: 16px;
+      }
     }
 
     &__link {
@@ -45,6 +54,14 @@
       border: 1px solid $primary;
       @include flexbox($justify: center, $items: center, $gap: 8px);
       color: $primary;
+
+      @include mobile {
+        padding: 10px;
+
+        > *:first-child {
+          font-size: 20px !important;
+        }
+      }
 
       &:hover {
         cursor: pointer;
@@ -56,6 +73,10 @@
         font-size: 16px;
         font-weight: 500;
         letter-spacing: 0.1px;
+
+        @include mobile {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -69,7 +90,21 @@
     }
 
     > *:last-child {
-      flex: 9;
+      flex: 8;
+    }
+
+    @include tablet {
+      > *:first-child {
+        flex: 4;
+      }
+
+      > *:last-child {
+        flex: 8;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
     }
 
     &__left {
@@ -83,6 +118,13 @@
         $gap: 10px
       );
 
+      @include mobile {
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+        gap: 5px;
+      }
+
       &__actions {
         height: 283px;
         @include flexbox(
@@ -91,6 +133,12 @@
           $items: flex-start,
           $gap: 24px
         );
+
+        @include mobile {
+          height: max-content;
+          width: 100%;
+          gap: 16px;
+        }
 
         &__clearAll {
           @include flexbox($justify: flex-start, $items: center, $gap: 5px);
@@ -124,8 +172,22 @@
             $gap: 12px
           );
 
+          @include mobile {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+          }
+
+          @include mobile3 {
+            gap: 2px;
+          }
+
           &__item {
             @include flexbox($justify: flex-start, $items: center, $gap: 6px);
+
+            @include mobile3 {
+              gap: 2px;
+            }
 
             input[type="radio"] {
               appearance: checkbox;
@@ -133,6 +195,11 @@
               min-width: 15px;
               min-height: 15px;
               border-radius: 0.4rem;
+
+              @include mobile3 {
+                min-width: 12px;
+                min-height: 12px;
+              }
             }
 
             input[type="radio"]:checked {
@@ -144,6 +211,10 @@
               font-weight: 400;
               color: $font;
               cursor: pointer;
+
+              @include mobile3 {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -157,6 +228,10 @@
           $gap: 20px
         );
         width: 100%;
+
+        @include mobile {
+          display: none;
+        }
 
         > *:not(:last-child) {
           border-bottom: 1px solid $lightBorder;
@@ -182,6 +257,14 @@
 
       > * {
         min-width: 250px;
+
+        @include mobile {
+          min-width: 220px;
+        }
+
+        @include mobile3 {
+          min-width: 200px;
+        }
       }
 
       &::-webkit-scrollbar {
@@ -217,6 +300,32 @@
             font-size: 16px;
             font-weight: 400;
             color: $font;
+          }
+
+          &__field {
+            @include flexbox(
+              $direction: column,
+              $justify: flex-start,
+              $items: flex-start,
+              $gap: 10px
+            );
+
+            > *:first-child {
+              color: $lightFont;
+              font-size: 15px;
+              display: none;
+              text-transform: capitalize;
+
+              @include mobile {
+                display: initial;
+              }
+            }
+
+            > *:last-child {
+              font-weight: 500;
+              font-size: 16px;
+              color: $font;
+            }
           }
         }
 

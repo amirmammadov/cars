@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { add, closeOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
-import { comparisonValues } from "../../../constants";
+import { comparisonValues, comparisonValuesAz } from "../../../constants";
 
 import { useDispatch } from "react-redux";
 import { setCompareCarIds } from "../../../features/appSlice";
@@ -24,8 +24,14 @@ const RightCars = ({ cars }) => {
           <div key={product.id} className="comparison__content__right__item">
             <Car product={product} />
             <div className="comparison__content__right__item__info">
-              {Object.values(comparisonValues).map((value) => (
-                <div key={value}>{value}</div>
+              {Object.entries(comparisonValues).map((item) => (
+                <div
+                  key={item[1]}
+                  className="comparison__content__right__item__info__field"
+                >
+                  <div>{comparisonValuesAz[item[0]]}</div>
+                  <div>{item[1]}</div>
+                </div>
               ))}
             </div>
             <button

@@ -1,9 +1,17 @@
+import { useState } from "react";
+
 import { trash } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
 import { comparisonTitles } from "../../../constants";
 
 export function LeftSide() {
+  const [checkedRadio, setCheckedRadio] = useState("all");
+
+  const handleChange = (e) => {
+    setCheckedRadio(e.target.id);
+  };
+
   return (
     <div className="comparison__content__left">
       <div className="comparison__content__left__actions">
@@ -13,15 +21,33 @@ export function LeftSide() {
         </div>
         <div className="comparison__content__left__actions__radios">
           <div className="comparison__content__left__actions__radios__item">
-            <input type="radio" id="all" name="option" />
+            <input
+              type="radio"
+              id="all"
+              name="option"
+              checked={checkedRadio === "all"}
+              onChange={handleChange}
+            />
             <label htmlFor="all">Hamısı</label>
           </div>
           <div className="comparison__content__left__actions__radios__item">
-            <input type="radio" id="same" name="option" />
+            <input
+              type="radio"
+              id="same"
+              name="option"
+              checked={checkedRadio === "same"}
+              onChange={handleChange}
+            />
             <label htmlFor="same">Oxşarlıqlar</label>
           </div>
           <div className="comparison__content__left__actions__radios__item">
-            <input type="radio" id="diff" name="option" />
+            <input
+              type="radio"
+              id="diff"
+              name="option"
+              checked={checkedRadio === "diff"}
+              onChange={handleChange}
+            />
             <label htmlFor="diff">Fərqlər</label>
           </div>
         </div>

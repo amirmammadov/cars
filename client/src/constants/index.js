@@ -504,3 +504,19 @@ export const comparisonValues = {
   seat_count: 5,
   color: "Qara",
 };
+
+export const comparisonValuesAz = {
+  volume: "Həcm",
+  mileage: "Yürüyüş",
+  year: "İl",
+  condition: "Vəziyyəti",
+  body_type: "Ban növü",
+  power: "Güc",
+  fuel_type: "Yanacaq növü",
+  fuel_consumption: "Yanacaq sərfiyyatı",
+  owner: "Sahib",
+  transmission: "Transmissiya",
+  drive: "Ötürücü",
+  seat_count: "Oturacaq sayı",
+  color: "Rəng",
+};
