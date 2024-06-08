@@ -472,3 +472,51 @@ export const rating = [
 ];
 
 export const accountAsideBtns = ["advert", "account", "offer", "logout"];
+
+export const comparisonTitles = [
+  "Həcm",
+  "Yürüyüş",
+  "İl",
+  "Vəziyyəti",
+  "Ban növü",
+  "Güc",
+  "Yanacaq növü",
+  "Yanacaq sərfiyyatı",
+  "Sahib",
+  "Transmissiya",
+  "Ötürücü",
+  "Oturacaq sayı",
+  "Rəng",
+];
+
+export const comparisonValues = {
+  volume: "5.5 L",
+  mileage: "110,000 km",
+  year: 2021,
+  condition: "Sürülmüş",
+  body_type: "Sedan",
+  power: 263,
+  fuel_type: "Dizel",
+  fuel_consumption: "71/100 km",
+  owner: 2,
+  transmission: "Avtomat",
+  drive: "Ön",
+  seat_count: 5,
+  color: "Qara",
+};
+
+export const comparisonValuesAz = {
+  volume: "Həcm",
+  mileage: "Yürüyüş",
+  year: "İl",
+  condition: "Vəziyyəti",
+  body_type: "Ban növü",
+  power: "Güc",
+  fuel_type: "Yanacaq növü",
+  fuel_consumption: "Yanacaq sərfiyyatı",
+  owner: "Sahib",
+  transmission: "Transmissiya",
+  drive: "Ötürücü",
+  seat_count: "Oturacaq sayı",
+  color: "Rəng",
+};

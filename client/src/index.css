@@ -6,6 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+main.layout-main {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 h1,
 h2,
 h3,
@@ -24,15 +30,13 @@ li {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
 *::selection {
   color: #ffffff;
   background-color: #620985;
 }
 a {
   text-decoration: none;
-}
-ul li {
-  list-style: none;
 }
 
 .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
@@ -74,22 +78,3 @@ ul li {
 .css-38raov-MuiButtonBase-root-MuiChip-root {
   background-color: transparent !important;
 }
-/* .css-1oj2twp-MuiPagination-root {
-  display: flex !important;
-  justify-content: center !important;
-  margin: 50px auto !important;
-}
-.css-1oj2twp-MuiPagination-root > ul > li > *:focus {
-  background-color: #620985 !important;
-  color: #ffffff !important;
-}
-.css-1oj2twp-MuiPagination-root > ul > li:nth-child(2) > * {
-  background-color: #620985 !important;
-  color: #ffffff !important;
-}
-.css-1oj2twp-MuiPagination-root > ul > li > * {
-  font-family: "Montserrat", sans-serif !important;
-  background-color: transparent !important;
-  border: 1px solid #0000001a !important;
-  color: #0000001a !important;
-} */

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import PhoneIcon from "@mui/icons-material/Phone";
 import BalanceIcon from "@mui/icons-material/Balance";
 import PersonIcon from "@mui/icons-material/Person";
@@ -6,13 +8,16 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import "../../sass/layout/_topBar.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { Dialog, IconButton } from "@mui/material";
 
 import { useLoggedIn } from "../../hooks/useLoggedIn";
 
+import { useSelector } from "react-redux";
+
 const TopBar = () => {
   const [openModal, setOpenModal] = useState(false);
+
+  const compareCarCount = useSelector((state) => state.compareCarIds);
 
   const isLoggedIn = useLoggedIn();
 
@@ -40,11 +45,16 @@ const TopBar = () => {
         <div className="topbar__phone__text">+994 70 562 12 69</div>
       </div>
       <div className="topbar__more">
-        <Link to="/comparison">
+        <Link to="/comparison" className="topbar__more__balanceLink">
           <BalanceIcon
             className="topbar__more__balance"
             sx={{ color: "#fff" }}
           />
+          {compareCarCount.length !== 0 && (
+            <div className="topbar__more__balanceSize">
+              {compareCarCount.length}
+            </div>
+          )}
         </Link>
         <Link to="/favorites">
           {isOpen ? (

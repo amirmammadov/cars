@@ -12,10 +12,11 @@ import {
   heart,
   warningOutline,
   shareOutline,
+  scale,
 } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
-import { setFavCarIds } from "../../features/appSlice";
+import { setFavCarIds, setCompareCarIds } from "../../features/appSlice";
 
 const CarDetailLinks = ({ product }) => {
   const [linksActive, setLinksActive] = useState(false);
@@ -44,11 +45,17 @@ const CarDetailLinks = ({ product }) => {
   const dispatch = useDispatch();
 
   const favCarIds = useSelector((state) => state.favCarIds);
+  const compareCarIds = useSelector((state) => state.compareCarIds);
 
   const isFav = favCarIds.some((fav) => fav === product.id);
+  const wasCompared = compareCarIds.some((compare) => compare === product.id);
 
   const handleFavCar = (id) => {
     dispatch(setFavCarIds({ ID: id }));
+  };
+
+  const handleCompareCar = (id) => {
+    dispatch(setCompareCarIds({ ID: id }));
   };
 
   return (
@@ -74,8 +81,21 @@ const CarDetailLinks = ({ product }) => {
             />
           )}
         </button>
-        <button className="car__detail__general__header__links__btn">
-          <IonIcon icon={scaleOutline} style={{ fontSize: "22px" }} />
+        <button
+          className="car__detail__general__header__links__btn"
+          onClick={(e) => {
+            e.stopPropagation();
+            handleCompareCar(product.id);
+          }}
+        >
+          {wasCompared ? (
+            <IonIcon
+              icon={scale}
+              style={{ fontSize: "22px", color: "#620985" }}
+            />
+          ) : (
+            <IonIcon icon={scaleOutline} style={{ fontSize: "22px" }} />
+          )}
         </button>
         <button className="car__detail__general__header__links__btn">
           <IonIcon icon={warningOutline} style={{ fontSize: "22px" }} />

@@ -72,10 +72,10 @@ body {
   line-height: 1;
 }
 
-// ol,
-// ul {
-//   list-style: none;
-// }
+ol,
+ul {
+  list-style: none;
+}
 
 blockquote,
 q {
@@ -99,4 +99,8 @@ input {
   appearance: none;
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+a {
+  text-decoration: none;
 }

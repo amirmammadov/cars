@@ -1,0 +1,371 @@
+@import "../index";
+
+.comparison {
+  min-width: 100%;
+  padding: 32px 15%;
+  background-color: $background;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 2rem
+  );
+
+  @include x-large-screen {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $font;
+  }
+
+  .no__car {
+    width: 100%;
+    height: 300px;
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: center,
+      $gap: 20px
+    );
+
+    &__text {
+      font-size: 20px;
+      font-weight: 400;
+      color: $font;
+      letter-spacing: 0.1px;
+      text-align: center;
+
+      @include mobile {
+        font-size: 18px;
+      }
+
+      @include mobile3 {
+        font-size: 16px;
+      }
+    }
+
+    &__link {
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid $primary;
+      @include flexbox($justify: center, $items: center, $gap: 8px);
+      color: $primary;
+
+      @include mobile {
+        padding: 10px;
+
+        > *:first-child {
+          font-size: 20px !important;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $primary;
+        color: $white;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include flexbox($justify: flex-start, $items: flex-start, $gap: 20px);
+    width: 100%;
+
+    > *:first-child {
+      flex: 3;
+    }
+
+    > *:last-child {
+      flex: 8;
+    }
+
+    @include tablet {
+      > *:first-child {
+        flex: 4;
+      }
+
+      > *:last-child {
+        flex: 8;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &__left {
+      background-color: $white;
+      border-radius: 8px;
+      padding: 10px;
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $items: flex-start,
+        $gap: 10px
+      );
+
+      @include mobile {
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+        gap: 5px;
+      }
+
+      &__actions {
+        height: 283px;
+        @include flexbox(
+          $direction: column,
+          $justify: flex-start,
+          $items: flex-start,
+          $gap: 24px
+        );
+
+        @include mobile {
+          height: max-content;
+          width: 100%;
+          gap: 16px;
+        }
+
+        &__clearAll {
+          @include flexbox($justify: flex-start, $items: center, $gap: 5px);
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+
+          > *:first-child {
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            color: $primary;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 0;
+            cursor: pointer;
+          }
+
+          > *:last-child {
+            color: $primary !important;
+          }
+        }
+
+        &__radios {
+          @include flexbox(
+            $direction: column,
+            $justify: flex-start,
+            $items: flex-start,
+            $gap: 12px
+          );
+
+          @include mobile {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+          }
+
+          @include mobile3 {
+            gap: 2px;
+          }
+
+          &__item {
+            @include flexbox($justify: flex-start, $items: center, $gap: 6px);
+
+            @include mobile3 {
+              gap: 2px;
+            }
+
+            input[type="radio"] {
+              appearance: checkbox;
+              cursor: pointer;
+              min-width: 15px;
+              min-height: 15px;
+              border-radius: 0.4rem;
+
+              @include mobile3 {
+                min-width: 12px;
+                min-height: 12px;
+              }
+            }
+
+            input[type="radio"]:checked {
+              accent-color: $primary;
+            }
+
+            label {
+              font-size: 16px;
+              font-weight: 400;
+              color: $font;
+              cursor: pointer;
+
+              @include mobile3 {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      &__titles {
+        @include flexbox(
+          $direction: column,
+          $justify: flex-start,
+          $items: flex-start,
+          $gap: 20px
+        );
+        width: 100%;
+
+        @include mobile {
+          display: none;
+        }
+
+        > *:not(:last-child) {
+          border-bottom: 1px solid $lightBorder;
+          width: 100%;
+          padding-bottom: 6px;
+          font-size: 16px;
+          font-weight: 400;
+          color: $font;
+        }
+      }
+    }
+
+    &__right {
+      width: 100%;
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+      border-radius: 8px;
+      padding: 14px 0;
+
+      > * {
+        min-width: 250px;
+
+        @include mobile {
+          min-width: 220px;
+        }
+
+        @include mobile3 {
+          min-width: 200px;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &__item {
+        @include flexbox(
+          $direction: column,
+          $justify: flex-start,
+          $items: flex-start,
+          $gap: 24px
+        );
+        position: relative;
+
+        > *:first-child {
+          height: max-content;
+        }
+
+        &__info {
+          width: 100%;
+          @include flexbox(
+            $direction: column,
+            $justify: flex-start,
+            $items: flex-start,
+            $gap: 20px
+          );
+
+          > *:not(:last-child) {
+            border-bottom: 1px solid $lightBorder;
+            width: 100%;
+            padding-bottom: 6px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $font;
+          }
+
+          &__field {
+            @include flexbox(
+              $direction: column,
+              $justify: flex-start,
+              $items: flex-start,
+              $gap: 10px
+            );
+
+            > *:first-child {
+              color: $lightFont;
+              font-size: 15px;
+              display: none;
+              text-transform: capitalize;
+
+              @include mobile {
+                display: initial;
+              }
+            }
+
+            > *:last-child {
+              font-weight: 500;
+              font-size: 16px;
+              color: $font;
+            }
+          }
+        }
+
+        &__remove {
+          position: absolute;
+          top: -12px;
+          right: -12px;
+          z-index: 1;
+          background-color: $white;
+          border-radius: 50%;
+          line-height: 0;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+
+      &__add {
+        background-color: #f9f9f9;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        height: 265px;
+        @include flexbox($justify: center, $items: center);
+
+        &:hover {
+          cursor: pointer;
+
+          > *:first-child {
+            box-shadow: $box-shadow;
+          }
+        }
+
+        > *:first-child {
+          padding: 12px;
+          background-color: $white;
+          border-radius: 50%;
+          line-height: 0;
+        }
+      }
+    }
+  }
+}

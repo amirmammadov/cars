@@ -1,4 +1,5 @@
 @import "./base/reset";
+@import "./utils/colors";
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -8,7 +9,15 @@ code {
 *,
 *::after,
 *::before {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+*::selection {
+  color: #ffffff;
+  background-color: #620985;
 }
 
 html {
@@ -34,6 +43,18 @@ main.layout-main {
   margin: 0 auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+li {
+  font-family: "Montserrat", sans-serif !important;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -44,4 +65,44 @@ main.layout-main {
 
 ::-webkit-scrollbar-thumb {
   background: $hover;
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  border-radius: 8px !important;
+  margin-top: 10px !important;
+  box-shadow: none !important;
+  border: 1px solid #620985 !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: #f4f4f4 !important;
+}
+.css-ryrseu-MuiRating-root {
+  margin: 0 auto;
+  color: #d7d700 !important;
+}
+
+.MuiAutocomplete-option {
+  font-family: "Montserrat", sans-serif !important;
+}
+.css-gdh49b-MuiAutocomplete-listbox {
+  border: 1px solid #620985 !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+}
+.css-gdh49b-MuiAutocomplete-listbox > * {
+  display: flex;
+  flex-direction: row-reverse !important;
+  justify-content: space-between !important;
+}
+.css-gdh49b-MuiAutocomplete-listbox:hover {
+  background-color: transparent !important;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+  min-height: 30px !important;
+}
+.css-38raov-MuiButtonBase-root-MuiChip-root {
+  background-color: transparent !important;
 }

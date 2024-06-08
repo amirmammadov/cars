@@ -28,6 +28,25 @@
       cursor: pointer;
     }
 
+    &__balanceLink {
+      position: relative;
+    }
+
+    &__balanceSize {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      @include flexbox($justify: center, $items: center);
+      background-color: $orange;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      font-size: 14px;
+      font-weight: 400;
+      color: $white;
+      line-height: 0;
+    }
+
     &__account {
       padding: 10px 15px;
       background-color: $orange;

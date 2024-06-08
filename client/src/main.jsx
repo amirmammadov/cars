@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./sass/_style.scss";
 import { BrowserRouter } from "react-router-dom";
 import { initializeIcons } from "@fluentui/react";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";

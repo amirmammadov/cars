@@ -40,6 +40,7 @@ const initialState = {
   },
   promotionEmpty: [],
   favCarIds: JSON.parse(localStorage.getItem("favCars")) || [],
+  compareCarIds: JSON.parse(localStorage.getItem("compareCars")) || [],
   isLoggedIn: true,
   mobileForAccActive: false,
 };
@@ -75,6 +76,25 @@ export const appSlice = createSlice({
         localStorage.setItem("favCars", JSON.stringify(state.favCarIds));
       }
     },
+    setCompareCarIds: (state, action) => {
+      const carId = action.payload.ID;
+
+      if (state.compareCarIds.includes(carId)) {
+        const index = state.compareCarIds.indexOf(carId);
+
+        state.compareCarIds.splice(index, 1);
+        localStorage.setItem(
+          "compareCars",
+          JSON.stringify(state.compareCarIds)
+        );
+      } else {
+        state.compareCarIds.push(carId);
+        localStorage.setItem(
+          "compareCars",
+          JSON.stringify(state.compareCarIds)
+        );
+      }
+    },
     setLoggedIn: (state, action) => {
       state.isLoggedIn = action.payload;
     },
@@ -91,6 +111,7 @@ export const {
   setFavCarIds,
   setLoggedIn,
   setMobileAccActive,
+  setCompareCarIds,
 } = appSlice.actions;
 
 export default appSlice.reducer;
