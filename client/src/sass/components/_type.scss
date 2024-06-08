@@ -9,25 +9,6 @@
   );
   width: 100%;
 
-  &__checkboxes {
-    &__group {
-      @include flexbox($justify: flex-start, $items: center, $gap: 2.5rem);
-      width: 100%;
-
-      .radio__group__label {
-        @extend %font-normal;
-        margin-right: 0;
-
-        @include mobile {
-          span {
-            font-size: 13px;
-            align-items: center;
-          }
-        }
-      }
-    }
-  }
-
   &__inputs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

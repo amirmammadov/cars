@@ -11,7 +11,7 @@ import {
   Contact,
 } from "./components/index";
 
-import CrumbNewProm from "../../components/BreadCrumbs/CrumbNewProm";
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 
 import { useNavigate } from "react-router-dom";
 
@@ -60,7 +60,7 @@ const NewPromotion = () => {
   return (
     <main className="new__promotion">
       <div className="new__promotion__titles">
-        <CrumbNewProm />
+        <BreadCrumbs curPage="Elan yerləşdir" />
         <div className="new__promotion__titles__main">Elan yerləşdir</div>
       </div>
       <div className="new__promotion__content">

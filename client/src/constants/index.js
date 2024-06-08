@@ -25,6 +25,42 @@ export const filterTabOne = {
   old: "sürülmüş",
 };
 
+export const newPromotionRadioValues = [
+  {
+    id: 1,
+    value: "new",
+    radioName: "isNew",
+    text: "Yeni",
+  },
+  {
+    id: 2,
+    value: "old",
+    radioName: "isNew",
+    text: "Sürülmüş",
+  },
+];
+
+export const filtersRadioValues = [
+  {
+    id: 1,
+    value: "all",
+    radioName: "isNew",
+    text: "Hamısı",
+  },
+  {
+    id: 2,
+    value: "new",
+    radioName: "isNew",
+    text: "Yeni",
+  },
+  {
+    id: 3,
+    value: "old",
+    radioName: "isNew",
+    text: "Sürülmüş",
+  },
+];
+
 export const filterTabTwo = {
   all: "hamısı",
   credit: "kredit",
@@ -87,7 +123,9 @@ export const carTypes = [
   { name: "Pikap", image: "/carTypes/pickup.svg", id: 7 },
   { name: "Van/Minibus", image: "/carTypes/van.svg", id: 8 },
 ];
+
 export const carNames = [];
+
 export const typeOfFuel = [
   {
     title: "Benzin",

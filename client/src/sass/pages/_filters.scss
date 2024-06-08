@@ -1,0 +1,33 @@
+@import "../index";
+
+.filters {
+  padding: 32px 15%;
+  background-color: $background;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 32px
+  );
+  width: 100%;
+
+  @include large-screen {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $font;
+  }
+
+  &__content {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start
+    );
+    width: 100%;
+  }
+}

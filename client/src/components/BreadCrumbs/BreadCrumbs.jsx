@@ -3,16 +3,16 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
-const breadcrumbs = [
-  <Link underline="hover" key="1" color="inherit" href="/">
-    Ana Səhifə
-  </Link>,
-  <Typography key="2" color="text.primary">
-    Elan yerləşdir
-  </Typography>,
-];
+const BreadCrumbs = ({ curPage }) => {
+  const breadcrumbs = [
+    <Link underline="hover" key="1" color="inherit" href="/">
+      Ana Səhifə
+    </Link>,
+    <Typography key="2" color="text.primary">
+      {curPage}
+    </Typography>,
+  ];
 
-const CrumbNewProm = () => {
   return (
     <Breadcrumbs
       separator={<NavigateNextIcon fontSize="small" />}
@@ -23,4 +23,4 @@ const CrumbNewProm = () => {
   );
 };
 
-export default CrumbNewProm;
+export default BreadCrumbs;
