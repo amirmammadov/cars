@@ -7,7 +7,16 @@ import { IonIcon } from "@ionic/react";
 
 import { comparisonValues } from "../../../constants";
 
+import { useDispatch } from "react-redux";
+import { setCompareCarIds } from "../../../features/appSlice";
+
 const RightCars = ({ cars }) => {
+  const dispatch = useDispatch();
+
+  const handleCompareCar = (id) => {
+    dispatch(setCompareCarIds({ ID: id }));
+  };
+
   return (
     <div className="comparison__content__right">
       {cars.map((product) => {
@@ -19,10 +28,16 @@ const RightCars = ({ cars }) => {
                 <div key={value}>{value}</div>
               ))}
             </div>
-            <button className="comparison__content__right__item__remove">
+            <button
+              className="comparison__content__right__item__remove"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCompareCar(product.id);
+              }}
+            >
               <IonIcon
                 icon={closeOutline}
-                style={{ fontSize: "24px", color: "#000" }}
+                style={{ fontSize: "26px", color: "#000" }}
               />
             </button>
           </div>

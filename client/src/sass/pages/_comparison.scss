@@ -84,7 +84,7 @@
       );
 
       &__actions {
-        height: 275px;
+        height: 283px;
         @include flexbox(
           $direction: column,
           $justify: flex-start,
@@ -178,6 +178,7 @@
       align-items: flex-start;
       gap: 20px;
       border-radius: 8px;
+      padding: 14px 0;
 
       > * {
         min-width: 250px;
@@ -197,7 +198,7 @@
         position: relative;
 
         > *:first-child {
-          height: 275px;
+          height: max-content;
         }
 
         &__info {
@@ -221,8 +222,15 @@
 
         &__remove {
           position: absolute;
-          top: -25px;
-          right: -10px;
+          top: -12px;
+          right: -12px;
+          z-index: 1;
+          background-color: $white;
+          border-radius: 50%;
+          line-height: 0;
+          border: none;
+          outline: none;
+          cursor: pointer;
         }
       }
 
@@ -231,7 +239,7 @@
         border: none;
         outline: none;
         border-radius: 8px;
-        height: 275px;
+        height: 265px;
         @include flexbox($justify: center, $items: center);
 
         &:hover {
