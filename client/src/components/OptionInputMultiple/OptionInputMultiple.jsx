@@ -54,17 +54,17 @@ export default function OptionInputMultiple({
         overflow: "hidden",
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
           {
-            borderColor: "#620985",
             borderRadius: "8px",
-            borderWidth: "1px",
+            border: "1px solid #620985",
           },
         "& .MuiAutocomplete-inputRoot": { padding: "5px" },
-        borderRadius: "8px",
+        // borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
-          borderColor: "transparent",
+          borderColor: "#d2d2d2",
+          borderRadius: "8px",
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
-          borderColor: "transparent",
+          borderColor: "#d2d2d2",
         },
       }}
       componentsProps={{

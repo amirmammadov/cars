@@ -7,6 +7,7 @@
     $items: flex-start,
     $gap: 16px
   );
+
   width: 100%;
 
   &__title {
@@ -15,14 +16,82 @@
     color: $font;
   }
 
-  &__row {
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  &__inputs {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $items: flex-start,
+      $gap: 16px
+    );
 
-    &__item {
-      flex-grow: 1;
+    .filters__fund__row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      &__item {
+        flex-grow: 1;
+
+        select {
+          width: 100%;
+          border: 1px solid $grayish2;
+          border-radius: 8px;
+          outline: none;
+          padding: 15px 8px;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.1px;
+        }
+
+        &.customInput {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          > *:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-right: none;
+          }
+
+          > *:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+
+          input {
+            width: 100%;
+            border: 1px solid $grayish2;
+            outline: none;
+            padding: 15px 8px;
+          }
+
+          input::placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: $inputColor;
+            letter-spacing: 0.1px;
+          }
+
+          input[type="number"]::-webkit-inner-spin-button,
+          input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+          }
+        }
+
+        &.options {
+          grid-column: auto;
+          max-width: max-content;
+
+          select {
+            width: 100%;
+            border: 1px solid $grayish2;
+            border-radius: 8px;
+            outline: none;
+            padding: 15px 8px;
+          }
+        }
+      }
     }
   }
 }

@@ -49,12 +49,12 @@ export default function OptionInputSingle({
         "& .MuiAutocomplete-inputRoot": { padding: "5px" },
         borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
-          borderColor: `${isEmpty ? "#ff2c2c" : "transparent"}`,
+          borderColor: `${isEmpty ? "#ff2c2c" : "#d2d2d2"}`,
           borderRadius: "8px",
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
-          borderColor: `${isEmpty ? "#ff2c2c" : "transparent"}`,
-          borderWidth: `${isEmpty ? "1px" : "0"}`,
+          borderColor: `${isEmpty ? "#ff2c2c" : "#d2d2d2"}`,
+          borderWidth: `${isEmpty ? "1px" : "1px"}`,
         },
       }}
       componentsProps={{
