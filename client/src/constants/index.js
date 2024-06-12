@@ -558,3 +558,57 @@ export const comparisonValuesAz = {
   seat_count: "Oturacaq sayı",
   color: "Rəng",
 };
+
+export const filtersOtherValues = [
+  {
+    id: 1,
+    title: "ABS",
+  },
+  {
+    id: 2,
+    title: "Mərkəzi qapanma",
+  },
+  {
+    id: 3,
+    title: "Lyuk",
+  },
+  {
+    id: 4,
+    title: "Yağış sensoru",
+  },
+  {
+    id: 5,
+    title: "Ksenon lampalar",
+  },
+  {
+    id: 6,
+    title: "Vuruğu yoxdur",
+  },
+  {
+    id: 7,
+    title: "Rənglənməyib",
+  },
+];
+
+export const filtersSupplies = [
+  {
+    id: 1,
+    title: "Yan pərdələr",
+  },
+  {
+    id: 2,
+    title: "Oturacaqların havalandırılması",
+  },
+  {
+    id: 3,
+    title: "Oturacaqların isidilməsi",
+  },
+  {
+    id: 4,
+    title: "Dəri sükan",
+  },
+  {
+    id: 5,
+    title: "Kondisioner",
+  },
+];

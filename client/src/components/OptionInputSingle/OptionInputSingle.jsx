@@ -54,7 +54,6 @@ export default function OptionInputSingle({
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
           borderColor: `${isEmpty ? "#ff2c2c" : "#d2d2d2"}`,
-          borderWidth: `${isEmpty ? "1px" : "1px"}`,
         },
       }}
       componentsProps={{
