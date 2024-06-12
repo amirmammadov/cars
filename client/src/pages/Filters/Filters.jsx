@@ -1,3 +1,5 @@
+import { useClearFilter } from "../../hooks/useClearFilter";
+
 import "../../sass/pages/_filters.scss";
 
 import { filtersOtherValues, filtersSupplies } from "../../constants";
@@ -14,6 +16,12 @@ import Inner from "./_components/Inner";
 import Additional from "./_components/Additional";
 
 const Filters = () => {
+  const handleClear = useClearFilter()[1];
+
+  const handleFormClear = () => {
+    handleClear();
+  };
+
   return (
     <div className="filters">
       <BreadCrumbs curPage="Axtarışım" />
@@ -28,7 +36,7 @@ const Filters = () => {
         <Additional />
       </div>
       <div className="filters__btns">
-        <button className="filters__btns__clear">
+        <button className="filters__btns__clear" onClick={handleFormClear}>
           <div className="filters__btns__clear__text">Təmizlə</div>
           <IonIcon icon={closeOutline} />
         </button>

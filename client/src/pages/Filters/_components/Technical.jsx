@@ -1,18 +1,16 @@
-import { useState } from "react";
+import { useClearFilter } from "../../../hooks/useClearFilter";
 
 import "../../../sass/components/_filtersSection.scss";
 
 import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionInputMultiple";
 
-import {
-  typeOfFuel,
-  fuelConsumption,
-  gearBox,
-  transmission,
-} from "../../../constants";
+import { moreFilterOptions } from "../../../constants/more-filters";
 
 const Technical = () => {
-  const [clear, setClear] = useState(false);
+  const isClear = useClearFilter()[0];
+
+  const { fuelType, fuelConsumption, gearBox, transmission } =
+    moreFilterOptions;
 
   const handleChange = () => {};
 
@@ -30,13 +28,11 @@ const Technical = () => {
         </div>
         <div className="filters__tech__row__item">
           <OptionInputMultiple
-            options={typeOfFuel}
+            options={fuelType}
             holder="Yanacaq növü"
-            keyValue="typeOfFuel"
-            clear={clear}
-            setClear={setClear}
+            keyValue="fuelType"
+            clear={isClear}
             handleChange={handleChange}
-            key="typeOfFuel"
           />
         </div>
         <div className="filters__tech__row__item">
@@ -44,10 +40,8 @@ const Technical = () => {
             options={fuelConsumption}
             holder="Yanacaq sərfiyyatı"
             keyValue="fuelConsumption"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="fuelConsumption"
           />
         </div>
       </div>
@@ -57,10 +51,8 @@ const Technical = () => {
             options={gearBox}
             holder="Transmissiya"
             keyValue="gearBox"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="gearBox"
           />
         </div>
         <div className="filters__tech__row__item">
@@ -68,10 +60,8 @@ const Technical = () => {
             options={transmission}
             holder="Ötürücü"
             keyValue="transmission"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="transmission"
           />
         </div>
       </div>

@@ -5,7 +5,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 
-const RadioGroups = ({ value, radioName, handler, obj }) => {
+const RadioGroups = ({ value, radioName, handler, radios }) => {
   return (
     <FormControl>
       <RadioGroup
@@ -17,7 +17,7 @@ const RadioGroups = ({ value, radioName, handler, obj }) => {
         value={value}
         onChange={handler}
       >
-        {obj.map((label) => (
+        {radios.map((label) => (
           <FormControlLabel
             key={label.id}
             value={label.value}

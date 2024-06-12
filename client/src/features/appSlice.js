@@ -1,43 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import { newPromotion } from "../constants/new-promotion";
+import { moreFiltersValues } from "../constants/more-filters";
+
 const initialState = {
-  newPromotion: {
-    sellerName: "",
-    sellerSurname: "",
-    isNew: "new",
-    brand: "",
-    model: "",
-    salon: "",
-    price: 0,
-    currency: "AZN",
-    paymentOptions: "all",
-    frontView: null,
-    backView: null,
-    panelView: null,
-    otherImages: [],
-    year: "",
-    fuelType: "",
-    fuelConsumption: "",
-    gearBox: "",
-    transmission: "",
-    pankingSensor: "",
-    speedControl: "",
-    innerMaterial: "",
-    seatNumbers: "",
-    sellerType: "",
-    city: "",
-    phonePrefix: "050",
-    phoneNumber: "",
-    distance: "",
-    volume: "",
-    power: "",
-    innerColor: "",
-    outerColor: "",
-    comment: "",
-    supplies: [],
-    suppliesOther: [],
-    forMarket: "",
-  },
+  newPromotion: newPromotion,
+  moreFilterValues: moreFiltersValues,
+  moreFiltersCleared: false,
   promotionEmpty: [],
   favCarIds: JSON.parse(localStorage.getItem("favCars")) || [],
   compareCarIds: JSON.parse(localStorage.getItem("compareCars")) || [],
@@ -95,6 +64,12 @@ export const appSlice = createSlice({
         );
       }
     },
+    setMoreFilters: (state) => {
+      state.moreFilterValues = [];
+    },
+    setMoreFiltersCleared: (state) => {
+      state.moreFiltersCleared = !state.moreFiltersCleared;
+    },
     setLoggedIn: (state, action) => {
       state.isLoggedIn = action.payload;
     },
@@ -112,6 +87,8 @@ export const {
   setLoggedIn,
   setMobileAccActive,
   setCompareCarIds,
+  setMoreFilters,
+  setMoreFiltersCleared,
 } = appSlice.actions;
 
 export default appSlice.reducer;

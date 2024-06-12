@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useClearFilter } from "../../../hooks/useClearFilter";
 
 import "../../../sass/components/_moreOptions.scss";
 
@@ -10,7 +10,7 @@ import OptionInputSingle from "../../../components/OptionInputSingle/OptionInput
 import { moreOptionsIterator } from "../../../constants/index";
 
 const MoreOptions = () => {
-  const [clear, setClear] = useState(false);
+  const isClear = useClearFilter()[0];
 
   const emptyValues = useSelector((state) => state.promotionEmpty);
 
@@ -58,8 +58,7 @@ const MoreOptions = () => {
             options={option.options}
             holder={option.holder}
             keyValue={option.keyValue}
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
             key={option.keyValue}
             isEmpty={emptyValues.includes(option.keyValue)}

@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useClearFilter } from "../../../hooks/useClearFilter";
 
 import "../../../sass/components/_filtersSection.scss";
 
 import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionInputMultiple";
 
-import { sellerType } from "../../../constants";
+import { moreFilterOptions } from "../../../constants/more-filters";
 
 const Additional = () => {
-  const [clear, setClear] = useState(false);
+  const isClear = useClearFilter()[0];
+
+  const { sellerType } = moreFilterOptions;
 
   const handleChange = () => {};
 
@@ -20,10 +22,8 @@ const Additional = () => {
             options={sellerType}
             holder="Satıcı"
             keyValue="sellerType"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="sellerType"
           />
         </div>
       </div>

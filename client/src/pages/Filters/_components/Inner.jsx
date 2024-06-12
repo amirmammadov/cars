@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useClearFilter } from "../../../hooks/useClearFilter";
 
 import "../../../sass/components/_filtersSection.scss";
 
 import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionInputMultiple";
 
-import { innerMaterial, innerColors } from "../../../constants";
+import { moreFilterOptions } from "../../../constants/more-filters";
 
 const Inner = () => {
-  const [clear, setClear] = useState(false);
+  const isClear = useClearFilter()[0];
+
+  const { innerMaterial, innerColors } = moreFilterOptions;
 
   const handleChange = () => {};
 
@@ -20,10 +22,8 @@ const Inner = () => {
             options={innerColors}
             holder="Daxili rəng"
             keyValue="innerColors"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="innerColors"
           />
         </div>
         <div className="filters__inner__row__item">
@@ -31,10 +31,8 @@ const Inner = () => {
             options={innerMaterial}
             holder="Daxili material"
             keyValue="innerMaterial"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="innerMaterial"
           />
         </div>
       </div>

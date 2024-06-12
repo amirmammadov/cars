@@ -1,27 +1,25 @@
 import { useState } from "react";
 
+import { useClearFilter } from "../../../hooks/useClearFilter";
+
 import "../../../sass/components/_filtersSection.scss";
 
 import RadioGroups from "../../../components/RadioGroups/RadioGroups";
 import OptionInputSingle from "../../../components/OptionInputSingle/OptionInputSingle";
 import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionInputMultiple";
 
-import {
-  filtersRadioValues,
-  brandOptions,
-  modelOptions,
-  banOptions,
-  seatNumbers,
-  forMarket,
-  cityOptions,
-} from "../../../constants";
+import { moreFilterOptions } from "../../../constants/more-filters";
 
 const INITIAL_DATA = {};
 
 const Fundamentals = () => {
   const [data, setData] = useState(INITIAL_DATA);
   const [radioValue, setRadioValue] = useState("all");
-  const [clear, setClear] = useState(false);
+
+  const isClear = useClearFilter()[0];
+
+  const { brand, model, banType, seats, city, forMarket, radios } =
+    moreFilterOptions;
 
   const handleRadioChange = (event) => {
     const { value } = event.target;
@@ -44,38 +42,33 @@ const Fundamentals = () => {
         value={radioValue}
         radioName="isNew"
         handler={handleRadioChange}
-        obj={filtersRadioValues}
+        radios={radios}
       />
       <div className="filters__fund__row">
         <div className="filters__fund__row__item">
           <OptionInputSingle
-            options={brandOptions}
+            options={brand}
             holder="Marka"
             keyValue="brand"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="brand"
           />
         </div>
         <div className="filters__fund__row__item">
           <OptionInputMultiple
-            options={modelOptions}
+            options={model}
             holder="Model"
             keyValue="model"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="model"
           />
         </div>
         <div className="filters__fund__row__item">
           <OptionInputMultiple
-            options={banOptions}
+            options={banType}
             holder="Ban növü"
-            keyValue="ban"
-            clear={clear}
-            setClear={setClear}
+            keyValue="banType"
+            clear={isClear}
             handleChange={handleChange}
             key="ban"
           />
@@ -113,24 +106,20 @@ const Fundamentals = () => {
         </div>
         <div className="filters__fund__row__item">
           <OptionInputMultiple
-            options={seatNumbers}
+            options={seats}
             holder="Oturacaq Sayı"
-            keyValue="seat"
-            clear={clear}
-            setClear={setClear}
+            keyValue="seats"
+            clear={isClear}
             handleChange={handleChange}
-            key="seat"
           />
         </div>
         <div className="filters__fund__row__item">
           <OptionInputMultiple
-            options={cityOptions}
+            options={city}
             holder="Şəhər"
             keyValue="city"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="city"
           />
         </div>
         <div className="filters__fund__row__item">
@@ -138,10 +127,8 @@ const Fundamentals = () => {
             options={forMarket}
             holder="Yığıldığı bazar"
             keyValue="forMarket"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
-            key="forMarket"
           />
         </div>
       </div>

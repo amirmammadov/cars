@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { useClearFilter } from "../../../hooks/useClearFilter";
+
 import RadioGroups from "../../../components/RadioGroups/RadioGroups";
 
 import "../../../sass/components/_type.scss";
@@ -21,7 +23,7 @@ import { newPromotionRadioValues } from "../../../constants/index";
 
 const Type = () => {
   const [radioValue, setRadioValue] = useState("new");
-  const [clear, setClear] = useState(false);
+  const isClear = useClearFilter()[0];
 
   const emptyValues = useSelector((state) => state.promotionEmpty);
 
@@ -45,7 +47,7 @@ const Type = () => {
           value={radioValue}
           radioName="isNew"
           handler={handleRadioChange}
-          obj={newPromotionRadioValues}
+          radios={newPromotionRadioValues}
         />
       </div>
       <div className="new__promotion__main__type__inputs">
@@ -54,8 +56,7 @@ const Type = () => {
             options={brandOptions}
             holder="Marka"
             keyValue="brand"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
             key="brand"
             isEmpty={emptyValues.includes("brand")}
@@ -66,8 +67,7 @@ const Type = () => {
             options={modelOptions}
             holder="Model"
             keyValue="model"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
             key="model"
             isEmpty={emptyValues.includes("model")}
@@ -78,8 +78,7 @@ const Type = () => {
             options={salonOptions}
             holder="Avtomobil Salonu"
             keyValue="salon"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
             key="salon"
             isEmpty={emptyValues.includes("salon")}

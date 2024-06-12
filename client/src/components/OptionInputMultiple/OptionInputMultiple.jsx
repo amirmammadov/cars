@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+
+import { useClearFilter } from "../../hooks/useClearFilter";
+
 import Checkbox from "@mui/material/Checkbox";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -14,13 +17,13 @@ export default function OptionInputMultiple({
   keyValue,
   handleChange,
   clear,
-  setClear,
 }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
+  const handleClear = useClearFilter()[1];
+
   const handleAutocompleteChange = (event, value) => {
     setSelectedOptions(value);
-    setClear(false);
     handleChange({
       target: { name: keyValue, value: value || [] },
     });
@@ -29,8 +32,9 @@ export default function OptionInputMultiple({
   useEffect(() => {
     if (clear) {
       setSelectedOptions([]);
+      handleClear();
     }
-  }, [clear]);
+  }, [clear, handleClear]);
 
   const renderTags = (value, getTagProps) => {
     if (value.length === 0) {
