@@ -1,5 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
-import { setMoreFilterValues } from "../../../features/appSlice";
+import { useSelector } from "react-redux";
+
+import { useFiltersDispatch } from "../../../hooks/useFiltersDispatch";
 
 import "../../../sass/components/_filtersSection.scss";
 
@@ -22,14 +23,10 @@ const Fundamentals = () => {
     carAge,
   } = useSelector((state) => state.moreFilterValues);
 
-  const dispatch = useDispatch();
-
   const { brand, model, banType, seats, city, forMarket, radios } =
     moreFilterOptions;
 
-  const handleChange = ({ target }) => {
-    dispatch(setMoreFilterValues({ name: target.name, value: target.value }));
-  };
+  const handleChange = useFiltersDispatch();
 
   return (
     <div className="filters__fund">

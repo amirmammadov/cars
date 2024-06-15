@@ -1,17 +1,15 @@
-import { useClearFilter } from "../../../hooks/useClearFilter";
-
 import "../../../sass/components/_filtersSection.scss";
+
+import { useFiltersDispatch } from "../../../hooks/useFiltersDispatch";
 
 import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionInputMultiple";
 
 import { moreFilterOptions } from "../../../constants/more-filters";
 
 const Additional = () => {
-  const isClear = useClearFilter()[0];
-
   const { sellerType } = moreFilterOptions;
 
-  const handleChange = () => {};
+  const handleChange = useFiltersDispatch();
 
   return (
     <div className="filters__add">
@@ -22,7 +20,6 @@ const Additional = () => {
             options={sellerType}
             holder="Satıcı"
             keyValue="sellerType"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>

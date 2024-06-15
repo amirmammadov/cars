@@ -198,7 +198,6 @@ export const moreFiltersValues = {
   innerColors: [],
   innerMaterial: [],
   sellerType: [],
-  radios: "",
   minDistance: "",
   maxDistance: "",
   minPrice: "",
@@ -208,4 +207,10 @@ export const moreFiltersValues = {
   currency: "AZN",
   sellingType: "all",
   carAge: "all",
+  minPower: "",
+  maxPower: "",
+  minVolume: "",
+  maxVolume: "",
+  additional: [],
+  supplies: [],
 };

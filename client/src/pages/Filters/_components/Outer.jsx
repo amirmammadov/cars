@@ -1,17 +1,15 @@
-import { useClearFilter } from "../../../hooks/useClearFilter";
-
 import "../../../sass/components/_filtersSection.scss";
+
+import { useFiltersDispatch } from "../../../hooks/useFiltersDispatch";
 
 import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionInputMultiple";
 
 import { moreFilterOptions } from "../../../constants/more-filters";
 
 const Outer = () => {
-  const isClear = useClearFilter()[0];
-
   const { outerColors, parkingSensor, speedControl } = moreFilterOptions;
 
-  const handleChange = () => {};
+  const handleChange = useFiltersDispatch();
 
   return (
     <div className="filters__outer">
@@ -22,7 +20,6 @@ const Outer = () => {
             options={outerColors}
             holder="Xarici rəng"
             keyValue="outerColors"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -31,7 +28,6 @@ const Outer = () => {
             options={parkingSensor}
             holder="Parking sensoru"
             keyValue="parkingSensor"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -40,7 +36,6 @@ const Outer = () => {
             options={speedControl}
             holder="Sürət kontrol düzənləyicisi"
             keyValue="speedControl"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>

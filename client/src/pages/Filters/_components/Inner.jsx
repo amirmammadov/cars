@@ -1,4 +1,4 @@
-import { useClearFilter } from "../../../hooks/useClearFilter";
+import { useFiltersDispatch } from "../../../hooks/useFiltersDispatch";
 
 import "../../../sass/components/_filtersSection.scss";
 
@@ -7,11 +7,9 @@ import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionI
 import { moreFilterOptions } from "../../../constants/more-filters";
 
 const Inner = () => {
-  const isClear = useClearFilter()[0];
-
   const { innerMaterial, innerColors } = moreFilterOptions;
 
-  const handleChange = () => {};
+  const handleChange = useFiltersDispatch();
 
   return (
     <div className="filters__inner">
@@ -22,7 +20,6 @@ const Inner = () => {
             options={innerColors}
             holder="Daxili rəng"
             keyValue="innerColors"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -31,7 +28,6 @@ const Inner = () => {
             options={innerMaterial}
             holder="Daxili material"
             keyValue="innerMaterial"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>

@@ -1,6 +1,9 @@
 import { useClearFilter } from "../../hooks/useClearFilter";
+import { setMoreFilterValues } from "../../features/appSlice";
 
 import "../../sass/pages/_filters.scss";
+
+import { useSelector } from "react-redux";
 
 import { filtersOtherValues, filtersSupplies } from "../../constants";
 
@@ -8,18 +11,26 @@ import { closeOutline, optionsOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
-import Fundamentals from "./_components/Fundamentals";
-import Technical from "./_components/Technical";
-import Outer from "./_components/Outer";
-import Others from "./_components/Others";
-import Inner from "./_components/Inner";
-import Additional from "./_components/Additional";
+import CheckBoxes from "../../components/CheckBoxes/CheckBoxes";
+import {
+  Fundamentals,
+  Technical,
+  Outer,
+  Inner,
+  Additional,
+} from "./_components";
 
 const Filters = () => {
+  const searchData = useSelector((state) => state.moreFilterValues);
+
   const handleClear = useClearFilter()[1];
 
   const handleFormClear = () => {
     handleClear();
+  };
+
+  const handleSearch = () => {
+    console.log(searchData);
   };
 
   return (
@@ -30,9 +41,19 @@ const Filters = () => {
         <Fundamentals />
         <Technical />
         <Outer />
-        <Others others={filtersOtherValues} title="Digər" />
+        <CheckBoxes
+          others={filtersOtherValues}
+          title="Digər"
+          name="additional"
+          dispatchFunc={setMoreFilterValues}
+        />
         <Inner />
-        <Others others={filtersSupplies} title="Avtomobilin təchizatları" />
+        <CheckBoxes
+          others={filtersSupplies}
+          title="Avtomobilin təchizatları"
+          name="supplies"
+          dispatchFunc={setMoreFilterValues}
+        />
         <Additional />
       </div>
       <div className="filters__btns">
@@ -41,7 +62,9 @@ const Filters = () => {
           <IonIcon icon={closeOutline} />
         </button>
         <button className="filters__btns__search">
-          <div className="filters__btns__clear__text">Filtrlə</div>
+          <div className="filters__btns__clear__text" onClick={handleSearch}>
+            Filtrlə
+          </div>
           <IonIcon icon={optionsOutline} />
         </button>
       </div>

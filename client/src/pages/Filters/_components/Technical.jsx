@@ -1,37 +1,64 @@
-import { useClearFilter } from "../../../hooks/useClearFilter";
-
 import "../../../sass/components/_filtersSection.scss";
+
+import { useFiltersDispatch } from "../../../hooks/useFiltersDispatch";
+
+import { useSelector } from "react-redux";
 
 import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionInputMultiple";
 
 import { moreFilterOptions } from "../../../constants/more-filters";
 
 const Technical = () => {
-  const isClear = useClearFilter()[0];
+  const { minPower, maxPower, minVolume, maxVolume } = useSelector(
+    (state) => state.moreFilterValues
+  );
 
   const { fuelType, fuelConsumption, gearBox, transmission } =
     moreFilterOptions;
 
-  const handleChange = () => {};
+  const handleChange = useFiltersDispatch();
 
   return (
     <div className="filters__tech">
       <div className="filters__tech__title">Texniki məlumatlar</div>
       <div className="filters__tech__row">
         <div className="filters__tech__row__item customInput">
-          <input type="number" placeholder="Güc, Min" />
-          <input type="number" placeholder="Max" />
+          <input
+            type="number"
+            placeholder="Güc, Min"
+            name="minPower"
+            value={minPower}
+            onChange={(e) => handleChange(e)}
+          />
+          <input
+            type="number"
+            placeholder="Max"
+            name="maxPower"
+            value={maxPower}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filters__tech__row__item customInput">
-          <input type="number" placeholder="Həcm, Min" />
-          <input type="number" placeholder="Max" />
+          <input
+            type="number"
+            placeholder="Həcm, Min"
+            name="minVolume"
+            value={minVolume}
+            onChange={(e) => handleChange(e)}
+          />
+          <input
+            type="number"
+            placeholder="Max"
+            name="maxVolume"
+            value={maxVolume}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filters__tech__row__item">
           <OptionInputMultiple
             options={fuelType}
             holder="Yanacaq növü"
             keyValue="fuelType"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -40,7 +67,6 @@ const Technical = () => {
             options={fuelConsumption}
             holder="Yanacaq sərfiyyatı"
             keyValue="fuelConsumption"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -51,7 +77,6 @@ const Technical = () => {
             options={gearBox}
             holder="Transmissiya"
             keyValue="gearBox"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -60,7 +85,6 @@ const Technical = () => {
             options={transmission}
             holder="Ötürücü"
             keyValue="transmission"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
