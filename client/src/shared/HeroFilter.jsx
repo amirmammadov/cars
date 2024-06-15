@@ -95,6 +95,7 @@ const HeroFilter = () => {
           setTabDefaultValue={setTabsDefault}
           tabKey="tabThree"
           key="tabThree"
+          isDisabled
         />
       </div>
       <div className="home__hero__content__secondLine">

@@ -13,7 +13,6 @@ import {
   Faq,
   Favorites,
   Homepage,
-  // MoreFilters,
   NewPromotion,
   SearchResult,
   Account,

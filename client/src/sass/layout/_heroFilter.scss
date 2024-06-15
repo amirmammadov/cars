@@ -30,6 +30,10 @@
     @include tablet {
       flex-direction: column;
     }
+
+    > *:last-child {
+      opacity: 0.6;
+    }
   }
 
   @include tablet {
@@ -78,7 +82,7 @@
           margin: 0;
           border: none;
           outline: none;
-          padding: 12px;
+          padding: 14px 12px;
           background: $white;
           font-size: 16px;
           font-style: normal;
@@ -87,6 +91,7 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          border: 1px solid $grayish2;
         }
 
         input::placeholder {
@@ -120,7 +125,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        padding: 11px;
+        padding: 13px;
         border-radius: 8px;
         background: $white;
         border: none;
@@ -128,6 +133,7 @@
         display: flex;
         align-self: flex-start;
         color: $inputColor;
+        border: 1px solid $grayish2;
 
         &:focus {
           border-color: $primary;
@@ -150,6 +156,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        border: 1px solid $grayish2;
 
         &:focus {
           border-color: $primary;

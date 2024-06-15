@@ -6,6 +6,7 @@ const FilterTab = ({
   tabKey,
   tabDefaultValue,
   setTabDefaultValue,
+  isDisabled,
 }) => {
   const handleActiveItem = (e) => {
     setTabDefaultValue((prev) => {
@@ -18,15 +19,20 @@ const FilterTab = ({
   };
 
   return (
-    <div className="filter__tab">
+    <div className={`filter__tab ${isDisabled && "disabled"}`}>
       {Object.entries(tabs).map(([key, value]) => (
         <div
           key={key}
           className={`filter__tab__item ${
             tabDefaultValue === key ? "active" : ""
-          }`}
+          } ${isDisabled && "disabled"}`}
           id={key}
-          onClick={(e) => handleActiveItem(e)}
+          onClick={(e) => {
+            if (isDisabled) {
+              return;
+            }
+            handleActiveItem(e);
+          }}
         >
           {value}
         </div>
