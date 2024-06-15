@@ -15,12 +15,11 @@ export default function OptionInputSingle({
   isYear,
   handleChange,
   keyValue,
-  clear,
   isEmpty,
 }) {
   const [selectedValue, setSelectedValue] = useState(null);
 
-  const handleClear = useClearFilter()[1];
+  const [isClear] = useClearFilter();
 
   const handleAutocompleteChange = (_, value) => {
     setSelectedValue(value);
@@ -30,11 +29,8 @@ export default function OptionInputSingle({
   };
 
   useEffect(() => {
-    if (clear) {
-      setSelectedValue(null);
-      handleClear();
-    }
-  }, [clear, handleClear]);
+    setSelectedValue(null);
+  }, [isClear]);
 
   return (
     <Autocomplete

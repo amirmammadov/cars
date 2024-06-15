@@ -16,13 +16,12 @@ export default function OptionInputMultiple({
   holder,
   keyValue,
   handleChange,
-  clear,
 }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
-  const handleClear = useClearFilter()[1];
+  const [isClear] = useClearFilter();
 
-  const handleAutocompleteChange = (event, value) => {
+  const handleAutocompleteChange = (_, value) => {
     setSelectedOptions(value);
     handleChange({
       target: { name: keyValue, value: value || [] },
@@ -30,17 +29,14 @@ export default function OptionInputMultiple({
   };
 
   useEffect(() => {
-    if (clear) {
-      setSelectedOptions([]);
-      handleClear();
-    }
-  }, [clear, handleClear]);
+    setSelectedOptions([]);
+  }, [isClear]);
 
-  const renderTags = (value, getTagProps) => {
+  const renderTags = (value) => {
     if (value.length === 0) {
       return null;
     } else if (value.length === 1) {
-      return <div {...getTagProps({ index: 0 })}>{value[0].title}</div>;
+      return <div>{value[0].title}</div>;
     } else {
       return <div>{`${value.length} selected`}</div>;
     }
@@ -62,7 +58,6 @@ export default function OptionInputMultiple({
             border: "1px solid #620985",
           },
         "& .MuiAutocomplete-inputRoot": { padding: "5px" },
-        // borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
           borderColor: "#d2d2d2",
           borderRadius: "8px",

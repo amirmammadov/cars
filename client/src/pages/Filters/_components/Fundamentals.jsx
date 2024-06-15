@@ -1,6 +1,5 @@
-import { useState } from "react";
-
-import { useClearFilter } from "../../../hooks/useClearFilter";
+import { useSelector, useDispatch } from "react-redux";
+import { setMoreFilterValues } from "../../../features/appSlice";
 
 import "../../../sass/components/_filtersSection.scss";
 
@@ -10,38 +9,35 @@ import OptionInputMultiple from "../../../components/OptionInputMultiple/OptionI
 
 import { moreFilterOptions } from "../../../constants/more-filters";
 
-const INITIAL_DATA = {};
-
 const Fundamentals = () => {
-  const [data, setData] = useState(INITIAL_DATA);
-  const [radioValue, setRadioValue] = useState("all");
+  const {
+    minDistance,
+    maxDistance,
+    minPrice,
+    maxPrice,
+    minYear,
+    maxYear,
+    currency,
+    sellingType,
+    carAge,
+  } = useSelector((state) => state.moreFilterValues);
 
-  const isClear = useClearFilter()[0];
+  const dispatch = useDispatch();
 
   const { brand, model, banType, seats, city, forMarket, radios } =
     moreFilterOptions;
 
-  const handleRadioChange = (event) => {
-    const { value } = event.target;
-    setRadioValue(value);
-  };
-
   const handleChange = ({ target }) => {
-    setData((prevValues) => ({
-      ...prevValues,
-      [target.name]: target.value,
-    }));
+    dispatch(setMoreFilterValues({ name: target.name, value: target.value }));
   };
-
-  console.log(data);
 
   return (
     <div className="filters__fund">
       <div className="filters__fund__title">Təməl məlumatlar</div>
       <RadioGroups
-        value={radioValue}
-        radioName="isNew"
-        handler={handleRadioChange}
+        value={carAge}
+        radioName="carAge"
+        handler={handleChange}
         radios={radios}
       />
       <div className="filters__fund__row">
@@ -50,7 +46,6 @@ const Fundamentals = () => {
             options={brand}
             holder="Marka"
             keyValue="brand"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -59,7 +54,6 @@ const Fundamentals = () => {
             options={model}
             holder="Model"
             keyValue="model"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -68,31 +62,61 @@ const Fundamentals = () => {
             options={banType}
             holder="Ban növü"
             keyValue="banType"
-            clear={isClear}
             handleChange={handleChange}
-            key="ban"
           />
         </div>
         <div className="filters__fund__row__item" />
       </div>
       <div className="filters__fund__row">
         <div className="filters__fund__row__item customInput">
-          <input type="number" placeholder="Yürüyüş, Min" />
-          <input type="number" placeholder="Max" />
+          <input
+            type="number"
+            placeholder="Yürüyüş, Min"
+            name="minDistance"
+            value={minDistance}
+            onChange={(e) => handleChange(e)}
+          />
+          <input
+            type="number"
+            placeholder="Max"
+            name="maxDistance"
+            value={maxDistance}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filters__fund__row__item">
-          <select>
+          <select
+            onChange={(e) => handleChange(e)}
+            name="sellingType"
+            value={sellingType}
+          >
             <option value="all">Hamısı</option>
-            <option value="new">Yeni</option>
-            <option value="old">Sürülmüş</option>
+            <option value="credit">Kredit</option>
+            <option value="barter">Barter</option>
           </select>
         </div>
         <div className="filters__fund__row__item customInput">
-          <input type="number" placeholder="Qiymət, Min" />
-          <input type="number" placeholder="Max" />
+          <input
+            type="number"
+            placeholder="Qiymət, Min"
+            name="minPrice"
+            value={minPrice}
+            onChange={(e) => handleChange(e)}
+          />
+          <input
+            type="number"
+            placeholder="Max"
+            name="maxPrice"
+            value={maxPrice}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filters__fund__row__item options">
-          <select>
+          <select
+            onChange={(e) => handleChange(e)}
+            name="currency"
+            value={currency}
+          >
             <option value="AZN">AZN</option>
             <option value="EUR">EUR</option>
             <option value="USD">USD</option>
@@ -101,15 +125,26 @@ const Fundamentals = () => {
       </div>
       <div className="filters__fund__row">
         <div className="filters__fund__row__item customInput">
-          <input type="number" placeholder="Il, Min" />
-          <input type="number" placeholder="Max" />
+          <input
+            type="number"
+            placeholder="Il, Min"
+            name="minYear"
+            value={minYear}
+            onChange={(e) => handleChange(e)}
+          />
+          <input
+            type="number"
+            placeholder="Max"
+            name="maxYear"
+            value={maxYear}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filters__fund__row__item">
           <OptionInputMultiple
             options={seats}
             holder="Oturacaq Sayı"
             keyValue="seats"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -118,7 +153,6 @@ const Fundamentals = () => {
             options={city}
             holder="Şəhər"
             keyValue="city"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>
@@ -127,7 +161,6 @@ const Fundamentals = () => {
             options={forMarket}
             holder="Yığıldığı bazar"
             keyValue="forMarket"
-            clear={isClear}
             handleChange={handleChange}
           />
         </div>

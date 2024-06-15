@@ -32,6 +32,14 @@ export const appSlice = createSlice({
         [name]: value,
       };
     },
+    setMoreFilterValues: (state, action) => {
+      const { name, value } = action.payload;
+
+      state.moreFilterValues = {
+        ...state.moreFilterValues,
+        [name]: value,
+      };
+    },
     setFavCarIds: (state, action) => {
       const carId = action.payload.ID;
 
@@ -69,6 +77,7 @@ export const appSlice = createSlice({
     },
     setMoreFiltersCleared: (state) => {
       state.moreFiltersCleared = !state.moreFiltersCleared;
+      state.moreFilterValues = moreFiltersValues;
     },
     setLoggedIn: (state, action) => {
       state.isLoggedIn = action.payload;
@@ -89,6 +98,7 @@ export const {
   setCompareCarIds,
   setMoreFilters,
   setMoreFiltersCleared,
+  setMoreFilterValues,
 } = appSlice.actions;
 
 export default appSlice.reducer;

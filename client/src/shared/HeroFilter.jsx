@@ -34,9 +34,11 @@ const HeroFilter = () => {
 
   const navigate = useNavigate();
 
-  const [isClear, handleClear] = useClearFilter();
+  const handleClear = useClearFilter()[1];
 
   const handleChange = ({ target }) => {
+    console.log(target);
+
     setData((prevValues) => ({
       ...prevValues,
       [target.name]: target.value,
@@ -101,7 +103,6 @@ const HeroFilter = () => {
             options={brandOptions}
             holder="Marka"
             keyValue="brand"
-            clear={isClear}
             handleChange={handleChange}
             key="brand"
           />
@@ -111,7 +112,6 @@ const HeroFilter = () => {
             options={modelOptions}
             holder="Model"
             keyValue="model"
-            clear={isClear}
             handleChange={handleChange}
             key="model"
           />
@@ -121,7 +121,6 @@ const HeroFilter = () => {
             options={banOptions}
             holder="Ban növü"
             keyValue="banType"
-            clear={isClear}
             handleChange={handleChange}
             key="banType"
           />
@@ -131,7 +130,6 @@ const HeroFilter = () => {
             options={cityOptions}
             holder="Şəhər"
             keyValue="city"
-            clear={isClear}
             handleChange={handleChange}
             key="city"
           />
@@ -177,7 +175,6 @@ const HeroFilter = () => {
               holder="İl,Min"
               isYear
               keyValue="minYear"
-              clear={isClear}
               handleChange={handleChange}
               key="minYear"
             />
@@ -186,7 +183,6 @@ const HeroFilter = () => {
               holder="Max"
               isYear
               keyValue="maxYear"
-              clear={isClear}
               handleChange={handleChange}
               key="maxYear"
             />
