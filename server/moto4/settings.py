@@ -48,6 +48,10 @@ INSTALLED_APPS = [
 
     #apps
     'companies',
+    'core',
+    'advertisement',
+    'account',
+    
 ]
 
 REST_FRAMEWORK = {
@@ -161,7 +165,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'MOTO4',
         'USER': 'moto4admin',
-        'PASSWORD': 'WSF4dhR3u3LpYR',
+        'PASSWORD': 'WkajshTY67l',
         'HOST': 'localhost',
         'PORT': 5432,
     }

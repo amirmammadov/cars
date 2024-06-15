@@ -1,13 +1,11 @@
 from django.db import models
-
-# Create your models here.
-from django.db import models
+from moto4.utils.base import BaseModel
 from django.contrib.postgres.fields import ArrayField
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 
-class Country(models.Model):
+class Country(BaseModel):
     name = models.CharField(max_length=100, unique=True)
 
     def _str_(self):
@@ -18,7 +16,7 @@ class Country(models.Model):
         verbose_name_plural = 'Countries'
     
 
-class Company(models.Model):
+class Company(BaseModel):
     name = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
     logo = models.ImageField(upload_to='posters/', blank=True, null=True)
@@ -35,7 +33,7 @@ class Company(models.Model):
         return self.name
     
 
-class PhoneNumber(models.Model):
+class PhoneNumber(BaseModel):
     company = models.ForeignKey(Company, related_name='phone_numbers', on_delete=models.CASCADE)
     number = models.CharField(max_length=20)
 
