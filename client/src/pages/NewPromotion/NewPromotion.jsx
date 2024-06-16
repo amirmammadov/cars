@@ -5,13 +5,15 @@ import {
   Price,
   MoreOptions,
   CarSupply,
-  Others,
   Comment,
   Pictures,
   Contact,
 } from "./components/index";
 
-import CrumbNewProm from "../../components/BreadCrumbs/CrumbNewProm";
+import { others } from "../../constants";
+
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
+import CheckBoxes from "../../components/CheckBoxes/CheckBoxes";
 
 import { useNavigate } from "react-router-dom";
 
@@ -19,6 +21,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   setPromotionEmpty,
   resetPromotionEmpty,
+  setNewPromotionState,
 } from "../../features/appSlice";
 
 import "../../sass/pages/_newPromotion.scss";
@@ -60,7 +63,7 @@ const NewPromotion = () => {
   return (
     <main className="new__promotion">
       <div className="new__promotion__titles">
-        <CrumbNewProm />
+        <BreadCrumbs curPage="Elan yerləşdir" />
         <div className="new__promotion__titles__main">Elan yerləşdir</div>
       </div>
       <div className="new__promotion__content">
@@ -69,7 +72,12 @@ const NewPromotion = () => {
         <MoreOptions />
         <div className="new__promotion__content__divider" />
         <CarSupply />
-        <Others />
+        <CheckBoxes
+          others={others}
+          title="Digər"
+          name="suppliesOther"
+          dispatchFunc={setNewPromotionState}
+        />
         <div className="new__promotion__content__divider" />
         <Comment />
         <Pictures />

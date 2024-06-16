@@ -73,12 +73,12 @@ const CarDetailLinks = ({ product }) => {
           }}
         >
           {isFav ? (
-            <IonIcon icon={heartOutline} style={{ fontSize: "22px" }} />
-          ) : (
             <IonIcon
               icon={heart}
               style={{ fontSize: "22px", color: "#620985" }}
             />
+          ) : (
+            <IonIcon icon={heartOutline} style={{ fontSize: "22px" }} />
           )}
         </button>
         <button

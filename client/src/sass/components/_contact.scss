@@ -26,35 +26,14 @@
       }
     }
 
-    // .vinItem {
-    //   display: flex;
-    //   align-items: center;
-    //   gap: 0.5rem;
-    //   flex-grow: 1;
-
-    //   &__input {
-    //     flex-grow: 1;
-    //     border-radius: 8px;
-    //     border: 1px solid rgba(0, 0, 0, 0.1);
-    //     background: $white;
-    //     padding: 10px;
-    //     @extend %font-normal;
-    //     outline: none;
-
-    //     &:focus {
-    //       border: 1px solid $primary;
-    //     }
-    //   }
-    // }
-
     &__item,
     &__select,
     &__phone {
       flex-grow: 1;
       border-radius: 8px;
-      border: 1px solid transparent;
+      border: 1px solid $grayish2;
       background: $white;
-      padding: 13px;
+      padding: 14px;
       outline: none;
       width: 100%;
 

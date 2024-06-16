@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useClearFilter } from "../../../hooks/useClearFilter";
 
 import "../../../sass/components/_contact.scss";
 
@@ -14,7 +14,7 @@ const Contact = () => {
 
   const emptyValues = useSelector((state) => state.promotionEmpty);
 
-  const [clear, setClear] = useState(false);
+  const isClear = useClearFilter()[0];
 
   const handleChange = ({ target }) => {
     dispatch(setNewPromotionState({ name: target.name, value: target.value }));
@@ -49,8 +49,7 @@ const Contact = () => {
             options={cityOptions}
             holder="Şəhər"
             keyValue="city"
-            clear={clear}
-            setClear={setClear}
+            clear={isClear}
             handleChange={handleChange}
             isEmpty={emptyValues.includes("city")}
           />
@@ -74,20 +73,6 @@ const Contact = () => {
           }`}
           autoComplete="off"
         />
-        {/* <div className="vinItem">
-          <input
-            type="text"
-            placeholder="VİN/Ban kodu"
-            className="vinItem__input"
-            name="vin"
-            onChange={(e) => handleChange(e)}
-          />
-          <img
-            src="/promotion/question.png"
-            alt="question"
-            className="vinItem__img"
-          />
-        </div> */}
       </div>
     </div>
   );

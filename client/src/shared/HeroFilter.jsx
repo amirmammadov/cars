@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { useClearFilter } from "../hooks/useClearFilter";
+
 import FilterTab from "../components/FilterTab/FilterTab";
 import OptionInputMultiple from "../components/OptionInputMultiple/OptionInputMultiple";
 import OptionInputSingle from "../components/OptionInputSingle/OptionInputSingle";
@@ -32,9 +34,11 @@ const HeroFilter = () => {
 
   const navigate = useNavigate();
 
-  const [clear, setClear] = useState(false);
+  const handleClear = useClearFilter()[1];
 
   const handleChange = ({ target }) => {
+    console.log(target);
+
     setData((prevValues) => ({
       ...prevValues,
       [target.name]: target.value,
@@ -53,15 +57,15 @@ const HeroFilter = () => {
 
     setData(INITIAL_DATA);
     setTabsDefault(tabsDefaultValues);
-    setClear(true);
+    handleClear();
     navigate("/result");
   };
 
-  const handleClear = () => {
+  const handleFormClear = () => {
     setData(INITIAL_DATA);
     setTabsDefault(tabsDefaultValues);
 
-    setClear(true);
+    handleClear();
   };
 
   return (
@@ -91,6 +95,7 @@ const HeroFilter = () => {
           setTabDefaultValue={setTabsDefault}
           tabKey="tabThree"
           key="tabThree"
+          isDisabled
         />
       </div>
       <div className="home__hero__content__secondLine">
@@ -99,8 +104,6 @@ const HeroFilter = () => {
             options={brandOptions}
             holder="Marka"
             keyValue="brand"
-            clear={clear}
-            setClear={setClear}
             handleChange={handleChange}
             key="brand"
           />
@@ -110,8 +113,6 @@ const HeroFilter = () => {
             options={modelOptions}
             holder="Model"
             keyValue="model"
-            clear={clear}
-            setClear={setClear}
             handleChange={handleChange}
             key="model"
           />
@@ -121,8 +122,6 @@ const HeroFilter = () => {
             options={banOptions}
             holder="Ban növü"
             keyValue="banType"
-            clear={clear}
-            setClear={setClear}
             handleChange={handleChange}
             key="banType"
           />
@@ -132,8 +131,6 @@ const HeroFilter = () => {
             options={cityOptions}
             holder="Şəhər"
             keyValue="city"
-            clear={clear}
-            setClear={setClear}
             handleChange={handleChange}
             key="city"
           />
@@ -179,8 +176,6 @@ const HeroFilter = () => {
               holder="İl,Min"
               isYear
               keyValue="minYear"
-              clear={clear}
-              setClear={setClear}
               handleChange={handleChange}
               key="minYear"
             />
@@ -189,8 +184,6 @@ const HeroFilter = () => {
               holder="Max"
               isYear
               keyValue="maxYear"
-              clear={clear}
-              setClear={setClear}
               handleChange={handleChange}
               key="maxYear"
             />
@@ -210,7 +203,7 @@ const HeroFilter = () => {
       <div className="home__hero__content__fourthLine">
         <button
           className="home__hero__content__fourthLine__clearBtn"
-          onClick={handleClear}
+          onClick={handleFormClear}
         >
           Təmizlə <CloseIcon />
         </button>

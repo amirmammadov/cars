@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+
+import { useClearFilter } from "../../hooks/useClearFilter";
+
 import Checkbox from "@mui/material/Checkbox";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -13,30 +16,27 @@ export default function OptionInputMultiple({
   holder,
   keyValue,
   handleChange,
-  clear,
-  setClear,
 }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
-  const handleAutocompleteChange = (event, value) => {
+  const [isClear] = useClearFilter();
+
+  const handleAutocompleteChange = (_, value) => {
     setSelectedOptions(value);
-    setClear(false);
     handleChange({
       target: { name: keyValue, value: value || [] },
     });
   };
 
   useEffect(() => {
-    if (clear) {
-      setSelectedOptions([]);
-    }
-  }, [clear]);
+    setSelectedOptions([]);
+  }, [isClear]);
 
-  const renderTags = (value, getTagProps) => {
+  const renderTags = (value) => {
     if (value.length === 0) {
       return null;
     } else if (value.length === 1) {
-      return <div {...getTagProps({ index: 0 })}>{value[0].title}</div>;
+      return <div>{value[0].title}</div>;
     } else {
       return <div>{`${value.length} selected`}</div>;
     }
@@ -54,17 +54,16 @@ export default function OptionInputMultiple({
         overflow: "hidden",
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
           {
-            borderColor: "#620985",
             borderRadius: "8px",
-            borderWidth: "1px",
+            border: "1px solid #620985",
           },
         "& .MuiAutocomplete-inputRoot": { padding: "5px" },
-        borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
-          borderColor: "transparent",
+          borderColor: "#d2d2d2",
+          borderRadius: "8px",
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
-          borderColor: "transparent",
+          borderColor: "#d2d2d2",
         },
       }}
       componentsProps={{

@@ -1,0 +1,18 @@
+@import "../index";
+
+.radio__group {
+  @include flexbox($justify: flex-start, $items: center, $gap: 2.5rem);
+  width: 100%;
+
+  &__label {
+    @extend %font-normal;
+    margin-right: 0;
+
+    @include mobile {
+      span {
+        font-size: 13px;
+        align-items: center;
+      }
+    }
+  }
+}

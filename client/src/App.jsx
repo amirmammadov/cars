@@ -13,11 +13,11 @@ import {
   Faq,
   Favorites,
   Homepage,
-  MoreFilters,
   NewPromotion,
   SearchResult,
   Account,
   NotFound,
+  Filters,
 } from "./pages/index";
 import Registration from "./pages/Authentication/Registration";
 import Login from "./pages/Authentication/Login";
@@ -31,7 +31,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/elan" element={<Advertisement />} />
         <Route path="/faq" element={<Faq />} />
-        <Route path="/more-filters" element={<MoreFilters />} />
+        <Route path="/more-filters" element={<Filters />} />
         <Route path="/new-promotion" element={<NewPromotion />} />
         <Route path="/auto/:id" element={<CarDetail />} />
         <Route path="/result" element={<SearchResult />} />

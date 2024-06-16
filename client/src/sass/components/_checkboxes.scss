@@ -1,6 +1,6 @@
 @import "../index";
 
-.car__others {
+.check__others {
   @include flexbox(
     $direction: column,
     $justify: space-between,
@@ -11,6 +11,12 @@
 
   &__title {
     @extend %font-normal;
+
+    &.filtersOthersTitle {
+      font-size: 18px;
+      font-weight: 500;
+      color: $font;
+    }
   }
 
   &__content {

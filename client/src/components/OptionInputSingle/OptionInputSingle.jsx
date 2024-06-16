@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+
+import { useClearFilter } from "../../hooks/useClearFilter";
+
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import parse from "autosuggest-highlight/parse";
@@ -12,25 +15,22 @@ export default function OptionInputSingle({
   isYear,
   handleChange,
   keyValue,
-  clear,
-  setClear,
   isEmpty,
 }) {
   const [selectedValue, setSelectedValue] = useState(null);
 
+  const [isClear] = useClearFilter();
+
   const handleAutocompleteChange = (_, value) => {
     setSelectedValue(value);
-    setClear(false);
     handleChange({
       target: { name: keyValue, value: value || "" },
     });
   };
 
   useEffect(() => {
-    if (clear) {
-      setSelectedValue(null);
-    }
-  }, [clear]);
+    setSelectedValue(null);
+  }, [isClear]);
 
   return (
     <Autocomplete
@@ -49,12 +49,11 @@ export default function OptionInputSingle({
         "& .MuiAutocomplete-inputRoot": { padding: "5px" },
         borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
-          borderColor: `${isEmpty ? "#ff2c2c" : "transparent"}`,
+          borderColor: `${isEmpty ? "#ff2c2c" : "#d2d2d2"}`,
           borderRadius: "8px",
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
-          borderColor: `${isEmpty ? "#ff2c2c" : "transparent"}`,
-          borderWidth: `${isEmpty ? "1px" : "0"}`,
+          borderColor: `${isEmpty ? "#ff2c2c" : "#d2d2d2"}`,
         },
       }}
       componentsProps={{

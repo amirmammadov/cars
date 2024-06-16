@@ -10,6 +10,10 @@
   background: $white;
   @include flexbox($justify: center, $items: center, $gap: 0.625rem);
 
+  &.disabled {
+    cursor: not-allowed;
+  }
+
   @include tablet {
     width: 100%;
     padding: 5px;
@@ -46,6 +50,10 @@
 
     &:hover {
       cursor: pointer;
+
+      &.disabled {
+        cursor: not-allowed;
+      }
     }
   }
 

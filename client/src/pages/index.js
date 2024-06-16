@@ -12,6 +12,8 @@ import SearchResult from "./SearchResult/SearchResult";
 import Account from "./Account/Account";
 import NotFound from "./NotFound/NotFound";
 
+import Filters from "./Filters/Filters";
+
 export {
   CarDetail,
   Advertisement,
@@ -26,4 +28,5 @@ export {
   SearchResult,
   Account,
   NotFound,
+  Filters,
 };
