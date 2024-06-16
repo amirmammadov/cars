@@ -6,12 +6,10 @@ import Comparison from "./Comparison/Comparison";
 import Faq from "./Faq/Faq";
 import Favorites from "./Favorites/Favorites";
 import Homepage from "./Homepage/Homepage";
-import MoreFilters from "./MoreFilters/MoreFilters";
 import NewPromotion from "./NewPromotion/NewPromotion";
 import SearchResult from "./SearchResult/SearchResult";
 import Account from "./Account/Account";
 import NotFound from "./NotFound/NotFound";
-
 import Filters from "./Filters/Filters";
 
 export {
@@ -23,7 +21,6 @@ export {
   Faq,
   Favorites,
   Homepage,
-  MoreFilters,
   NewPromotion,
   SearchResult,
   Account,
