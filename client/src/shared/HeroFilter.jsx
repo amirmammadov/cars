@@ -23,7 +23,6 @@ import {
   modelOptions,
   banOptions,
   cityOptions,
-  yearOptions,
 } from "../constants";
 
 import { useNavigate } from "react-router-dom";
@@ -140,7 +139,7 @@ const HeroFilter = () => {
         <div className="home__hero__content__thirdLine__item">
           <div className="home__hero__content__thirdLine__item__amount">
             <input
-              type="text"
+              type="number"
               value={data.minPrice}
               name="minPrice"
               onChange={handleChange}
@@ -148,7 +147,7 @@ const HeroFilter = () => {
               className="amount__min"
             />
             <input
-              type="text"
+              type="number"
               value={data.maxPrice}
               name="maxPrice"
               onChange={handleChange}
@@ -171,21 +170,21 @@ const HeroFilter = () => {
         </div>
         <div className="home__hero__content__thirdLine__item">
           <div className="home__hero__content__thirdLine__item__year">
-            <OptionInputSingle
-              options={yearOptions}
-              holder="İl,Min"
-              isYear
-              keyValue="minYear"
-              handleChange={handleChange}
-              key="minYear"
+            <input
+              type="number"
+              value={data.minYear}
+              name="minYear"
+              onChange={handleChange}
+              placeholder="İl,Min"
+              className="year__min"
             />
-            <OptionInputSingle
-              options={yearOptions}
-              holder="Max"
-              isYear
-              keyValue="maxYear"
-              handleChange={handleChange}
-              key="maxYear"
+            <input
+              type="number"
+              value={data.maxYear}
+              name="maxYear"
+              onChange={handleChange}
+              placeholder="Max"
+              className="year__max"
             />
           </div>
         </div>

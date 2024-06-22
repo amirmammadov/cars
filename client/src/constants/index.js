@@ -8,8 +8,8 @@ export const INITIAL_DATA = {
   minPrice: "",
   maxPrice: "",
   currency: "AZN",
-  minYear: { title: "" },
-  maxYear: { title: "" },
+  minYear: "",
+  maxYear: "",
   code: "",
 };
 

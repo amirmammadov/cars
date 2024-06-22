@@ -4,6 +4,14 @@
   @include flexbox($justify: flex-start, $items: center, $gap: 2.5rem);
   width: 100%;
 
+  @include mobile {
+    gap: 10px;
+  }
+
+  @include mobile3 {
+    gap: 2px;
+  }
+
   &__label {
     @extend %font-normal;
     margin-right: 0;

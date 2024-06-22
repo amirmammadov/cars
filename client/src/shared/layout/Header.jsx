@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { useDispatch } from "react-redux";
+
 import styles from "./styles.module.scss";
 import logo from "../../assets/logo.png";
 
@@ -13,10 +15,13 @@ import { Icon } from "@fluentui/react";
 
 import { useLoggedIn } from "../../hooks/useLoggedIn";
 import { useDeviceSize } from "../../hooks/useDeviceSize";
+import { setHamburgerClicked as clickedHamburger } from "../../features/appSlice";
 
 function Header() {
   const [activePage, setActivePage] = useState("/");
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
+
+  const dispatch = useDispatch();
 
   const isLoggedIn = useLoggedIn();
   const windowSize = useDeviceSize()[0];
@@ -40,7 +45,8 @@ function Header() {
     } else {
       document.documentElement.classList.remove("no-scroll");
     }
-  }, [hamburgerClicked]);
+    dispatch(clickedHamburger());
+  }, [hamburgerClicked, dispatch]);
 
   const handleHamburgerOpen = () => {
     setHamburgerClicked((prevValue) => !prevValue);

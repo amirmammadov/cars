@@ -12,6 +12,7 @@ const initialState = {
   compareCarIds: JSON.parse(localStorage.getItem("compareCars")) || [],
   isLoggedIn: true,
   mobileForAccActive: false,
+  hamburgerClicked: false,
 };
 
 export const appSlice = createSlice({
@@ -85,6 +86,9 @@ export const appSlice = createSlice({
     setMobileAccActive: (state, action) => {
       state.mobileForAccActive = action.payload;
     },
+    setHamburgerClicked: (state) => {
+      state.hamburgerClicked = !state.hamburgerClicked;
+    },
   },
 });
 
@@ -99,6 +103,7 @@ export const {
   setMoreFilters,
   setMoreFiltersCleared,
   setMoreFilterValues,
+  setHamburgerClicked,
 } = appSlice.actions;
 
 export default appSlice.reducer;

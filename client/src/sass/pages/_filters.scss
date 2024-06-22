@@ -39,7 +39,7 @@
 
   &__btns {
     position: fixed;
-    width: 30%;
+    width: 35%;
     height: auto;
     bottom: 40px;
     left: 50%;
@@ -50,6 +50,24 @@
     box-shadow: $box-shadow;
     @include flexbox($justify: space-around, $items: center, $gap: 10px);
 
+    @include desktop {
+      width: 45%;
+    }
+
+    @include tablet {
+      width: 55%;
+    }
+
+    @include mobile {
+      width: 80%;
+      gap: 5px;
+      padding: 10px;
+    }
+
+    @include mobile3 {
+      width: 90%;
+    }
+
     &__clear,
     &__search {
       border: none;
@@ -57,6 +75,14 @@
       @include flexbox($justify: center, $items: center, $gap: 10px);
       padding: 15px 30px;
       border-radius: 8px;
+
+      @include mobile {
+        padding: 10px 15px;
+      }
+
+      @include mobile3 {
+        padding: 10px;
+      }
 
       > *:first-child {
         font-size: 16px;
