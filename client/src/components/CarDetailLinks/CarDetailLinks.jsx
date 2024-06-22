@@ -7,14 +7,13 @@ import "../../sass/components/_carDetailLinks.scss";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
-  scaleOutline,
   heartOutline,
   heart,
   warningOutline,
   shareOutline,
-  scale,
 } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
+import BalanceIcon from "@mui/icons-material/Balance";
 
 import { setFavCarIds, setCompareCarIds } from "../../features/appSlice";
 
@@ -22,12 +21,18 @@ const CarDetailLinks = ({ product }) => {
   const [linksActive, setLinksActive] = useState(false);
   const [innerWidth, setInnerWidth] = useState(0);
 
+  const dispatch = useDispatch();
+
+  const favCarIds = useSelector((state) => state.favCarIds);
+  const compareCarIds = useSelector((state) => state.compareCarIds);
+  const hamburgerClicked = useSelector((state) => state.hamburgerClicked);
+
   useEffect(() => {
     const handleWindowResize = () => {
       setInnerWidth(window.innerWidth);
     };
 
-    if (innerWidth > 592) {
+    if (innerWidth > 592 || hamburgerClicked) {
       setLinksActive(false);
     }
 
@@ -36,16 +41,11 @@ const CarDetailLinks = ({ product }) => {
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
-  }, [innerWidth]);
+  }, [innerWidth, hamburgerClicked]);
 
   const handleActiveLinks = () => {
     setLinksActive(!linksActive);
   };
-
-  const dispatch = useDispatch();
-
-  const favCarIds = useSelector((state) => state.favCarIds);
-  const compareCarIds = useSelector((state) => state.compareCarIds);
 
   const isFav = favCarIds.some((fav) => fav === product.id);
   const wasCompared = compareCarIds.some((compare) => compare === product.id);
@@ -89,12 +89,9 @@ const CarDetailLinks = ({ product }) => {
           }}
         >
           {wasCompared ? (
-            <IonIcon
-              icon={scale}
-              style={{ fontSize: "22px", color: "#620985" }}
-            />
+            <BalanceIcon sx={{ color: "#620985" }} />
           ) : (
-            <IonIcon icon={scaleOutline} style={{ fontSize: "22px" }} />
+            <BalanceIcon sx={{ color: "#1e1e1e" }} />
           )}
         </button>
         <button className="car__detail__general__header__links__btn">
