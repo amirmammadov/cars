@@ -73,7 +73,8 @@
       flex-grow: 1;
       width: 25%;
 
-      &__amount {
+      &__amount,
+      &__year {
         width: 100%;
         @include flexbox($justify: flex-start, $items: center);
 
@@ -109,12 +110,14 @@
           -moz-appearance: textfield;
         }
 
-        input.amount__min {
+        input.amount__min,
+        input.year__min {
           border-bottom-left-radius: 8px;
           border-top-left-radius: 8px;
         }
 
-        input.amount__max {
+        input.amount__max,
+        input.year__max {
           border-bottom-right-radius: 8px;
           border-top-right-radius: 8px;
         }
@@ -138,11 +141,6 @@
         &:focus {
           border-color: $primary;
         }
-      }
-
-      &__year {
-        @include flexbox($justify: flex-start, $items: center);
-        width: 100%;
       }
 
       &__code {
