@@ -4,13 +4,12 @@ import {
   Type,
   Price,
   MoreOptions,
-  CarSupply,
   Comment,
   Pictures,
   Contact,
 } from "./components/index";
 
-import { others } from "../../constants";
+import { others, supplies } from "../../constants";
 
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 import CheckBoxes from "../../components/CheckBoxes/CheckBoxes";
@@ -71,10 +70,15 @@ const NewPromotion = () => {
         <Price />
         <MoreOptions />
         <div className="new__promotion__content__divider" />
-        <CarSupply />
+        <CheckBoxes
+          others={supplies}
+          title="Digər"
+          name="supplies"
+          dispatchFunc={setNewPromotionState}
+        />
         <CheckBoxes
           others={others}
-          title="Digər"
+          title="Avtomobilin təchizatları"
           name="suppliesOther"
           dispatchFunc={setNewPromotionState}
         />

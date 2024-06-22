@@ -62,9 +62,6 @@ const Fundamentals = () => {
             handleChange={handleChange}
           />
         </div>
-        <div className="filters__fund__row__item" />
-      </div>
-      <div className="filters__fund__row">
         <div className="filters__fund__row__item customInput">
           <input
             type="number"
@@ -81,17 +78,8 @@ const Fundamentals = () => {
             onChange={(e) => handleChange(e)}
           />
         </div>
-        <div className="filters__fund__row__item">
-          <select
-            onChange={(e) => handleChange(e)}
-            name="sellingType"
-            value={sellingType}
-          >
-            <option value="all">Hamısı</option>
-            <option value="credit">Kredit</option>
-            <option value="barter">Barter</option>
-          </select>
-        </div>
+      </div>
+      <div className="filters__fund__row">
         <div className="filters__fund__row__item customInput">
           <input
             type="number"
@@ -117,6 +105,17 @@ const Fundamentals = () => {
             <option value="AZN">AZN</option>
             <option value="EUR">EUR</option>
             <option value="USD">USD</option>
+          </select>
+        </div>
+        <div className="filters__fund__row__item sellingType">
+          <select
+            onChange={(e) => handleChange(e)}
+            name="sellingType"
+            value={sellingType}
+          >
+            <option value="all">Hamısı</option>
+            <option value="credit">Kredit</option>
+            <option value="barter">Barter</option>
           </select>
         </div>
       </div>

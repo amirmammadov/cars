@@ -20,13 +20,23 @@
   }
 
   &__content {
-    @include flexbox($justify: space-between, $items: center, $gap: 1.875rem);
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     @include mobile {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       width: 100%;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 16px;
       &__item:last-child {
         grid-column: span 2;
       }

@@ -26,6 +26,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     &__item {
       flex-grow: 1;
 
@@ -80,7 +84,6 @@
 
       &.options {
         grid-column: auto;
-        max-width: max-content;
 
         select {
           width: 100%;
@@ -88,6 +91,10 @@
           border-radius: 8px;
           outline: none;
           padding: 15px 8px;
+        }
+
+        @include tablet {
+          max-width: 100%;
         }
       }
     }
